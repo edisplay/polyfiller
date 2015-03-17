@@ -13,21 +13,25 @@ void function () {
         return 0;
     }
 
-    var STATUS           = '[[PromiseStatus]]',
-        VALUE            = '[[PromiseValue]]',
-        ON_FUlFILLED     = '[[OnFulfilled]]',
-        ON_REJECTED      = '[[OnRejected]]',
-        ORIGINAL_ERROR   = '[[OriginalError]]',
-        PENDING          = 'pending',
+    var STATUS = '[[PromiseStatus]]',
+        VALUE = '[[PromiseValue]]',
+        ON_FUlFILLED = '[[OnFulfilled]]',
+        ON_REJECTED = '[[OnRejected]]',
+        ORIGINAL_ERROR = '[[OriginalError]]',
+        PENDING = 'pending',
         INTERNAL_PENDING = 'internal pending',
-        FULFILLED        = 'fulfilled',
-        REJECTED         = 'rejected',
-        NOT_ARRAY        = 'not an array.',
-        REQUIRES_NEW     = 'constructor Promise requires "new".',
-        CHAINING_CYCLE   = 'then() cannot return same Promise that it resolves.';
+        FULFILLED = 'fulfilled',
+        REJECTED = 'rejected',
+        NOT_ARRAY = 'not an array.',
+        REQUIRES_NEW = 'constructor Promise requires "new".',
+        CHAINING_CYCLE = 'then() cannot return same Promise that it resolves.';
 
     function InternalError (originalError) {
         this[ORIGINAL_ERROR] = originalError;
+    }
+
+    function isInternalError (anything) {
+        return anything instanceof InternalError;
     }
 
     function isObject (anything) {
