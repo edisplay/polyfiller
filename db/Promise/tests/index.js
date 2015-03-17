@@ -27,7 +27,7 @@ var test = new function () {
                 });
             });
 
-            global.setTimeout(function () {
+            window.setTimeout(function () {
                 if (!settled) {
                     reject(new Error(desc));
                 }
