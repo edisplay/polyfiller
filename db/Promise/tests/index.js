@@ -91,7 +91,7 @@ test('call onRejected asynchronously', function (assert) {
     new Promise(function (resolve, reject) {
         reject();
     })
-    ['catch'](function () {
+    .catch(function () {
         x = 1;
     });
 
@@ -104,7 +104,7 @@ test('reject resolver error', function (assert) {
     new Promise(function () {
         throw error;
     })
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error);
     });
 });
@@ -127,7 +127,7 @@ test('skip resolver error (rejected)', function (assert) {
         reject(rejectedError);
         throw resolverError;
     })
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === rejectedError);
     });
 });
@@ -147,7 +147,7 @@ test('call something one (reject first)', function (assert) {
         reject();
         resolve();
     })
-    ['catch'](function () {
+    .catch(function () {
         assert(true);
     });
 });
@@ -180,7 +180,7 @@ test('reject once', function (assert) {
         reject(error1);
         reject(error2);
     })
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         reasons.push(reason);
         callCount++;
     });
@@ -217,9 +217,9 @@ test('call onRejected with promise value', function (assert) {
         reject(error1);
     });
 
-    promise['catch'](function () {
-        promise['catch'](function () {
-            promise['catch'](function (reason) {
+    promise.catch(function () {
+        promise.catch(function () {
+            promise.catch(function (reason) {
                 assert(reason === error1);
             });
 
@@ -253,15 +253,15 @@ test('unwrap promise (reject)', function (assert) {
     new Promise(function (resolve, reject) {
         reject(error1);
     })
-    ['catch'](function () {
+    .catch(function () {
         return new Promise(function (resolve, reject) {
             reject(new Promise(function (resolve, reject) {
                 reject(error2);
             }));
         });
     })
-    ['catch'](function (reason) {
-        reason['catch'](function (reason) {
+    .catch(function (reason) {
+        reason.catch(function (reason) {
             assert(reason === error2);
         });
     });
@@ -269,24 +269,27 @@ test('unwrap promise (reject)', function (assert) {
 
 test('return fulfilled promise', function (assert) {
     Promise.resolve(1)
-    .then(function () {
-        return Promise.resolve(2);
-    })
-    .then(function (value) {
-        assert(value === 2);
-    });
+        .then(function () {
+            return Promise.resolve(2);
+        })
+        .then(function (value) {
+            assert(value === 2);
+        })
+    ;
 });
 
 test('return rejected promise', function (assert) {
     var error1 = new Error('test error 1');
     var error2 = new Error('test error 2');
 
-    Promise.reject(error1)['catch'](function () {
-        return Promise.reject(error2);
-    })
-    ['catch'](function (reason) {
-        assert(reason === error2);
-    });
+    Promise.reject(error1)
+        .catch(function () {
+            return Promise.reject(error2);
+        })
+        .catch(function (reason) {
+            assert(reason === error2);
+        })
+    ;
 });
 
 test('return self', function (assert) {
@@ -308,7 +311,7 @@ test('keep initial value (fulfilled)', function (assert) {
         return 2;
     });
 
-    promise['catch'](function () {
+    promise.catch(function () {
         throw error;
     });
 
@@ -327,11 +330,11 @@ test('keep initial value (rejected)', function (assert) {
         return 1;
     });
 
-    promise['catch'](function () {
+    promise.catch(function () {
         throw error2;
     });
 
-    promise['catch'](function (reason) {
+    promise.catch(function (reason) {
         assert(reason === error1);
     });
 });
@@ -351,15 +354,16 @@ test('transfer value', function (assert) {
 test('transfer reason', function (assert) {
     var error = new Error('test error');
 
-    Promise.reject(error)['catch'](function (reason) {
-        throw reason;
-    })
-    ['catch'](function (reason) {
-        throw reason;
-    })
-    ['catch'](function (reason) {
-        assert(reason === error);
-    });
+    Promise.reject(error)
+        .catch(function (reason) {
+            throw reason;
+        })
+        .catch(function (reason) {
+            throw reason;
+        })
+        .catch(function (reason) {
+            assert(reason === error);
+        });
 });
 
 test('call resolve asynchronously', function (assert) {
@@ -377,7 +381,7 @@ test('call reject asynchronously', function (assert) {
     new Promise(function (resolve, reject) {
         global.setImmediate(reject, error);
     })
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error);
     });
 });
@@ -385,24 +389,28 @@ test('call reject asynchronously', function (assert) {
 test('throw from onFulfilled', function (assert) {
     var error = new Error('test error');
 
-    Promise.resolve().then(function () {
-        throw error;
-    })
-    ['catch'](function (reason) {
-        assert(reason === error);
-    });
+    Promise.resolve()
+        .then(function () {
+            throw error;
+        })
+        .catch(function (reason) {
+            assert(reason === error);
+        })
+    ;
 });
 
 test('throw from onRejected', function (assert) {
     var error1 = new Error('test error 1');
     var error2 = new Error('test error 2');
 
-    Promise.reject(error1)['catch'](function () {
-        throw error2;
-    })
-    ['catch'](function (reason) {
-        assert(reason === error2);
-    });
+    Promise.reject(error1)
+        .catch(function () {
+            throw error2;
+        })
+        .catch(function (reason) {
+            assert(reason === error2);
+        })
+    ;
 });
 
 test('race', function (assert) {
@@ -443,11 +451,12 @@ test('reject(promise)', function (assert) {
         resolve(1);
     });
 
-    Promise.reject(promise)['catch'](function (value) {
-        value.then(function (value) {
-            assert(value === 1);
+    Promise.reject(promise)
+        .catch(function (value) {
+            value.then(function (value) {
+                assert(value === 1);
+            });
         });
-    });
 });
 
 test('resolve(thenable)', function (assert) {
@@ -468,9 +477,10 @@ test('reject(thenable)', function (assert) {
         }
     };
 
-    Promise.reject(thenable)['catch'](function (value) {
-        assert(value === thenable);
-    });
+    Promise.reject(thenable)
+        .catch(function (value) {
+            assert(value === thenable);
+        });
 });
 
 test('then(promise)', function (assert) {
@@ -496,12 +506,13 @@ test('then(thenable)', function (assert) {
 });
 
 test('return value from onRejected', function (assert) {
-    Promise.reject(1)['catch'](function () {
-        return 2;
-    })
-    .then(function (value) {
-        assert(value === 2);
-    });
+    Promise.reject(1)
+        .catch(function () {
+            return 2;
+        })
+        .then(function (value) {
+            assert(value === 2);
+        });
 });
 
 test('return thenable from onFulfilled', function (assert) {
@@ -521,16 +532,17 @@ test('return thenable from onFulfilled', function (assert) {
 test('return thenable from onRejected', function (assert) {
     var error = new Error('test error');
 
-    Promise.reject(error)['catch'](function (reason) {
-        return {
-            then: function (onFulfilled, onRejected) {
-                onRejected(reason);
-            }
-        };
-    })
-    ['catch'](function (reason) {
-        assert(reason === error);
-    });
+    Promise.reject(error)
+        .catch(function (reason) {
+            return {
+                then: function (onFulfilled, onRejected) {
+                    onRejected(reason);
+                }
+            };
+        })
+        .catch(function (reason) {
+            assert(reason === error);
+        });
 });
 
 test('throw from thenable', function (assert) {
@@ -542,7 +554,7 @@ test('throw from thenable', function (assert) {
             }
         };
     })
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error);
     });
 });
@@ -692,7 +704,7 @@ test('first rejected (race)', function (assert) {
             }, 100);
         })
     ])
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error2);
     });
 });
@@ -768,7 +780,7 @@ test('reject all(mixed)', function (assert) {
     Promise.all([ 1, new Promise(function (resolve, reject) {
         reject(error);
     }), 3 ])
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error);
     });
 });
@@ -781,13 +793,13 @@ test('deep reject all(mixed)', function (assert) {
         new Promise(function (resolve, reject) {
             reject(error);
         })
-        ['catch'](function (reason) {
+        .catch(function (reason) {
             return new Promise(function (resolve, reject) {
                 global.setTimeout(function () {
                     reject(reason);
                 }, 50);
             })
-            ['catch'](function (reason) {
+            .catch(function (reason) {
                 return new Promise(function (resolve, reject) {
                     reject(reason);
                 });
@@ -795,7 +807,7 @@ test('deep reject all(mixed)', function (assert) {
         }),
         3
     ])
-    ['catch'](function (reason) {
+    .catch(function (reason) {
         assert(reason === error);
     });
 });
@@ -861,21 +873,21 @@ test('chaining cycle on resolve', function (assert) {
         return promise;
     });
 
-    promise['catch'](function (reason) {
+    promise.catch(function (reason) {
         assert(reason instanceof TypeError);
     });
 });
 
 test('chaining cycle on reject', function (assert) {
-    var promise = Promise.reject()['catch'](function () {
-        return promise;
-    });
+    var promise = Promise.reject()
+        .catch(function () {
+            return promise;
+        });
 
-    promise['catch'](function (reason) {
+    promise.catch(function (reason) {
         assert(reason instanceof TypeError);
     });
 });
-
 
 test('call thenable.then synchronously', function (assert) {
     var x = 0;
