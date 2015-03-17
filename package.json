@@ -1,0 +1,50 @@
+{
+    "name"   : "polyfiller-db",
+    "version": "0.0.1",
+    "author" : "Abashkin Alexander <monolithed@gmail.com>",
+    "homepage": "https://github.com/monolithed/polyfiller-db.git",
+
+    "description": "A database for polyfill combinator",
+
+    "keywords": [ "polyfill", "polyfill-db", "es5", "es6", "es7", "harmony", "strawman"],
+
+    "man": "README.md",
+
+    "engines": {
+        "node": ">=0.10.28"
+    },
+
+    "repository": {
+        "type": "git",
+        "url" :  "https://github.com/monolithed/polyfiller-db.git"
+    },
+
+    "bugs": {
+        "url": "https://github.com/monolithed/polyfiller-db/issues"
+    },
+
+    "scripts": {
+        "init-sauce": "grunt-init sauce",
+        "test": "grunt test"
+    },
+
+    "dependencies": { },
+
+    "devDependencies": {
+        "grunt"               : "^0.4.5",
+        "grunt-contrib-clean" : "^0.6.0",
+        "grunt-mocha"         : "^0.4.12",
+        "grunt-dev-update"    : "^1.0.2",
+        "grunt-mocha-client"  : "^0.0.1",
+        "load-grunt-config"   : "^0.16.0",
+        "mocha"               : "^2.2.0",
+        "promises-aplus-tests": "^2.1.0",
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "http://www.opensource.org/licenses/mit-license.php"
+        }
+    ]
+}

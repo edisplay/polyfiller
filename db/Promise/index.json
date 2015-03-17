@@ -1,0 +1,6 @@
+{
+    "dependencies": [
+        "window.setImmediate",
+        "Array.isArray"
+    ]
+}
