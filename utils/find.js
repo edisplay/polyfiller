@@ -1,10 +1,11 @@
 'use strict';
 
-var path = require('path');
-var fs = require('fs');
+var path    = require('path'),
+    fs      = require('fs'),
+    resolve = require('resolve');
 
-var resolve = require('resolve');
-var log = require('./log');
+var log = require('./log'),
+    wrap = require('./wrap');
 
 /**
  * find the files
@@ -28,7 +29,7 @@ module.exports = function (files, options, callback) {
             }
             catch (error) { }
 
-            build.file = fs.readFileSync(build.file + '.js', 'utf8');
+            build.file = wrap(fs.readFileSync(build.file + '.js', 'utf8'));
         }
         catch (error) {
             throw log.fail('The', file, 'polyfill was not found', error);

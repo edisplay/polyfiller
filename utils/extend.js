@@ -1,8 +1,6 @@
-// -*- coding: utf-8 -*-
-
 'use strict';
 
-/*
+/**
  * Extends an object
  *
  * @param {Object} to
