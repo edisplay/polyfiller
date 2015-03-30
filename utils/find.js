@@ -16,27 +16,22 @@ var log = require('./log');
  */
 module.exports = function (files, options, callback) {
     return files.map(function (file) {
-        var build = {};
-
-        file = path.resolve(options.path, file, 'index');
+        var build = {
+            file: path.resolve(options.path, file, 'index')
+        };
 
         try {
             build.info = require(file + '.json');
+
+            try {
+                build.file = resolve.sync(build.info.name);
+            }
+            catch (error) { }
+
+            build.file = fs.readFileSync(build.file + '.js', 'utf8');
         }
         catch (error) {
-            throw log.fail('Info file reading', error);
-        }
-
-        try {
-            build.file = resolve.sync(build.info.name);
-        }
-        catch (error) { }
-
-        try {
-            build.file = fs.readFileSync(build.file || file + '.js', 'utf8');
-        }
-        catch (error) {
-            throw log.fail('Source file reading', error);
+            throw log.fail('The', file, 'polyfill was not found', error);
         }
 
         if (callback) {
