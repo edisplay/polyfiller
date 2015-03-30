@@ -22,7 +22,7 @@ module.exports = function (files, options, callback) {
         };
 
         try {
-            build.info = require(file + '.json');
+            build.info = require(build.file + '.json');
 
             try {
                 build.file = resolve.sync(build.info.name);
