@@ -1,0 +1,29 @@
+{
+    "name": "setimmediate",
+
+    "author": "YuzuJS",
+
+    "description": [
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/API/Window/setImmediate"
+        },
+
+        {
+            "type": "w3c",
+            "url": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://www.npmjs.com/package/setimmediate"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://github.com/YuzuJS/setImmediate/blob/master/LICENSE.txt"
+        }
+    ]
+}

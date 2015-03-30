@@ -1,0 +1,48 @@
+{
+    "name": "DOM4",
+
+    "author": "Andrea Giammarchi",
+
+    "description": [
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"
+        },
+
+        {
+            "type": "w3c",
+            "url": "http://www.w3.org/TR/dom/"
+        },
+
+        {
+            "type": "whatwg",
+            "url": "https://dom.spec.whatwg.org/"
+        }
+    ],
+
+    "dependencies": [
+        "Element.prototype.querySelectorAll"
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/dom4"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt"
+        }
+    ]
+}

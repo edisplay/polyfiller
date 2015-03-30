@@ -1,0 +1,29 @@
+{
+    "name": "WindowBase64",
+
+    "author": "David Chambers <dc@davidchambers.me>",
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://www.npmjs.com/package/Base64"
+    },
+
+    "description": [
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64"
+        },
+
+        {
+            "type": "whatwg",
+            "url": "https://html.spec.whatwg.org/multipage/#windowbase64"
+        }
+    ],
+
+    "licenses": [
+        {
+            "type": "WTFPL",
+            "url" : "https://raw.github.com/davidchambers/Base64.js/master/LICENSE"
+        }
+    ]
+}

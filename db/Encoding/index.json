@@ -1,0 +1,34 @@
+{
+    "name": "Encoding",
+
+    "author": "Joshua Bell",
+
+    "description": [
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder"
+        },
+
+        {
+            "type": "whatwg",
+            "url": "https://encoding.spec.whatwg.org/"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://www.npmjs.com/package/text-encoding"
+    },
+
+    "licenses": [
+        {
+            "type": "Apache License",
+            "url" : "https://github.com/inexorabletash/text-encoding/blob/master/LICENSE.md"
+        }
+    ]
+}

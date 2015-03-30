@@ -1,6 +1,27 @@
 {
+    "name": "Promise",
+
+    "author": "Dmitry Korobkin",
+
+    "description": [
+        {
+            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/es6-promises"
+    },
+
     "dependencies": [
-        "window.setImmediate",
-        "Array.isArray"
+        "window.setImmediate"
+    ],
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "http://www.opensource.org/licenses/mit-license.php"
+        }
     ]
 }
