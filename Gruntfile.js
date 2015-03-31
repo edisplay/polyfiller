@@ -4,14 +4,14 @@
 
 'use strict';
 
-var path = require('load-grunt-config'),
-    load = require('path');
+var load = require('load-grunt-config'),
+    path = require('path');
 
 module.exports = function (grunt) {
     var tasks = path.join(process.cwd(), 'tasks');
 
     load(grunt, {
-        configPath: tasks(),
+        configPath: tasks,
         jitGrunt: true
     });
 };

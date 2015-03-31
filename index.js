@@ -1,20 +1,23 @@
 'use strict';
 
-var fs = require('fs'),
-    path = require('path');
+import fs from 'fs';
 
-var find = require('./utils/find');
-var extend = require('./utils/extend');
+import find from './trunk/find';
+import list from './trunk/list';
+import extend from './utils/extend';
 
-module.exports = {
+export default {
     /**
      * Returns a bundle of polyfills as an array of object.
      * The array structure is [ { string: file, object: info } ].
      *
      * @see find
      */
-    find: function (files, options, callback) {
-        return find(files, extend({path: 'db'}, options), callback);
+    find (features, options, callback) {
+        var config = extend({ path: 'db' }, options);
+
+        return find(config.path,
+            list(config.path, features), callback);
     },
 
     /**
@@ -23,7 +26,7 @@ module.exports = {
      *
      * @returns {Array}
      */
-    list: function () {
+    list () {
         return fs.readdirSync('db');
     }
 };

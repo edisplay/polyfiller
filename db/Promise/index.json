@@ -15,7 +15,7 @@
     },
 
     "dependencies": [
-        "window.setImmediate"
+        "setImmediate"
     ],
 
     "licenses": [

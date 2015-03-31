@@ -1,13 +1,8 @@
 'use strict';
 
-var util = require('util');
-
-module.exports = {
-    fail: function (error, message) {
-        message = Array.prototype.slice.call(arguments, 1);
-        error = util.format('\x1b[31m[%s]\x1b[0m\n -', error);
-
-        console.log(error, message.join(' '));
+export default {
+    fail (error, ...message) {
+        console.log(`\x1b[31m[${error}]\x1b[0m\n -'`, ...message);
         process.exit(1);
     }
 };

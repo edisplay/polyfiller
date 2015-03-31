@@ -6,7 +6,7 @@
  * @param {Object} to
  * @param {Object} from
  */
-module.exports = function (to, from) {
+export default function (to, from) {
     for (var key in from) {
         if (Object.prototype.hasOwnProperty.call(from, key)) {
             var value = from[key];
