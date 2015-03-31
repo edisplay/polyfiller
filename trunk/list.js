@@ -2,6 +2,7 @@
 
 import tsort from 'tsort';
 import config from './config';
+import log from '../utils/log';
 
 /**
  * A list of requested features
@@ -24,7 +25,12 @@ export default (directory, files) => {
         graph.add(file.name, ...dependencies);
     });
 
-    var list = graph.sort();
+    try {
+        graph = graph.sort();
+    }
+    catch (error) {
+        throw log.fail('Unresolved dependency error', error);
+    }
 
-    return list.reverse();
+    return graph.reverse();
 };
