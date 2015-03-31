@@ -1,6 +1,6 @@
-# polyfiller-db
+# polyfiller
 
-> A database for polyfill combinator
+> A polyfill combinator
 
 ## Getting Started
 
