@@ -7,6 +7,6 @@
 export default (content) => {
     return `;(function () {
                 'use strict';
-                ${content}};
+                ${content};
             }.call(window));`;
 };
