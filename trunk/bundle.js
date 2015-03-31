@@ -12,8 +12,5 @@ import load from './load';
  * @return {Object}
  */
 export default (...rest) => {
-    return {
-        file: wrapper(load(...rest)),
-        info: config(...rest)
-    };
+    return { source: wrapper(load(...rest)), config: config(...rest) };
 };

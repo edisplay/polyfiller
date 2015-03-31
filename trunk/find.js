@@ -11,11 +11,11 @@ import bundle from './bundle';
  * @returns {Array}
  */
 export default (directory, files, callback) => {
-    return files.map((file) => {
-        var build = bundle(directory, file);
+    return files.map((name) => {
+        var build = bundle(directory, name);
 
         if (callback) {
-            callback(build, file, files);
+            callback(build, name, files);
         }
 
         return build;

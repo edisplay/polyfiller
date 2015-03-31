@@ -8,5 +8,5 @@ module.exports = {
     build: [ 'babel:build' ],
     test: [  ],
     lint: [ 'jshint:development' ],
-    'default': [ ]
+    default: [ ]
 };

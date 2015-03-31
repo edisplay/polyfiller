@@ -11,7 +11,10 @@ export default {
      * Returns a bundle of polyfills as an array of object.
      * The array structure is [ { string: file, object: info } ].
      *
-     * @see find
+     * @param {Array} features
+     * @param {Object} [options]
+     * @param {Function} [callback]
+     * @returns {Array}
      */
     find (features, options, callback) {
         var config = extend({ path: 'db' }, options);
