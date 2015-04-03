@@ -1,7 +1,3 @@
-/*!
- * tasks/devUpdate
- */
-
 'use strict';
 
 module.exports = function (grunt, options) {

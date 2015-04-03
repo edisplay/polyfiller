@@ -1,0 +1,44 @@
+{
+    "name": "es6-collections",
+
+    "author": "Andrea Giammarchi <andrea.giammarchi@gmail.com>",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-map-objects"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/es6-collections"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://github.com/WebReflection/es6-collections/blob/master/LICENSE.txt"
+        }
+    ]
+}

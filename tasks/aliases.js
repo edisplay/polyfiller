@@ -1,12 +1,17 @@
-/*!
- * tasks/aliases
- */
-
 'use strict';
 
 module.exports = {
-    build: [ 'babel:build' ],
-    test: [  ],
-    lint: [ 'jshint:development' ],
+    build: [
+        'babel:build'
+    ],
+
+    test: [
+        'karma:tests'
+    ],
+
+    lint: [
+        'jshint:development'
+    ],
+
     default: [ ]
 };

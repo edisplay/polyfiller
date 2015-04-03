@@ -1,7 +1,3 @@
-/*!
- * tasks/babel
- */
-
 'use strict';
 
 module.exports = function (grunt, options) {
@@ -9,6 +5,8 @@ module.exports = function (grunt, options) {
         options: {
             compact : false,
             comments: true,
+            modules: "amd",
+            //"module-ids": true,
 
             optional: [
                 'spec.protoToAssign'

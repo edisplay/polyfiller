@@ -1,10 +1,3 @@
-/*!
- * tasks/jshint
- *
- * @see http://jslinterrors.com/
- * @see http://www.jshint.com/docs/options/
- */
-
 'use strict';
 
 module.exports = function (grunt, options) {

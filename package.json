@@ -36,6 +36,7 @@
         "text-encoding"        : "^0.5.2",
         "event-source-polyfill": "^0.0.1",
         "es6-promises"         : "^1.0.10",
+        "es6-collections"      : "^0.5.1",
         "Base64"               : "^0.3.0",
         "raf.js"               : "^0.0.4",
         "setimmediate"         : "^1.0.2",
@@ -43,19 +44,29 @@
     },
 
     "commentedDependencies": {
-        "grunt-dev-update"  : "^1.0.2",
         "grunt-mocha"       : "^0.4.12",
         "grunt-mocha-client": "^0.0.1",
         "mocha"             : "^2.2.0"
     },
 
     "devDependencies": {
-        "grunt"              : "^0.4.5",
-        "grunt-contrib-clean": "^0.6.0",
-        "grunt-babel"        : "^4.0.0",
-        "load-grunt-config"  : "^0.16.0",
-        "jit-grunt"          : "^0.9.0",
-        "time-grunt"         : "^1.0.0"
+        "grunt"                   : "^0.4.5",
+        "grunt-contrib-clean"     : "^0.6.0",
+        "grunt-dev-update"        : "^1.0.2",
+        "grunt-karma"             : "^0.10.1",
+        "grunt-babel"             : "^4.0.0",
+        "load-grunt-config"       : "^0.16.0",
+        "jit-grunt"               : "^0.9.0",
+        "time-grunt"              : "^1.0.0",
+
+        "karma-mocha"             : "^0.1.10",
+        "karma-coverage"          : "^0.2.7",
+        "karma-chai-plugins"      : "^0.4.0",
+        "karma-phantomjs-launcher": "^0.1.4",
+        "karma-mocha-debug"       : "^0.1.2",
+        "karma-requirejs"         : "^0.2.2",
+        "karma-mocha-reporter"    : "^1.0.2",
+        "karma-babel-preprocessor": "^5.0.0"
     },
 
     "licenses": [

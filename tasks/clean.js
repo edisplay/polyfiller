@@ -1,7 +1,3 @@
-/*!
- * tasks/clean
- */
-
 'use strict';
 
 module.exports = function (grunt, options) {
