@@ -6,11 +6,7 @@ module.exports = {
     ],
 
     test: [
-        'babel:build',
-        'babel:tests',
-        'mock',
-        //'karma:unit',
-        //'karma:client'
+        'karma:tests'
     ],
 
     lint: [

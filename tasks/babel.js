@@ -5,6 +5,8 @@ module.exports = function (grunt, options) {
         options: {
             compact : false,
             comments: true,
+            modules: "amd",
+            //"module-ids": true,
 
             optional: [
                 'spec.protoToAssign'
@@ -16,16 +18,6 @@ module.exports = function (grunt, options) {
                 {
                     expand: true,
                     src   : ['index.js', '{utils,trunk}/**/*.js' ],
-                    dest  : 'cache',
-                }
-            ]
-        },
-
-        tests: {
-            files: [
-                {
-                    expand: true,
-                    src   : ['tests/**/*.js' ],
                     dest  : 'cache',
                 }
             ]
