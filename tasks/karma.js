@@ -1,17 +1,23 @@
 'use strict';
 
+var path = require('path');
+
 module.exports = function (grunt, options) {
     return {
-        options: {
-            configFile: 'karma.conf.js'
+        //options: {
+        //  basePath: path.resolve('./cache'),
+        //},
+
+        unit: {
+            options: {
+                configFile: 'karma.unit.js'
+            }
         },
 
-        tests: {
-            files: [
-                {
-                    src: ['tests/**/*.js']
-                }
-            ]
+        client: {
+            options: {
+                configFile: 'karma.conf.js'
+            }
         }
     };
 };

@@ -2,6 +2,7 @@
 
 import path from 'path';
 import extend from '../utils/extend';
+import log from '../utils/log';
 
 /**
  * Returns a feature config file
