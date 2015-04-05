@@ -2,7 +2,9 @@
 
 import fs from 'fs';
 import path from 'path';
+
 import resolve from 'resolve';
+import config from './config';
 import log from '../utils/log';
 
 /**
@@ -17,12 +19,13 @@ export default (directory, name) => {
 
     try {
         try {
-            file = resolve.sync(name);
+            file = config(directory, name);
+            file = resolve.sync(file.name);
         }
         catch (error) { }
 
         if (!file) {
-            file = path.resolve(directory, file, 'index.js');
+            file = path.resolve(directory, name, 'index.js');
         }
 
         return fs.readFileSync(file, 'utf8');
