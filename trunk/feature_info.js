@@ -12,7 +12,7 @@ import log from '../utils/log';
  * @return {Object}
  */
 export default (feature) => {
-    var config = resolve_path(feature, 'index.json');
+    let config = resolve_path(feature, 'index.json');
 
     try {
         config = require(config);
