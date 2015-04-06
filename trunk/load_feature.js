@@ -14,7 +14,7 @@ import log from '../utils/log';
  * @return {string}
  */
 export default (feature, name) => {
-    var file = null;
+    let file = null;
 
     try {
         try {

@@ -15,11 +15,11 @@ export default (features, callback) => {
     let features = dependency_list(features);
 
     return features.map((name) => {
-        let config = feature_info(name);
+        let info = feature_info(name),
 
-        var file = {
-            source: load_feature(name, config.name),
-            config: config
+        file = {
+            source: load_feature(name, info.name),
+            config: info
         };
 
         if (callback) {
