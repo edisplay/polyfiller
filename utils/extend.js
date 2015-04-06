@@ -7,9 +7,9 @@
  * @param {Object} from
  */
 export default function (to, from) {
-    for (var key in from) {
+    for (let key in from) {
         if (Object.prototype.hasOwnProperty.call(from, key)) {
-            var value = from[key];
+            let value = from[key];
 
             if (value) {
                 to[key] = value;
