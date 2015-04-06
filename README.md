@@ -9,15 +9,19 @@ Work in progress, see you...
 
 
 ```js
-import polyfiller from 'polyfiller';
+import Polyfiller from 'polyfiller';
 
-polyfiller.find([
+const polyfiller = new Polyfiller({
+	path: './my_polyfills'
+});
+
+var list = polyfiller.find([
 	{
 		name: 'Promise',
 		dependencies: true
 	}
-],
-null, (polyfill, name, dependencies) => {
-	console.log(name, polyfill.source, polyfill.config);
-});
+]);
+
+polyfiller.pack(list);
 ```
+

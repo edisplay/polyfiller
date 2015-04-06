@@ -1,25 +1,26 @@
 'use strict';
 
 import tsort from 'tsort';
-import config from './config';
+
+import feature_info from './feature_info';
 import log from '../utils/log';
 
 /**
- * A list of requested features
+ * An ordered list of requested features
  *
- * @param {string} directory
  * @param {Array} files
  * @returns {Array}
  */
-export default (directory, files) => {
-    var graph = tsort();
+export default (features) => {
+    let graph = tsort();
 
-    files.forEach((file) => {
-        var dependencies = [];
+    features.forEach((file) => {
+        let dependencies = [];
 
         if (file.dependencies) {
-            var feature = config(directory, file.name);
-            dependencies = feature.dependencies;
+            let polyfill = feature_info(file.name);
+
+            dependencies = polyfill.dependencies;
         }
 
         graph.add(file.name, ...dependencies);

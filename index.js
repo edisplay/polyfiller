@@ -2,26 +2,27 @@
 
 import fs from 'fs';
 
-import find from './trunk/find';
-import list from './trunk/list';
-import extend from './utils/extend';
+import find_features from './trunk/find_features';
+import wrapper from './trunk/wrapper';
+import env from './utils/env';
 
-export default {
+/** @exports Polyfiller */
+export default class Polyfiller {
+    constructor (options) {
+        env.set(options);
+    }
+
     /**
      * Returns a bundle of polyfills as an array of object.
      * The array structure is [ { string: file, object: info } ].
      *
      * @param {Array} features
-     * @param {Object} [options]
      * @param {Function} [callback]
      * @returns {Array}
      */
-    find (features, options, callback) {
-        var config = extend({ path: 'db' }, options);
-
-        return find(config.path,
-            list(config.path, features), callback);
-    },
+    find () {
+        return find_features(...arguments);
+    }
 
     /**
      * Return a list of all the polyfills as an array of strings.
@@ -32,4 +33,18 @@ export default {
     list () {
         return fs.readdirSync('db');
     }
-};
+
+    /**
+     * Packs a list of polyfills into one string.
+     *
+     * @returns {string}
+     */
+    pack (array) {
+        let result = '';
+
+        array.forEach((feature) =>
+            result += feature.source);
+
+        return wrapper(result);
+    }
+}

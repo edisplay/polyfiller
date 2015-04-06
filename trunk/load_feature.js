@@ -1,36 +1,34 @@
 'use strict';
 
 import fs from 'fs';
-import path from 'path';
-
 import resolve from 'resolve';
-import config from './config';
+
+import resolve_path from './resolve_path';
 import log from '../utils/log';
 
 /**
  * Returns a feature file
  *
- * @param {string} directory
+ * @param {string} feature
  * @param {string} name
  * @return {string}
  */
-export default (directory, name) => {
+export default (feature, name) => {
     var file = null;
 
     try {
         try {
-            file = config(directory, name);
-            file = resolve.sync(file.name);
+            file = resolve.sync(name);
         }
         catch (error) { }
 
         if (!file) {
-            file = path.resolve(directory, name, 'index.js');
+            file = resolve_path(feature, 'index.js');
         }
 
         return fs.readFileSync(file, 'utf8');
     }
     catch (error) {
-        throw log.fail('Package not found', name);
+        throw log.fail('Package not found', feature);
     }
 }
