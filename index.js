@@ -3,10 +3,11 @@
 import fs from 'fs';
 
 import find_features from './trunk/find_features';
-import wrapper from './trunk/wrapper';
+import features_list from './trunk/features_list';
+import pack_sources from './trunk/pack_sources';
 import env from './utils/env';
 
-/** @exports Polyfiller */
+/** @class Polyfiller */
 export default class Polyfiller {
     constructor (options) {
         env.set(options);
@@ -20,31 +21,26 @@ export default class Polyfiller {
      * @param {Function} [callback]
      * @returns {Array}
      */
-    find () {
-        return find_features(...arguments);
+    find (...rest) {
+        return find_features(...rest);
     }
 
     /**
      * Return a list of all the polyfills as an array of strings.
-     * This list corresponds to directories in the /db directory
      *
      * @returns {Array}
      */
     list () {
-        return fs.readdirSync('db');
+        return features_list();
     }
 
     /**
      * Packs a list of polyfills into one string.
      *
+     * @param {string} file
      * @returns {string}
      */
-    pack (array) {
-        let result = '';
-
-        array.forEach((feature) =>
-            result += feature.source);
-
-        return wrapper(result);
+    pack (features) {
+        return pack_sources(features);
     }
 }

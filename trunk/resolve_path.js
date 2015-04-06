@@ -4,6 +4,7 @@ import path from 'path';
 import fs from 'fs';
 
 import env from '../utils/env';
+import config from '../trunk/config';
 
 /**
  * Resolves a feature path
@@ -13,10 +14,9 @@ import env from '../utils/env';
  * @returns {string}
  */
 export default (feature, file) => {
-    let location = [env.get('path'), 'db'],
-        resolved = null;
+    let resolved = null;
 
-    location.forEach((location) => {
+    config.db.forEach((location) => {
         try {
             fs.statSync(resolved = path.resolve(location, feature, file));
         }

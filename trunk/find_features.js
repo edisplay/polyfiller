@@ -12,9 +12,9 @@ import dependency_list from './dependency_list';
  * @returns {Array}
  */
 export default (features, callback) => {
-    let features = dependency_list(features);
+    let dependencies = dependency_list(features);
 
-    return features.map((name) => {
+    return dependencies.map((name) => {
         let info = feature_info(name),
 
         file = {

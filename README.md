@@ -12,7 +12,8 @@ Work in progress, see you...
 import Polyfiller from 'polyfiller';
 
 const polyfiller = new Polyfiller({
-	path: './my_polyfills'
+	// Have custom polyfills? Add paths to their location here.
+	custom_features: ['./my_polyfills']
 });
 
 var list = polyfiller.find([

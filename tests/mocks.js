@@ -12,5 +12,21 @@ export default {
                 dependencies: true
             }
         ]);
+    },
+
+    'list': function () {
+        return polyfiller.list();
+    },
+
+    'pack': function () {
+        var features = polyfiller.find([
+            {
+                name: 'Promise',
+                dependencies: true
+            }
+        ]);
+
+        return polyfiller.pack(features);
     }
 }
+
