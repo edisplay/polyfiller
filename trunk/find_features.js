@@ -1,7 +1,7 @@
 'use strict';
 
 import feature_info from './feature_info';
-import load_feature from './load_feature';
+import resolve_path from './resolve_path';
 import dependency_list from './dependency_list';
 
 /**
@@ -15,17 +15,15 @@ export default (features, callback) => {
     let dependencies = dependency_list(features);
 
     return dependencies.map((name) => {
-        let info = feature_info(name),
+        let config = feature_info(name),
+            source = resolve_path(`${name}/index.js`),
 
-        file = {
-            source: load_feature(name, info.name),
-            config: info
-        };
+        feature = { config, source: require(source) };
 
         if (callback) {
-            callback(file, name, features);
+            callback(feature, name, features);
         }
 
-        return file;
+        return feature;
     });
 };

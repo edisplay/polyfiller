@@ -14,16 +14,16 @@ import log from '../utils/log';
 export default (features) => {
     let graph = tsort();
 
-    features.forEach((file) => {
+    features.forEach((feature) => {
         let dependencies = [];
 
-        if (file.dependencies) {
-            let polyfill = feature_info(file.name);
+        if (feature.dependencies) {
+            let polyfill = feature_info(feature.name);
 
             dependencies = polyfill.dependencies;
         }
 
-        graph.add(file.name, ...dependencies);
+        graph.add(feature.name, ...dependencies);
     });
 
     try {

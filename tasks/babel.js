@@ -9,13 +9,15 @@ module.exports = function (grunt, options) {
             optional: [
                 'spec.protoToAssign'
             ],
+
+            ignore: ['**/*.json']
         },
 
         build: {
             files: [
                 {
                     expand: true,
-                    src   : ['index.js', '{utils,trunk}/**/*.js' ],
+                    src   : ['index.js', '{db,utils,trunk}/**/*.{js,json}' ],
                     dest  : 'cache',
                 }
             ]

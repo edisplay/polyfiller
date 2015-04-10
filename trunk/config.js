@@ -1,5 +1,6 @@
 'use strict';
 
+import path from 'path';
 import env from '../utils/env';
 
 /**
@@ -7,6 +8,11 @@ import env from '../utils/env';
  *
  * @returns {Object}
  */
+
+
 export default {
-    db: [ ...(env.get('custom_features') || []), 'db' ]
+    db: [
+        ...(env.get('custom_features') || []),
+        path.join(path.dirname(__dirname), 'db')
+    ]
 };

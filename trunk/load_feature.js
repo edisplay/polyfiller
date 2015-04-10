@@ -10,25 +10,22 @@ import log from '../utils/log';
  * Returns a feature file
  *
  * @param {string} feature
- * @param {string} name
  * @return {string}
  */
-export default (feature, name) => {
-    let file = null;
-
+export default (file) => {
     try {
         try {
-            file = resolve.sync(name);
+            file = resolve.sync(file);
         }
         catch (error) { }
 
         if (!file) {
-            file = resolve_path(feature, 'index.js');
+            file = resolve_path(file);
         }
 
         return fs.readFileSync(file, 'utf8');
     }
     catch (error) {
-        throw log.fail('Package not found', feature);
+        throw log.fail('Package not found', file);
     }
 }

@@ -7,8 +7,7 @@ import log from '../utils/log';
 /**
  * Returns a feature info
  *
- * @param {string} location
- * @param {string} file
+ * @param {string} feature
  * @return {Object}
  */
 export default (feature) => {
