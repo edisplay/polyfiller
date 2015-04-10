@@ -8,8 +8,6 @@ import env from '../utils/env';
  *
  * @returns {Object}
  */
-
-
 export default {
     db: [
         ...(env.get('custom_features') || []),
