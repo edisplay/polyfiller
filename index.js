@@ -75,6 +75,6 @@ export default class Polyfiller {
     }
 
     toString () {
-        //return `[Object ${new.target.name}]`;
+        return `[Object ${new.target.name}]`;
     }
 }
