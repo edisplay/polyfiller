@@ -45,17 +45,6 @@
         "whatwg-fetch"         : "^0.7.0"
     },
 
-    "bundleDependencies": [
-        "dom4",
-        "text-encoding",
-        "event-source-polyfill",
-        "es6-collections",
-        "Base64",
-        "raf.js",
-        "setimmediate",
-        "whatwg-fetch"
-    ],
-
     "devDependencies": {
         "grunt"                   : "^0.4.5",
         "grunt-contrib-clean"     : "^0.6.0",
@@ -78,6 +67,17 @@
         "karma-mocha-reporter"    : "^1.0.2",
         "babelify"                : "^5.0.4"
     },
+
+    "bundleDependencies": [
+        "dom4",
+        "text-encoding",
+        "event-source-polyfill",
+        "es6-collections",
+        "Base64",
+        "raf.js",
+        "setimmediate",
+        "whatwg-fetch"
+    ],
 
     "licenses": [
         {
