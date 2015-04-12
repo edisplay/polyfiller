@@ -1,16 +1,16 @@
 'use strict';
 
 import path from 'path';
-import env from '../utils/env';
+import env from '../../utils/env';
 
 /**
- * configuration file
+ * Configuration file
  *
  * @returns {Object}
  */
 export default {
     db: [
         ...(env.get('custom_features') || []),
-        path.join(path.dirname(__dirname), 'db')
+        path.join(__dirname, '../../db')
     ]
 };

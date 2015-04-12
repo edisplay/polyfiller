@@ -3,7 +3,7 @@
 import tsort from 'tsort';
 
 import feature_info from './feature_info';
-import log from '../utils/log';
+import log from '../../utils/log';
 
 /**
  * An ordered list of requested features
@@ -27,7 +27,7 @@ export default (features) => {
     });
 
     try {
-        graph = graph.sort()();
+        graph = graph.sort();
     }
     catch (error) {
         throw log.error('dependency_list', {
@@ -36,3 +36,4 @@ export default (features) => {
 
     return graph.reverse();
 };
+

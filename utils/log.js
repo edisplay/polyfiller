@@ -2,7 +2,6 @@
 
 import winston from 'winston';
 import winston_config from 'winston/lib/winston/config';
-import env from './env';
 
 let logger = new (winston.Logger)({
     transports: [
@@ -26,16 +25,12 @@ let logger = new (winston.Logger)({
                     options.level.toUpperCase())} [${options.message}]\n${text}`;
             }
         })
-        //new (winston.transports.File)({
-        //  level: 'error',
-        //  filename: env.get('logs_file')
-        //})
     ]
 });
 
 logger.on('logging', (transport, level) => {
     if (level == 'error') {
-        process.exit(winston.config.syslog.levels[level]);
+        process.exit(-1);
     }
 });
 

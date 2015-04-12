@@ -1,8 +1,8 @@
 'use strict';
 
 import resolve_path from './resolve_path';
-import extend from '../utils/extend';
-import log from '../utils/log';
+import extend from '../../utils/extend';
+import log from '../../utils/log';
 
 /**
  * Returns a feature info
