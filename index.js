@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import details from './trunk/details/index';
-import options from './trunk/details/options/index';
+import options from './trunk/options/index';
 import log from './utils/log';
 import env from './utils/env';
 
