@@ -10,15 +10,13 @@ import env from '../../utils/env';
  * @returns {Array}
  */
 export default (features) => {
-    return features.filter(feature => {
-        try {
-            let exclude = env.get('exclude');
+    let exclude = env.get('exclude');
 
-            return !Array.includes(exclude, feature);
-        }
-        catch (error) {
-            throw log.error('option.exclude', {
-                text : feature, error });
+    Array.prototype.forEach.call(exclude, (value, index) => {
+        if (features.includes(value)) {
+            features.splice(index, 1);
         }
     });
+
+    return features;
 };
