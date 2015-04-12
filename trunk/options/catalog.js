@@ -8,7 +8,7 @@ import env from '../../utils/env';
  *
  * @returns {Array}
  */
-const catalog =  [
+const catalog = [
     ...Array.from(env.get('catalog')),
     path.join(__dirname, '../../db')
 ];
