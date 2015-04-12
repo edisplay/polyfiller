@@ -10,7 +10,7 @@ import env from '../../utils/env';
  */
 export default {
     db: [
-        ...(env.get('custom_features') || []),
+        ...(env.get('catalog') || []),
         path.join(__dirname, '../../db')
     ]
 };

@@ -13,15 +13,11 @@ import Polyfiller from 'polyfiller';
 
 const polyfiller = new Polyfiller({
 	// Have custom polyfills? Add paths to their location here.
-	custom_features: ['./my_polyfills'],
-	exclude: []
+	catalog: ['./my_polyfills'],
+	exclude: ['setImmediate']
 });
 
-var list = polyfiller.find([
-	{
-		name: 'Promise'
-	}
-]);
+var list = polyfiller.find([ { name: 'Promise' } ]);
 
 polyfiller.pack(list);
 ```
