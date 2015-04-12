@@ -27,10 +27,11 @@ export default (features) => {
     });
 
     try {
-        graph = graph.sort();
+        graph = graph.sort()();
     }
     catch (error) {
-        throw log.fail('Unresolved dependency error', error);
+        throw log.error('dependency_list', {
+            text: 'Unresolved dependency error', error });
     }
 
     return graph.reverse();

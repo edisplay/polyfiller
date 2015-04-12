@@ -15,7 +15,8 @@ export default (features) => {
             result += feature.source);
     }
     catch (error) {
-        log.fail('Failed to pack the source files', error);
+        throw log.error('pack_sources', {
+            text: 'Failed to pack the source files', error });
     }
 
     return wrapper(result);

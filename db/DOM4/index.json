@@ -30,10 +30,6 @@
         }
     ],
 
-    "dependencies": [
-        "Element.prototype.querySelectorAll"
-    ],
-
     "repository": {
         "type": "npm",
         "url" : "https://npmjs.org/package/dom4"

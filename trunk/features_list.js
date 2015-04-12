@@ -19,7 +19,8 @@ export default () => {
         });
     }
     catch (error) {
-        log.fail('Failed to read the configuration file', error);
+        throw log.error('features_list', {
+            text: 'Failed to read the configuration file', error });
     }
 
     return result;

@@ -17,7 +17,8 @@ export default (feature) => {
         config = require(config);
     }
     catch (error) {
-        throw log.fail('File not found', config, error.message);
+        throw log.error('feature_info', {
+            text : 'File not found ' + config, error });
     }
 
     return extend({ dependencies: [] }, config);

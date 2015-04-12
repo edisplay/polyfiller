@@ -26,6 +26,7 @@ export default (file) => {
         return fs.readFileSync(file, 'utf8');
     }
     catch (error) {
-        throw log.fail('Package not found', file);
+        throw log.error('load_feature', {
+            text: 'Package not found ' + file });
     }
 }
