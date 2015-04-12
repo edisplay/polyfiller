@@ -21,7 +21,7 @@ export default class Polyfiller {
      * @returns {Array}
      */
     find (features, callback) {
-        let dependencies = details.dependency_list(features);
+        let dependencies = details.dependencies(features);
             dependencies = options.exclude(dependencies);
 
         return dependencies.map((name) => {

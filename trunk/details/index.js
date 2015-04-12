@@ -2,6 +2,6 @@
 
 import feature_info from './feature_info';
 import resolve_path from './resolve_path';
-import dependency_list from './dependency_list';
+import dependencies from './dependencies';
 
-export default { feature_info, resolve_path, dependency_list }
+export default { feature_info, resolve_path, dependencies }
