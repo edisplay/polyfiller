@@ -14,7 +14,7 @@ export default (features) => {
         try {
             let exclude = env.get('exclude');
 
-            return Array.prototype.indexOf.call(exclude, feature) === -1;
+            return !Array.includes(exclude, feature);
         }
         catch (error) {
             throw log.error('option.exclude', {

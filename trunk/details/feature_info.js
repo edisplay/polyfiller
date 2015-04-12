@@ -1,7 +1,6 @@
 'use strict';
 
 import resolve_path from './resolve_path';
-import extend from '../../utils/extend';
 import log from '../../utils/log';
 
 /**
@@ -21,5 +20,5 @@ export default (feature) => {
             text : 'File not found ' + config, error });
     }
 
-    return extend({ dependencies: [] }, config);
+    return Object.assign({ dependencies: [] }, config);
 }
