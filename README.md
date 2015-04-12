@@ -15,6 +15,8 @@ const polyfiller = new Polyfiller({
 	// Have custom polyfills? Add paths to their location here.
 	catalog: ['./my_polyfills'],
 	exclude: ['setImmediate']
+	verbose: true,
+	wrapper: true
 });
 
 var list = polyfiller.find([ { name: 'Promise' } ]);

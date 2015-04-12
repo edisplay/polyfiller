@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import resolve from 'resolve';
-
 import resolve_path from './resolve_path';
 import log from '../../utils/log';
 

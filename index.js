@@ -2,8 +2,8 @@
 
 import 'babelify/polyfill';
 import fs from 'fs';
-import details from './trunk/details/index';
-import options from './trunk/options/index';
+import details from './trunk/details';
+import options from './trunk/options';
 import log from './utils/log';
 import env from './utils/env';
 
@@ -53,7 +53,7 @@ export default class Polyfiller {
         try {
             let result = [];
 
-            details.config.db.forEach((path) => {
+            options.catalog.forEach((path) => {
                 result.push(...fs.readdirSync(path));
             });
 
@@ -74,7 +74,7 @@ export default class Polyfiller {
      */
     pack (features) {
         let result = features.map(feature => feature.source);
-        return details.wrapper(result.join(''));
+        return options.wrapper(result.join(''));
     }
 
     /** https://github.com/babel/babel/issues/1088 */

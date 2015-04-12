@@ -2,7 +2,7 @@
 
 import path from 'path';
 import fs from 'fs';
-import config from './config';
+import catalog from '../options/catalog';
 import log from '../../utils/log';
 
 /**
@@ -12,7 +12,7 @@ import log from '../../utils/log';
  * @returns {string}
  */
 export default function () {
-    for (let location of config.db) {
+    for (let location of catalog) {
         let file = path.resolve(location, ...arguments);
 
         try {
