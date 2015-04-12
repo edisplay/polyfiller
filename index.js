@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import details from './trunk/details/index';
+import options from './trunk/details/options/index';
 import log from './utils/log';
 import env from './utils/env';
 
@@ -20,6 +21,7 @@ export default class Polyfiller {
      */
     find (features, callback) {
         let dependencies = details.dependency_list(features);
+            dependencies = options.exclude(dependencies);
 
         return dependencies.map((name) => {
             try {
@@ -74,7 +76,8 @@ export default class Polyfiller {
         return details.wrapper(result.join(''));
     }
 
+    /** https://github.com/babel/babel/issues/1088 */
     toString () {
-        return `[Object ${new.target.name}]`;
+        //return `[Object ${new.target.name}]`;
     }
 }

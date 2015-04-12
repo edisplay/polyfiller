@@ -2,7 +2,7 @@
 
 import Polyfiller from '../index';
 
-const polyfiller = new Polyfiller;
+const polyfiller = new Polyfiller({exclude: ['setImmediate']});
 
 export default {
     'find': function () {

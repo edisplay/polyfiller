@@ -15,15 +15,10 @@ export default (features) => {
     let graph = tsort();
 
     features.forEach((feature) => {
-        let dependencies = [];
+        let name = feature.name;
 
-        if (feature.dependencies) {
-            let polyfill = feature_info(feature.name);
-
-            dependencies = polyfill.dependencies;
-        }
-
-        graph.add(feature.name, ...dependencies);
+        graph.add(name, ...feature_info(name)
+            .dependencies);
     });
 
     try {
@@ -36,4 +31,3 @@ export default (features) => {
 
     return graph.reverse();
 };
-
