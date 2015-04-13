@@ -10,7 +10,7 @@ import env from '../../utils/env';
  */
 const catalog = [
     ...Array.from(env.get('catalog')),
-    path.join(__dirname, '../../db')
+    path.join(__dirname, '../catalog')
 ];
 
 export default catalog;
