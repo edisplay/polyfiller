@@ -17,6 +17,11 @@ nconf.use('file', {
 nconf.defaults(options);
 
 export default {
+    /**
+     * Sets the specified values
+     *
+     * @param {Object} values
+     */
     set (values) {
         let data = mixin(options, values);
 
@@ -27,6 +32,11 @@ export default {
         nconf.save();
     },
 
+    /**
+     * Gets the specified values
+     *
+     * @param {string} option
+     */
     get (option) {
         return nconf.get(option);
     }
