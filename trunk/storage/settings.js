@@ -17,8 +17,8 @@ nconf.use('file', {
 nconf.defaults(options);
 
 export default {
-    set (value) {
-        let data = mixin(options, value);
+    set (values) {
+        let data = mixin(options, values);
 
         for (let [key, value] of entries(data)) {
             nconf.set(key, value);
