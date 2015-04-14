@@ -21,7 +21,7 @@ export default {
         let data = mixin(options, value);
 
         for (let [key, value] of entries(data)) {
-            nconf.set('options', value);
+            nconf.set(key, value);
         }
 
         nconf.save();
