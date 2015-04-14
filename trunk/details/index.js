@@ -1,7 +1,6 @@
 'use strict';
 
-import feature_info from './feature_info';
-import resolve_path from './resolve_path';
-import dependencies from './dependencies';
+import actual_list from './actual_list';
+import feature_bundle from './feature_bundle';
 
-export default { feature_info, resolve_path, dependencies }
+export default { actual_list, feature_bundle };

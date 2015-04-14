@@ -21,14 +21,11 @@ export default class Polyfiller {
      * @returns {Array}
      */
     find (features, callback) {
-        let dependencies = details.dependencies(features);
-            dependencies = options.exclude(dependencies);
+        let dependencies = details.actual_list(features);
 
         return dependencies.map((name) => {
             try {
-                let config  = details.feature_info(name),
-                    source  = details.resolve_path(`${name}/index.js`),
-                    feature = { config, source: require(source) };
+                let feature = details.feature_bundle(name);
 
                 if (callback) {
                     callback(feature, name, features);
