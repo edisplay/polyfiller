@@ -1,16 +1,10 @@
 'use strict';
 
-import path from 'path';
-import env from '../../utils/env';
+import storage from '../storage/settings';
 
 /**
  * Working catalog
  *
  * @returns {Array}
  */
-const catalog = [
-    ...Array.from(env.get('catalog')),
-    path.join(__dirname, '../catalog')
-];
-
-export default catalog;
+export default storage.get('catalog');

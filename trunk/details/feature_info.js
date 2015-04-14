@@ -17,7 +17,7 @@ export default (feature) => {
     }
     catch (error) {
         throw log.error('feature_info', {
-            text : 'File not found ' + config, error });
+            text : `Requested feature <${feature}> not found in the catalog`, error });
     }
 
     return Object.assign({ dependencies: [] }, config);

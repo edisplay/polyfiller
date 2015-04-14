@@ -1,22 +1,16 @@
 'use strict';
 
 import log from '../../utils/log';
-import env from '../../utils/env';
+import storage from '../storage/settings';
 
 /**
  * Excludes specified features from the dependency list
  *
- * @param {Array} files
+ * @param {Array} features
  * @returns {Array}
  */
 export default (features) => {
-    let exclude = env.get('exclude');
-
-    Array.prototype.forEach.call(exclude, (value, index) => {
-        if (features.includes(value)) {
-            features.splice(index, 1);
-        }
+    return features.filter((value, index) => {
+        return !storage.get('exclude').includes(value);
     });
-
-    return features;
 };

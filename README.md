@@ -9,11 +9,12 @@ Work in progress, see you...
 
 
 ```js
+import path from 'path';
 import Polyfiller from 'polyfiller';
 
 const polyfiller = new Polyfiller({
 	// Have custom polyfills? Add paths to their location here.
-	catalog: ['./my_polyfills'],
+	catalog: [path.resolve(__dirname, '../my/catalog')],
 	exclude: ['setImmediate']
 	verbose: true,
 	wrapper: true

@@ -1,7 +1,6 @@
 'use strict';
 
 import tsort from 'tsort';
-
 import feature_info from './feature_info';
 import log from '../../utils/log';
 

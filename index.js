@@ -2,15 +2,15 @@
 
 import 'babelify/polyfill';
 import fs from 'fs';
-import details from './trunk/details';
 import options from './trunk/options';
+import details from './trunk/details';
+import storage from './trunk/storage/settings';
 import log from './utils/log';
-import env from './utils/env';
 
 /** @class Polyfiller */
 export default class Polyfiller {
     constructor (options) {
-        env.set(options);
+        storage.set(options);
     }
 
     /**
