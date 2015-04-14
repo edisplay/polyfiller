@@ -1,8 +1,22 @@
 'use strict';
 
 import dependencies from './dependencies';
-import exclude from '../options/exclude';
+import options from '../options';
+import storage from '../storage/settings';
+import entries from '../../tools/entries';
+import log from '../../utils/log';
 
 export default (features) => {
-    return exclude(dependencies(features));
+    let files = {
+        included: options.exclude(dependencies(features)),
+        excluded: storage.get('exclude')
+    }
+
+    if (options.verbose) {
+        for (let [key, value] of entries(files)) {
+            log.info('%s files:\n — %s\n', key, value.join('\n — '));
+        }
+    }
+
+    return files.included;
 }

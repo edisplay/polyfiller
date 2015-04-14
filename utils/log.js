@@ -7,22 +7,27 @@ let logger = new (winston.Logger)({
     transports: [
         new (winston.transports.Console)({
             formatter (options) {
-                let meta = options.meta,
-                    text = '';
+                let prefix = winston_config.colorize(options.level, '>> ');
 
-                if (meta.text) {
-                    text = `  - ${meta.text}\n`;
-                }
+                if (options.level == 'error') {
+                    let meta = options.meta,
+                        text = '';
 
-                try {
-                    if (meta.error) {
-                        text += `    \n${meta.error.stack}`;
+                    if (meta.text) {
+                        text = `  - ${meta.text}\n`;
                     }
-                }
-                catch (error) {}
 
-                return `${winston_config.colorize(options.level,
-                    options.level.toUpperCase())} [${options.message}]\n${text}`;
+                    try {
+                        if (meta.error) {
+                            text += `    \n${meta.error.stack}`;
+                        }
+                    }
+                    catch (error) {}
+
+                    return prefix + `[${options.message}]\n${text}`;
+                }
+
+                return prefix + options.message;
             }
         })
     ]

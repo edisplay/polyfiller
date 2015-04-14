@@ -7,6 +7,7 @@ import entries from '../../tools/entries';
 
 let options = {
     catalog: [ path.join(__dirname, '../catalog') ],
+    verbose: false,
     exclude: [ ]
 };
 

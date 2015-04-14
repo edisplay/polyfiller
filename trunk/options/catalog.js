@@ -2,9 +2,5 @@
 
 import storage from '../storage/settings';
 
-/**
- * Working catalog
- *
- * @returns {Array}
- */
+/** @exports storage.catalog */
 export default storage.get('catalog');
