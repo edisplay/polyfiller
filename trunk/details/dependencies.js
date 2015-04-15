@@ -18,7 +18,7 @@ export default (features) => {
 
         if (!name) {
             throw log.error('dependencies', {
-                text: 'Could not found a property name for requested feature' });
+                text: 'Could not find a property name for requested feature' });
         }
 
         graph.add(name, ...feature_info(name)
