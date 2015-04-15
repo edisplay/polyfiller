@@ -33,7 +33,7 @@ export default class Polyfiller {
                 return feature;
             }
             catch (error) {
-                throw log.error('::list', {
+                throw log.error('::find', {
                     text: 'Could not find the specified features', error
                 });
             }
@@ -78,3 +78,7 @@ export default class Polyfiller {
         //return `[Object ${new.target.name}]`;
     }
 }
+
+var a = [];
+
+console.log({ a }); // ReferenceError: list is not defined
