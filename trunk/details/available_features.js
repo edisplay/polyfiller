@@ -4,12 +4,12 @@ import fs from 'fs';
 import catalog from '../options/catalog';
 import log from '../../utils/log';
 
-export default function () {
-    let result = [];
+export default () => {
+    let features = [];
 
     for (let path of catalog) {
         try {
-            result.push(...fs.readdirSync(path));
+            features.push(...fs.readdirSync(path));
         }
         catch (error) {
             throw log.error('::list', {
@@ -18,5 +18,5 @@ export default function () {
         }
     }
 
-    return result;
+    return features;
 }
