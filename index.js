@@ -1,7 +1,6 @@
 'use strict';
 
 import 'babelify/polyfill';
-import fs from 'fs';
 import options from './trunk/options';
 import details from './trunk/details';
 import storage from './trunk/storage/settings';
@@ -21,7 +20,7 @@ export default class Polyfiller {
      * @returns {Array}
      */
     find (features, callback) {
-        let list = details.actual_list(features);
+        let list = details.requested_features(features);
 
         return list.map((name) => {
             try {
@@ -48,17 +47,17 @@ export default class Polyfiller {
      */
     list () {
         try {
-            let result = [];
+            let list = details.available_features();
 
-            options.catalog.forEach((path) => {
-                result.push(...fs.readdirSync(path));
-            });
+            if (options.verbose) {
+                log.info('Available features', { list });
+            }
 
-            return result;
+            return list;
         }
         catch (error) {
             throw log.error('::list', {
-                text: 'Failed to read the configuration file', error
+                text: 'Failed to get a list of the features', error
             });
         }
     }

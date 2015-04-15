@@ -7,14 +7,22 @@ import entries from '../../tools/entries';
 import log from '../../utils/log';
 
 export default (features) => {
-    let files = {
-        included: options.exclude(dependencies(features)),
+    if (!Array.isArray(features)) {
+        log.warn('You should specify the requested features\n');
+
+        return [];
+    }
+
+    let list = dependencies(features),
+
+    files = {
+        included: options.exclude(list),
         excluded: storage.get('exclude')
     }
 
     if (options.verbose) {
-        for (let [key, value] of entries(files)) {
-            log.info('%s files:\n — %s\n', key, value.join('\n — '));
+        for (let [title, list] of entries(files)) {
+            log.info(title + ' files', { list });
         }
     }
 

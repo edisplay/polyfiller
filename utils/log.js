@@ -2,32 +2,39 @@
 
 import winston from 'winston';
 import winston_config from 'winston/lib/winston/config';
+import format_list from './format_list';
 
 let logger = new (winston.Logger)({
     transports: [
         new (winston.transports.Console)({
             formatter (options) {
-                let prefix = winston_config.colorize(options.level, '>> ');
+                let prefix = winston_config.colorize(options.level, '>> '),
+                    meta = options.meta;
 
                 if (options.level == 'error') {
-                    let meta = options.meta,
-                        text = '';
+                    let message = '';
 
                     if (meta.text) {
-                        text = `  - ${meta.text}\n`;
+                        message = `  - ${meta.text}\n`;
                     }
 
                     try {
                         if (meta.error) {
-                            text += `    \n${meta.error.stack}`;
+                            message += `    \n${meta.error.stack}`;
                         }
                     }
                     catch (error) {}
 
-                    return prefix + `[${options.message}]\n${text}`;
+                    return prefix + `[${options.message}]\n${message}`;
                 }
 
-                return prefix + options.message;
+                let message = prefix + options.message;
+
+                if (meta.list) {
+                    message = format_list(message, meta.list);
+                }
+
+                return message;
             }
         })
     ]

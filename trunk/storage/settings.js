@@ -24,10 +24,12 @@ export default {
      * @param {Object} values
      */
     set (values) {
-        let data = mixin(options, values);
+        if (values) {
+            let data = mixin(options, values);
 
-        for (let [key, value] of entries(data)) {
-            nconf.set(key, value);
+            for (let [key, value] of entries(data)) {
+                nconf.set(key, value);
+            }
         }
 
         nconf.save();

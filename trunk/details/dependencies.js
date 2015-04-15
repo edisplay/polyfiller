@@ -16,6 +16,11 @@ export default (features) => {
     features.forEach((feature) => {
         let name = feature.name;
 
+        if (!name) {
+            throw log.error('dependencies', {
+                text: 'Could not found a property name  for requested feature' });
+        }
+
         graph.add(name, ...feature_info(name)
             .dependencies);
     });
@@ -24,7 +29,7 @@ export default (features) => {
         graph = graph.sort();
     }
     catch (error) {
-        throw log.error('dependency_list', {
+        throw log.error('dependencies', {
             text: 'Unresolved dependency error', error });
     }
 
