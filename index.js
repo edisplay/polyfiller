@@ -78,7 +78,3 @@ export default class Polyfiller {
         //return `[Object ${new.target.name}]`;
     }
 }
-
-var a = [];
-
-console.log({ a }); // ReferenceError: list is not defined
