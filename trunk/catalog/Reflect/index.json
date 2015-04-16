@@ -1,0 +1,39 @@
+{
+    "name": "Reflect",
+
+    "author": "Tom Van Cutsem <tvcutsem@gmail.com>",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-reflect-object"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Reflect"
+        },
+
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-proxy-object-internal-methods-and-internal-slots"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/harmony-reflect"
+    },
+
+    "licenses": [
+        {
+            "type": "Apache License and the MPL (Mozilla Public License)",
+            "url" : "https://github.com/tvcutsem/harmony-reflect/blob/master/LICENSE"
+        }
+    ]
+}
