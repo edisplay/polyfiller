@@ -4,8 +4,10 @@ import path from 'path';
 import nconf from 'nconf';
 import mixin from '../../tools/mixin';
 import entries from '../../tools/entries';
+import wrapper from '../options/wrapper';
 
 let options = {
+    wrapper,
     catalog: [ path.join(__dirname, '../catalog') ],
     verbose: false,
     exclude: [ ]

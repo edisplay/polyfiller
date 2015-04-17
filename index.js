@@ -69,8 +69,15 @@ export default class Polyfiller {
      * @returns {string}
      */
     pack (features) {
-        let result = features.map(feature => feature.source);
-        return options.wrapper(result.join(''));
+        try {
+            let result = features.map(feature => feature.source);
+            return details.pack_features(result.join(''));
+        }
+        catch (error) {
+            throw log.error('::pack', {
+                text: 'Failed to pack the features', error
+            });
+        }
     }
 
     /** https://github.com/babel/babel/issues/1088 */

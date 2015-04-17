@@ -47,7 +47,7 @@ var polyfiller = new Polyfiller,
 	],
 	function (feature, name) {
 		console.log(name, feature.source, feature.config);
-	})
+	});
 ```
 
 #### list
