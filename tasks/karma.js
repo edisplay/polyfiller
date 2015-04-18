@@ -7,16 +7,11 @@ module.exports = function (grunt, options) {
         //options: {
         //  basePath: path.resolve('./cache'),
         //},
+        //
 
         unit: {
             options: {
                 configFile: 'karma.unit.js'
-            }
-        },
-
-        client: {
-            options: {
-                configFile: 'karma.conf.js'
             }
         }
     };

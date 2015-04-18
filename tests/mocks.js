@@ -9,19 +9,19 @@ export default {
         return polyfiller.find();
     },
 
-    'find (one)' () {
+    'find (npm feature)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([ { name: 'Promise' } ]);
     },
 
-    'find (one locally)' () {
+    'find (local feature)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([ { name: 'URL' } ]);
     },
 
-    'find (multiple)' () {
+    'find (several features)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([
@@ -30,7 +30,7 @@ export default {
         ]);
     },
 
-    'find (mixin)' () {
+    'find (npm + local)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([
@@ -65,7 +65,7 @@ export default {
         return polyfiller.find([ { name: 'Promise' } ]);
     },
 
-    'list (default)' () {
+    'list' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.list();
@@ -105,5 +105,5 @@ export default {
 
         return polyfiller.pack(features);
     }
-}
+};
 

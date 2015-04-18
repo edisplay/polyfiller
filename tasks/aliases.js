@@ -9,8 +9,7 @@ module.exports = {
         'babel:build',
         'babel:tests',
         'mock',
-        //'karma:unit',
-        //'karma:client'
+        'karma:client'
     ],
 
     lint: [
