@@ -21,20 +21,11 @@ export default {
         return polyfiller.find([ { name: 'URL' } ]);
     },
 
-    'find (several features)' () {
-        let polyfiller = new Polyfiller;
-
-        return polyfiller.find([
-            { name: 'Promise' },
-            { name: 'EventSource'}
-        ]);
-    },
-
     'find (npm + local)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([
-            { name: 'Promise' },
+            { name: 'EventSource' },
             { name: 'URL'}
         ]);
     },
@@ -58,11 +49,11 @@ export default {
     },
 
     'find (option.verbose)' () {
-        let polyfiller = new Polyfiller({
+            let polyfiller = new Polyfiller({
             verbose: true
         });
 
-        return polyfiller.find([ { name: 'Promise' } ]);
+        return polyfiller.find([ { name: 'EventSource' } ]);
     },
 
     'list' () {
@@ -81,14 +72,6 @@ export default {
         return polyfiller.list();
     },
 
-    'list (option.verbose)' () {
-        let polyfiller = new Polyfiller({
-            verbose: true
-        });
-
-        return polyfiller.list();
-    },
-
     'list (option.exclude)' () {
         let polyfiller = new Polyfiller({
             exclude: [
@@ -101,7 +84,7 @@ export default {
 
     'pack' () {
         let polyfiller = new Polyfiller;
-        let features = polyfiller.find([ { name: 'Promise' } ]);
+        let features = polyfiller.find([ { name: 'EventSource' } ]);
 
         return polyfiller.pack(features);
     }

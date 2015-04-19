@@ -7,32 +7,40 @@ let test = (title, callback) => {
 };
 
 describe('find', () => {
+    let cases = ['find (npm feature)', 'find (option.catalog)'];
+
     test('find (empty)', mock => {
         expect(mock.length)
             .to.equal(0);
     });
 
-    test('find (npm feature)', mock => {
-        expect(mock.length, 'length')
-            .to.equal(1);
+    cases.forEach((name) => {
+        test(name, mock => {
+            let features = ['setImmediate', 'Promise'];
 
-        expect('config' in mock[0], 'config')
-            .to.equal(true);
+            expect(mock.length, 'length')
+                .to.equal(2);
 
-        expect(mock[0].config.name, 'name')
-            .to.equal('Promise');
+            expect('config' in mock[0], 'config')
+                .to.equal(true);
 
-        expect(mock[0].config.dependencies[0], 'dependencies')
-            .to.equal('setImmediate');
+            features.forEach((name, index) => {
+                expect(mock[index].config.name, `name[${index}]`)
+                    .to.equal(name);
 
-        expect('source' in mock[0], 'source')
-            .to.equal(true);
+                expect('source' in mock[index], 'source')
+                    .to.equal(true);
 
-        expect(/Promise/.test(mock[0].source), 'source.length')
-            .to.equal(true);
+                expect(new RegExp(name).test(mock[index].source), 'source.length')
+                    .to.equal(true);
+            });
 
-        expect(/addFromSetImmediateArguments/.test(mock[0].source), 'included feature')
-            .to.equal(true);
+            expect(mock[1].config.dependencies[0], 'dependencies')
+                .to.equal('setImmediate');
+
+            expect(/addFromSetImmediateArguments/.test(mock[0].source), 'included feature')
+                .to.equal(true);
+        });
     });
 
     test('find (local feature)', mock => {
@@ -55,24 +63,13 @@ describe('find', () => {
             .to.equal(true);
     });
 
-    test('find (several features)', mock => {
-        expect(mock.length > 1, 'length')
-            .to.equal(true);
-
-        ['Promise', 'EventSource'].forEach((name, index, list) => {
-            expect(mock[index], 'config/source')
-                .to.have.all.keys(['config', 'source']);
-
-            expect(new RegExp(list.join('|')).test(mock[index].source), 'source.length')
-                .to.equal(true);
-        });
-    });
-
     test('find (npm + local)', mock => {
+        let features = ['EventSource', 'URL'];
+
         expect(mock.length > 1, 'length')
             .to.equal(true);
 
-        ['Promise', 'URL'].forEach((name, index, list) => {
+        features.forEach((name, index, list) => {
             expect(mock[index], 'config/source')
                 .to.have.all.keys(['config', 'source']);
 
@@ -98,46 +95,6 @@ describe('find', () => {
             .to.equal(true);
 
         expect(!/addFromSetImmediateArguments/.test(mock[0].source), 'excluded feature')
-            .to.equal(true);
-    });
-
-    test('find (option.catalog)', mock => {
-        expect(mock.length, 'length')
-            .to.equal(1);
-
-        expect('config' in mock[0], 'config')
-            .to.equal(true);
-
-        expect(mock[0].config.name, 'name')
-            .to.equal('Promise');
-
-        expect(mock[0].config.dependencies[0], 'dependencies')
-            .to.equal('setImmediate');
-
-        expect('source' in mock[0], 'source')
-            .to.equal(true);
-
-        expect(/Promise/.test(mock[0].source), 'source.length')
-            .to.equal(true);
-    });
-
-    test('find (option.verbose)', mock => {
-        expect(mock.length, 'length')
-            .to.equal(1);
-
-        expect('config' in mock[0], 'config')
-            .to.equal(true);
-
-        expect(mock[0].config.name, 'name')
-            .to.equal('Promise');
-
-        expect(mock[0].config.dependencies[0], 'dependencies')
-            .to.equal('setImmediate');
-
-        expect('source' in mock[0], 'source')
-            .to.equal(true);
-
-        expect(/Promise/.test(mock[0].source), 'source.length')
             .to.equal(true);
     });
 });
