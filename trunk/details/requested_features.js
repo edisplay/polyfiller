@@ -9,22 +9,23 @@ import log from '../../utils/log';
 export default (features) => {
     if (!Array.isArray(features)) {
         log.warn('You should specify the requested features\n');
-
-        return [];
     }
+    else {
+        let list = dependencies(features),
 
-    let list = dependencies(features),
-
-    files = {
-        included: options.exclude(list),
-        excluded: storage.get('exclude')
-    }
-
-    if (options.verbose) {
-        for (let [title, list] of entries(files)) {
-            log.info(title + ' files', { list });
+        files = {
+            included: options.exclude(list),
+            excluded: storage.get('exclude')
         }
+
+        if (options.verbose) {
+            for (let [title, file] of entries(files)) {
+                log.info(title + ' files', { file });
+            }
+        }
+
+        return files.included;
     }
 
-    return files.included;
-}
+    return [];
+};
