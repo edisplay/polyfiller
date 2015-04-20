@@ -48,14 +48,6 @@ export default {
         return polyfiller.find([ { name: 'Promise' } ]);
     },
 
-    'find (option.verbose)' () {
-            let polyfiller = new Polyfiller({
-            verbose: true
-        });
-
-        return polyfiller.find([ { name: 'EventSource' } ]);
-    },
-
     'list' () {
         let polyfiller = new Polyfiller;
 

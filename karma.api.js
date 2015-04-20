@@ -14,7 +14,7 @@ module.exports = function (config) {
 
         files: [
             'cache/tests/mocks.js',
-            'cache/tests/client.js'
+            'cache/tests/api.js'
         ],
 
         client: {

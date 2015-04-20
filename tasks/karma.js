@@ -9,9 +9,9 @@ module.exports = function (grunt, options) {
         //},
         //
 
-        unit: {
+        api: {
             options: {
-                configFile: 'karma.unit.js'
+                configFile: 'karma.api.js'
             }
         }
     };

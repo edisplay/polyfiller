@@ -2,7 +2,7 @@
 
 module.exports = function (grunt, options) {
     return {
-        units: {
+        api: {
             options: {
                 process: function (name, source) {
                     return 'function Mock () { return ' + source + '}';

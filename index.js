@@ -1,15 +1,17 @@
 'use strict';
 
 import 'babelify/polyfill';
+import Details from './trunk/details';
 import options from './trunk/options';
-import details from './trunk/details';
-import storage from './trunk/storage/settings';
+import functional from './tools/functional';
 import log from './utils/log';
 
 /** @class Polyfiller */
 export default class Polyfiller {
-    constructor (options) {
-        storage.set(options);
+    constructor () {
+        this.options = functional.mixin(options, ...arguments);
+        //console.log(this.options);
+        this.details = new Details(this.options);
     }
 
     /**
@@ -20,11 +22,11 @@ export default class Polyfiller {
      * @returns {Array}
      */
     find (features, callback) {
-        let list = details.requested_features(features);
+        let list = this.details.requested_features(features);
 
         return list.map((name) => {
             try {
-                let feature = details.feature_bundle(name);
+                let feature = this.details.feature_bundle(name);
 
                 if (callback) {
                     callback(feature, name, features);
@@ -47,9 +49,9 @@ export default class Polyfiller {
      */
     list () {
         try {
-            let list = details.available_features();
+            let list = this.details.available_features();
 
-            if (options.verbose) {
+            if (this.options.verbose) {
                 log.info('Available features', { list });
             }
 
@@ -70,8 +72,7 @@ export default class Polyfiller {
      */
     pack (features) {
         try {
-            let result = features.map(feature => feature.source);
-            return details.pack_features(result.join(''));
+            return this.details.pack_features(features);
         }
         catch (error) {
             throw log.error('::pack', {
@@ -82,6 +83,6 @@ export default class Polyfiller {
 
     /** https://github.com/babel/babel/issues/1088 */
     toString () {
-        //return `[Object ${new.target.name}]`;
+        return '[Object Polyfiller]';
     }
 }

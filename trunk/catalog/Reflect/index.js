@@ -1,5 +1,5 @@
 'use strict';
 
-import load_feature from '../../details/load_feature';
+import Details from '../../details';
 
-export default load_feature('harmony-reflect');
+export default (new Details).load_feature('harmony-reflect');

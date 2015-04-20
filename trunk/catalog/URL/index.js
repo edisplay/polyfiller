@@ -1,6 +1,8 @@
 'use strict';
 
 import path from 'path';
-import load_feature from '../../details/load_feature';
+import Details from '../../details';
 
-export default load_feature(path.join(__dirname, './files/index.js'));
+const location = path.join(__dirname, './files/index.js');
+
+export default (new Details).load_feature(location);

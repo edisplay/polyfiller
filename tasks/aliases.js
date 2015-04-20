@@ -8,8 +8,8 @@ module.exports = {
     test: [
         'babel:build',
         'babel:tests',
-        'mock',
-        'karma:unit'
+        'mock:api',
+        'karma:api'
     ],
 
     lint: [
