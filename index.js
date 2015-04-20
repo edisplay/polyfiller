@@ -9,7 +9,9 @@ import log from './utils/log';
 /** @class Polyfiller */
 export default class Polyfiller {
     constructor () {
-        this.options = functional.options(options, ...arguments);
+        this.options = functional
+            .options(options, ...arguments);
+
         this.details = new Details(this.options);
     }
 
