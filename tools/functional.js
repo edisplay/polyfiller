@@ -25,28 +25,6 @@ export default {
     },
 
     /**
-     * mixin
-     *
-     * @param {Object} to
-     * @param {Object} from
-     * @return {Object}
-     */
-    mixin (to, from) {
-        for (let [key, value] of this.entries(from || {})) {
-            if (value) {
-                if (Array.isArray(value)) {
-                    to[key].push(...value);
-                }
-                else {
-                    to[key] = value;
-                }
-            }
-        }
-
-        return to;
-    },
-
-    /**
      * uniq
      *
      * @param {Array} array
@@ -56,5 +34,33 @@ export default {
         return array.filter((value, index, array) => {
             return array.indexOf(value) === index;
         });
+    },
+
+    /**
+     * options
+     *
+     * @param {Object} to
+     * @param {Object} from
+     * @return {Object}
+     */
+    options (to, from = {}) {
+        let result = {};
+
+        for (let [key, value] of this.entries(to)) {
+            if (key in from) {
+                let current = from[key];
+
+                if (Array.isArray(current)) {
+                    value = this.uniq(value.concat(current));
+                }
+                else {
+                    value = current;
+                }
+            }
+
+            result[key] = value;
+        }
+
+        return result;
     }
 };
