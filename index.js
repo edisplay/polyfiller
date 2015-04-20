@@ -84,6 +84,6 @@ export default class Polyfiller {
 
     /** https://github.com/babel/babel/issues/1088 */
     toString () {
-        return '[Object Polyfiller]';
+        return `[Object ${this.constructor.name}}]`;
     }
 }
