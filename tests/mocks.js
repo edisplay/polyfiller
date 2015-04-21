@@ -6,27 +6,40 @@ import Polyfiller from '../index';
 export default {
     'find (empty)' () {
         let polyfiller = new Polyfiller;
+
         return polyfiller.find();
     },
 
     'find (npm feature)' () {
         let polyfiller = new Polyfiller;
 
-        return polyfiller.find([ { name: 'Promise' } ]);
+        return polyfiller.find([
+            {
+                name: 'Promise'
+            }
+        ]);
     },
 
     'find (local feature)' () {
         let polyfiller = new Polyfiller;
 
-        return polyfiller.find([ { name: 'URL' } ]);
+        return polyfiller.find([
+            {
+                name: 'URL'
+            }
+        ]);
     },
 
     'find (npm + local)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.find([
-            { name: 'EventSource' },
-            { name: 'URL'}
+            {
+                name: 'EventSource'
+            },
+            {
+                name: 'URL'
+            }
         ]);
     },
 
@@ -35,7 +48,11 @@ export default {
             exclude: ['setImmediate'],
         });
 
-        return polyfiller.find([ { name: 'Promise' } ]);
+        return polyfiller.find([
+            {
+                name: 'Promise'
+            }
+        ]);
     },
 
     'find (option.catalog)' () {
@@ -45,10 +62,14 @@ export default {
             ],
         });
 
-        return polyfiller.find([ { name: 'Promise' } ]);
+        return polyfiller.find([
+            {
+                name: 'Promise'
+            }
+        ]);
     },
 
-    'list' () {
+    'list (default)' () {
         let polyfiller = new Polyfiller;
 
         return polyfiller.list();
@@ -67,18 +88,52 @@ export default {
     'list (option.exclude)' () {
         let polyfiller = new Polyfiller({
             exclude: [
-                'setImmediate'
+                'Promise'
             ],
         });
 
         return polyfiller.list();
     },
 
-    'pack' () {
-        let polyfiller = new Polyfiller;
-        let features = polyfiller.find([ { name: 'EventSource' } ]);
+    'pack (empty)' () {
+        let polyfiller = new Polyfiller,
+            features = polyfiller.find([ ]);
+
+        return polyfiller.pack(features);
+    },
+
+    'pack (feature)' () {
+        let polyfiller = new Polyfiller,
+            features = polyfiller.find([
+                {
+                    name: 'EventSource'
+                }
+            ]);
+
+        return polyfiller.pack(features);
+    },
+
+    'pack (default wrapper)' () {
+        let polyfiller = new Polyfiller,
+
+        features = polyfiller.find([{
+            name: 'EventSource'
+        }]);
+
+        return polyfiller.pack(features);
+    },
+
+    'pack (custom wrapper)' () {
+        let polyfiller = new Polyfiller({
+            wrapper: function (source) {
+                return `try { ${source} } catch (error) {}`
+            }
+        }),
+
+        features = polyfiller.find([{
+            name: 'EventSource'
+        }]);
 
         return polyfiller.pack(features);
     }
 };
-

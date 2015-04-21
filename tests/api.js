@@ -6,7 +6,7 @@ let test = (title, callback) => {
     });
 };
 
-describe('find', () => {
+describe('::find', () => {
     let cases = ['find (npm feature)', 'find (option.catalog)'];
 
     test('find (empty)', mock => {
@@ -95,6 +95,47 @@ describe('find', () => {
             .to.equal(true);
 
         expect(!/addFromSetImmediateArguments/.test(mock[0].source), 'excluded feature')
+            .to.equal(true);
+    });
+});
+
+describe('::list', () => {
+    let cases = ['list (default)', 'list (option.catalog)'];
+
+    cases.forEach((name) => {
+        test(name, mock => {
+            expect(mock.length > 1, 'length')
+                .to.equal(true);
+
+            expect(mock.indexOf('Promise') !== -1, 'name')
+                .to.equal(true);
+        });
+    });
+
+    test('list (option.exclude)', mock => {
+        expect(mock.indexOf('Promise') === -1, 'name')
+            .to.equal(true);
+    });
+});
+
+describe('::pack', () => {
+    test('pack (empty)', mock => {
+        expect(mock.length, 'length')
+            .to.equal(0);
+    });
+
+    test('pack (feature)', mock => {
+        expect(/EventSource/.test(mock), 'source')
+            .to.equal(true);
+    });
+
+    test('pack (default wrapper)', mock => {
+        expect(/^;\(function \(\) {.*/.test(mock), 'source')
+            .to.equal(true);
+    });
+
+    test('pack (custom wrapper)', mock => {
+        expect(/^try { [\s\S]* } catch \(error\) {}$/.test(mock), 'source')
             .to.equal(true);
     });
 });

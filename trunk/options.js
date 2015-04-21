@@ -32,6 +32,15 @@ export default {
      * @returns {string}
      */
     wrapper (content) {
-        return `;(function () { ${content}; }.call(self));`;
+        return content &&
+            `;(function () {
+                ${content};
+            }.call(
+                typeof window === 'object' && window ||
+                typeof self   === 'object' && self   ||
+                typeof global === 'object' global    ||
+                {}
+            ));`
+        ;
     }
 }

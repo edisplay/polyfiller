@@ -60,7 +60,7 @@ export default class Polyfiller {
         }
         catch (error) {
             throw log.error('::list', {
-                text: 'Failed to get a list of the features', error
+                text: 'Failed to get a list of requested features', error
             });
         }
     }

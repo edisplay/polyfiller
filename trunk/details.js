@@ -50,23 +50,6 @@ export default class Details {
     }
 
     /**
-     * A list of available features
-     *
-     * @returns {Array}
-     */
-    available_features () {
-        try {
-            return functional.flat_map(this.options.catalog, path =>
-                fs.readdirSync(path));
-        }
-        catch (error) {
-            throw log.error('::list', {
-                text: 'Failed to read requested catalog', error
-            });
-        }
-    }
-
-    /**
      * Resolves a feature path
      *
      * @param {...string} file path
@@ -158,6 +141,23 @@ export default class Details {
     }
 
     /**
+     * A list of available features
+     *
+     * @returns {Array}
+     */
+    available_features () {
+        let features = functional.flat_map(this.options.catalog, path => {
+            return fs.readdirSync(path);
+        });
+
+        features = features.map(name => {
+            return { name };
+        });
+
+        return this.requested_features(features);
+    }
+
+    /**
      * A list of requested features
      *
      * @param {Array} features
@@ -194,9 +194,5 @@ export default class Details {
             config: this.feature_info(name),
             source: require(source)
         };
-    }
-
-    verify_path () {
-        // ...
     }
 }
