@@ -1,8 +1,13 @@
 'use strict';
 
+import chai from 'chai';
+import Mock from './mocks';
+
+let expect = chai.expect;
+
 let test = (title, callback) => {
     it(title, () => {
-        callback(Mock()[title]);
+        callback(Mock[title]());
     });
 };
 
@@ -38,8 +43,8 @@ describe('::find', () => {
             expect(mock[1].config.dependencies[0], 'dependencies')
                 .to.equal('setImmediate');
 
-            expect(/addFromSetImmediateArguments/.test(mock[0].source), 'included feature')
-                .to.equal(true);
+            expect(/addFromSetImmediateArguments/.test(mock[0].source),
+                'included feature').to.equal(true);
         });
     });
 
@@ -73,8 +78,8 @@ describe('::find', () => {
             expect(mock[index], 'config/source')
                 .to.have.all.keys(['config', 'source']);
 
-            expect(new RegExp(list.join('|')).test(mock[index].source), 'source.length')
-                .to.equal(true);
+            expect(new RegExp(list.join('|')).test(mock[index].source),
+                'source.length').to.equal(true);
         });
     });
 
@@ -94,8 +99,8 @@ describe('::find', () => {
         expect(/Promise/.test(mock[0].source), 'source.length')
             .to.equal(true);
 
-        expect(!/addFromSetImmediateArguments/.test(mock[0].source), 'excluded feature')
-            .to.equal(true);
+        expect(!/addFromSetImmediateArguments/.test(mock[0].source),
+            'excluded feature').to.equal(true);
     });
 });
 

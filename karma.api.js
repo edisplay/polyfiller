@@ -4,13 +4,9 @@ module.exports = function (config) {
     config.set({
         basePath: './',
 
-        browsers: [ 'PhantomJS' ],
-        frameworks: [ 'mocha-debug', 'mocha', 'chai' ],
-        reporters : [ 'mocha', 'progress', 'coverage' ],
-
-        preprocessors: {
-            'cache/tests/**/*.js': [ 'babel' ]
-        },
+        browsers  : ['PhantomJS'],
+        frameworks: ['mocha-debug', 'mocha', 'chai'],
+        reporters : ['mocha', 'progress'],
 
         files: [
             'cache/tests/mocks.js',
@@ -22,12 +18,6 @@ module.exports = function (config) {
                 reporter: 'html',
                 ui      : 'bdd'
             }
-        },
-
-        // https://github.com/karma-runner/karma-coverage
-        coverageReporter: {
-            type: 'html',
-            dir : 'cache/coverage/'
         },
 
         logLevel : config.LOG_INFO,

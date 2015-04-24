@@ -46,27 +46,29 @@
         "whatwg-fetch"         : "^0.7.0"
     },
 
-    "devDependencies": {
-        "grunt"                   : "^0.4.5",
-        "grunt-contrib-clean"     : "^0.6.0",
-        "grunt-dev-update"        : "^1.0.2",
-        "grunt-babel"             : "^5.0.0",
-        "load-grunt-config"       : "^0.16.0",
-        "jit-grunt"               : "^0.9.0",
-        "time-grunt"              : "^1.0.0",
-
+    "karma": {
         "grunt-karma"             : "^0.10.1",
-        "grunt-mock"              : "^0.0.2",
         "karma-mocha"             : "^0.1.10",
-        "karma-fixture"           : "^0.2.3",
         "karma-coverage"          : "^0.2.7",
         "karma-chai-plugins"      : "^0.4.0",
         "karma-phantomjs-launcher": "^0.1.4",
-        "karma-nodewebkit-launcher": "^0.0.12",
         "karma-mocha-debug"       : "^0.1.2",
         "karma-browserify"        : "^4.1.2",
-        "karma-mocha-reporter"    : "^1.0.2",
-        "babelify"                : "^5.0.4"
+        "karma-mocha-reporter"    : "^1.0.2"
+    },
+
+    "devDependencies": {
+        "grunt"              : "^0.4.5",
+        "grunt-contrib-clean": "^0.6.0",
+        "grunt-mocha-test"   : "^0.12.7",
+        "grunt-dev-update"   : "^1.0.2",
+        "grunt-babel"        : "^5.0.0",
+        "grunt-mock"         : "^0.0.3",
+        "load-grunt-config"  : "^0.16.0",
+        "jit-grunt"          : "^0.9.0",
+        "time-grunt"         : "^1.0.0",
+        "babelify"           : "^5.0.4",
+        "chai"               : "^2.2.0"
     },
 
     "bundleDependencies": [

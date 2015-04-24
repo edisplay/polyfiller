@@ -6,10 +6,11 @@ module.exports = {
     ],
 
     test: [
-        'babel:build',
+        'build',
         'babel:tests',
         'mock:api',
-        'karma:api'
+        'mochaTest',
+        //'karma:api'
     ],
 
     lint: [
