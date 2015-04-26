@@ -6,20 +6,24 @@ import Mock from './mocks';
 let expect = chai.expect;
 
 let test = (title, callback) => {
-    it(title, () => {
-        callback(Mock[title]());
-    });
+    it(title, ( ) =>
+        callback(Mock[title]()))
+    ;
 };
 
-describe('::find', () => {
-    let cases = ['find (npm feature)', 'find (option.catalog)'];
+describe('::find', ( ) => {
+    let cases = [
+        'find (npm feature)',
+        'find (option.catalog)',
+        'find (advanced format)'
+    ];
 
     test('find (empty)', mock => {
         expect(mock.length)
             .to.equal(0);
     });
 
-    cases.forEach((name) => {
+    cases.forEach(name => {
         test(name, mock => {
             let features = ['setImmediate', 'Promise'];
 
@@ -68,18 +72,48 @@ describe('::find', () => {
             .to.equal(true);
     });
 
-    test('find (npm + local)', mock => {
-        let features = ['EventSource', 'URL'];
+    test('find (callback)', mock => {
+        let features = [ 'URL', 'EventSource' ];
 
-        expect(mock.length > 1, 'length')
-            .to.equal(true);
+        expect(mock.length, 'length')
+            .to.equal(2);
 
-        features.forEach((name, index, list) => {
-            expect(mock[index], 'config/source')
-                .to.have.all.keys(['config', 'source']);
+        features.forEach((name, index) => {
+            let callback = mock[index];
 
-            expect(new RegExp(list.join('|')).test(mock[index].source),
-                'source.length').to.equal(true);
+            expect(callback.name, 'name')
+                .to.equal(name);
+
+            expect(callback.bundle.source.search(name) !== -1, 'source')
+                .to.equal(true);
+
+            expect(callback.bundle.config.name == name, 'config')
+                .to.equal(true);
+
+            expect(callback.features.length, 'features')
+                .to.equal(2);
+        });
+    });
+
+    cases = [
+        'find (npm + local)',
+        'find (mixed format)'
+    ];
+
+    cases.forEach(name => {
+        test(name, mock => {
+            let features = ['EventSource', 'URL'];
+
+            expect(mock.length > 1, 'length')
+                .to.equal(true);
+
+            features.forEach((name, index, list) => {
+                expect(mock[index], 'config/source')
+                    .to.have.all.keys(['config', 'source']);
+
+                expect(new RegExp(list.join('|')).test(mock[index].source),
+                    'source.length').to.equal(true);
+            });
         });
     });
 

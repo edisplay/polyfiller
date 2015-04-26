@@ -3,6 +3,7 @@
 import 'babelify/polyfill';
 import Details from './trunk/details';
 import options from './trunk/options';
+import utils from './trunk/utils';
 import functional from './tools/functional';
 import log from './utils/log';
 
@@ -13,6 +14,9 @@ export default class Polyfiller {
             .options(options, ...arguments);
 
         this.details = new Details(this.options);
+
+        /** Provides a set of useful utilities */
+        this.utils = utils;
     }
 
     /**
@@ -30,7 +34,7 @@ export default class Polyfiller {
                 let feature = this.details.feature_bundle(name);
 
                 if (callback) {
-                    callback(feature, name, features);
+                    callback(feature, name, this.utils.list(features));
                 }
 
                 return feature;

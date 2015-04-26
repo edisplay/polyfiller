@@ -2,7 +2,7 @@
 
 module.exports = function (grunt, options) {
     return {
-        tests: {
+        api: {
             options: {
                 timeout    : 3000,
                 ignoreLeaks: false,

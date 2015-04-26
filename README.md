@@ -24,7 +24,7 @@ var Polyfiller = require('polyfiller');
 var Polyfiller = require('polyfiller');
 
 var polyfiller = new Polyfiller,
-	list = polyfiller.find([ { name: 'Promise' } ]),
+	list = polyfiller.find([ 'Promise' ]),
 	code = polyfiller.pack(list);
 ```
 
@@ -37,7 +37,20 @@ Type: `Function (feature, name)` <br />
 Returns: `Array`
 
 
-Returns a bundle of polyfills as an array of object
+Returns an unordered bundle of polyfills as an array of objects
+
+```js
+var polyfiller = new Polyfiller,
+	list = polyfiller.find(['Promise'], function (feature, name) {
+		console.log(name, feature.source, feature.config);
+	});
+
+	list[0].source; // source code
+	list[0].config.name; // feature name
+```
+
+
+Also available the second format (it may be useful in the future versions):
 
 ```js
 var polyfiller = new Polyfiller,

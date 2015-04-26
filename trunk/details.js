@@ -6,6 +6,7 @@ import path from 'path';
 import tsort from 'tsort';
 import resolve from 'resolve';
 
+import utils from './utils';
 import options from './options';
 import functional from './../tools/functional';
 import log from './../utils/log';
@@ -150,10 +151,6 @@ export default class Details {
             return fs.readdirSync(path);
         });
 
-        features = features.map(name => {
-            return { name };
-        });
-
         return this.requested_features(features);
     }
 
@@ -168,9 +165,10 @@ export default class Details {
             log.warn('You should specify the requested features\n');
         }
         else {
-            let list = this.dependencies(features),
+            let list = utils.list(features);
+                list = this.dependencies(list);
 
-            files = {
+            let files = {
                 included: this.exclude_features(list, this.options.exclude),
                 excluded: this.options.exclude
             }
