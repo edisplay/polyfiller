@@ -64,7 +64,12 @@
         "karma-mocha"             : "^0.1.10",
         "karma-mocha-debug"       : "^0.1.2",
         "karma-mocha-reporter"    : "^1.0.2",
+        "karma-sauce-launcher"    : "^0.2.10",
         "karma-phantomjs-launcher": "^0.1.4"
+    },
+
+    "optionalDependencies": {
+        "travis-encrypt": "^0.1.4"
     },
 
     "bundleDependencies": [

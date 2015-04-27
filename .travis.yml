@@ -1,0 +1,17 @@
+env:
+  global:
+  - SAUCE_USERNAME: monolithed
+  - secure: "eJw8GHuzq38+VF+VcmRBP1g4FedvnvHYLPzLdf43iZKdgyY+Sxxm2rExcSbLz26LGFOzGav7+gNMImyrBZM0b+kV7RzA3Ua8fgOc0awealVeY8TllPnDkBWTJ+6JFjQRKVlb2G7cmppLeXOQBEsTisnJBBV1gqiIMcyJiZ11ROU="
+
+language: node_js
+
+node_js:
+  - "io.js"
+  - "0.12"
+  - '0.10'
+
+install:
+    - npm install
+
+before_script:
+  - npm runt test
