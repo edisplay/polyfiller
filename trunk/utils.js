@@ -4,6 +4,7 @@ export default {
     /**
      * Provides a corrected list of features
      *
+     * @param {Array} features
      * @returns {Array}
      */
     list (features) {
