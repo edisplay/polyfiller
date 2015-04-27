@@ -46,17 +46,6 @@
         "whatwg-fetch"         : "^0.7.0"
     },
 
-    "karma": {
-        "grunt-karma"             : "^0.10.1",
-        "karma-mocha"             : "^0.1.10",
-        "karma-coverage"          : "^0.2.7",
-        "karma-chai-plugins"      : "^0.4.0",
-        "karma-phantomjs-launcher": "^0.1.4",
-        "karma-mocha-debug"       : "^0.1.2",
-        "karma-browserify"        : "^4.1.2",
-        "karma-mocha-reporter"    : "^1.0.2"
-    },
-
     "devDependencies": {
         "grunt"                   : "^0.4.5",
         "grunt-contrib-clean"     : "^0.6.0",
