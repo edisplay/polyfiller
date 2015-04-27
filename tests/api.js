@@ -5,6 +5,8 @@ import Mock from './mocks';
 
 let expect = chai.expect;
 
+/** Functional tests */
+
 let test = (title, callback) => {
     it(title, ( ) =>
         callback(Mock[title]()))
@@ -163,7 +165,7 @@ describe('::pack', () => {
             .to.equal(0);
     });
 
-    test('pack (feature)', mock => {
+    test('pack (npm feature)', mock => {
         expect(/EventSource/.test(mock), 'source')
             .to.equal(true);
     });

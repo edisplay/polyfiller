@@ -38,7 +38,7 @@ export default {
             }.call(
                 typeof window === 'object' && window ||
                 typeof self   === 'object' && self   ||
-                typeof global === 'object' global    ||
+                typeof global === 'object' && global ||
                 {}
             ));`
         ;

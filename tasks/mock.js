@@ -5,12 +5,12 @@ module.exports = function (grunt, options) {
         api: {
             options: {
                 process: function (name, source) {
-                    return 'function Mock () { return ' + source + '}';
+                    return 'window.Mock = ' + source;
                 }
             },
 
             files: {
-                'cache/tests/mocks.js': ['cache/tests/mocks.js']
+                'cache/tests/source.js': [ 'cache/tests/mocks.js' ]
             }
         }
     };

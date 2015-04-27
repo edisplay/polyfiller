@@ -102,7 +102,7 @@ export default {
         return polyfiller.pack(features);
     },
 
-    'pack (feature)' () {
+    'pack (npm feature)' () {
         let polyfiller = new Polyfiller,
             features = polyfiller.find([ 'EventSource' ]);
 

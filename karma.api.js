@@ -6,11 +6,11 @@ module.exports = function (config) {
 
         browsers  : ['PhantomJS'],
         frameworks: ['mocha-debug', 'mocha', 'chai'],
-        reporters : ['mocha', 'progress'],
+        reporters : ['mocha'],
 
         files: [
-            'cache/tests/mocks.js',
-            'cache/tests/api.js'
+            'cache/tests/source.js',
+            'cache/tests/client.js'
         ],
 
         client: {

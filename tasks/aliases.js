@@ -8,9 +8,9 @@ module.exports = {
     test: [
         'build',
         'babel:tests',
-        //'mock:api',
+        'mock:api',
         'mochaTest:api',
-        //'karma:api'
+        'karma:api'
     ],
 
     lint: [
