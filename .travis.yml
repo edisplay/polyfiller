@@ -13,5 +13,5 @@ node_js:
 install:
     - npm install
 
-before_script:
-  - npm run test
+notifications:
+  email: false
