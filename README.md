@@ -1,5 +1,12 @@
 # polyfiller
 
+[![npm version badge](https://img.shields.io/npm/v/polyfiller.svg)](polyfiller)
+[![Build Status](https://travis-ci.org/monolithed/polyfiller.png)](https://travis-ci.org/monolithed/polyfiller)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
+
+
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/monolithed.svg)](https://saucelabs.com/u/monolithed)
+
 > A polyfill combinator
 
 ## Getting Started
