@@ -92,6 +92,6 @@ module.exports = {
         base       : 'SauceLabs',
         browserName: 'android',
         platform   : 'Linux',
-        version    : '5.12'
+        version    : '5.1'
     }
 };
