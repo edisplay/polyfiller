@@ -9,7 +9,8 @@ module.exports = function (config) {
 
         sauceLabs: {
             testName: 'Polyfiller tests',
-            public: "public"
+            username:  process.env.SAUCE_USERNAME,
+            accessKey: process.env.SAUCE_ACCESS_KEY,
         },
 
         customLaunchers: clients
