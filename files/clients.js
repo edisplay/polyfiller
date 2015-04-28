@@ -8,7 +8,7 @@ module.exports = {
         base       : 'SauceLabs',
         browserName: 'chrome',
         platform   : 'Windows 8.1',
-        version    : '42.0'
+        version    : '41.0'
     },
 
     chrome_osx: {
