@@ -4,7 +4,7 @@ module.exports = function (grunt, options) {
     return {
         options: {
             basePath: '../',
-            frameworks: ['mocha-debug', 'mocha', 'chai'],
+            frameworks: ['mocha', 'chai'],
 
             files: [
                 'cache/tests/source.js',
@@ -12,6 +12,8 @@ module.exports = function (grunt, options) {
             ],
 
             client: {
+                useFrame: true,
+
                 mocha: {
                     reporter: 'html',
                     ui      : 'bdd'

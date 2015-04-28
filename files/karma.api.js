@@ -3,6 +3,6 @@
 module.exports = function (config) {
     config.set({
         browsers  : ['PhantomJS'],
-        reporters : ['mocha'],
+        reporters : ['mocha', 'progress'],
     });
 };
