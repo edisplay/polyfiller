@@ -1,6 +1,6 @@
 # polyfiller
 
-[![npm version badge](https://img.shields.io/npm/v/polyfiller.svg)](polyfiller)
+[![npm version badge](https://img.shields.io/npm/v/polyfiller.svg)](https://www.npmjs.org/package/polyfiller)
 [![Build Status](https://travis-ci.org/monolithed/polyfiller.png)](https://travis-ci.org/monolithed/polyfiller)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 

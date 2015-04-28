@@ -9,7 +9,7 @@ module.exports = function (config) {
 
         sauceLabs: {
             testName: 'Polyfiller tests',
-            "public": "public"
+            public: "public"
         },
 
         customLaunchers: clients
