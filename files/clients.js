@@ -3,77 +3,77 @@
 /** @see https://saucelabs.com/platforms */
 
 module.exports = {
-    sl_win_chrome: {
+    chrome_win: {
         base       : 'SauceLabs',
         browserName: 'chrome',
-        platform   : 'Windows 7',
+        platform   : 'Windows 8.1',
+        version    : '42'
+    },
+
+    chrome_osx: {
+        base       : 'SauceLabs',
+        browserName: 'chrome',
+        platform   : 'OS X Yosemite',
         version    : '41'
     },
 
-    sl_osx_chrome: {
-        base       : 'SauceLabs',
-        browserName: 'chrome',
-        platform   : 'OS X 10.10',
-        version    : '41'
-    },
-
-    sl_lin_chrome: {
+    chrome_linux: {
         base       : 'SauceLabs',
         browserName: 'chrome',
         platform   : 'linux',
         version    : '41'
     },
 
-    sl_osx_safari: {
+    safari_osx: {
         base       : 'SauceLabs',
         browserName: 'safari',
-        platform   : 'OS X 10.10',
+        platform   : 'OS X Yosemite',
         version    : '8'
     },
 
-    sl_win_firefox: {
+    firefox_win: {
         base       : 'SauceLabs',
         browserName: 'firefox',
         platform   : 'Windows 8.1',
         version    : '37'
     },
 
-    sl_osx_firefox: {
+    firefox_osx: {
         base       : 'SauceLabs',
         browserName: 'firefox',
-        platform   : 'OS X 10.10',
-        version    : '37'
+        platform   : 'OS X Yosemite',
+        version    : '32'
     },
 
-    sl_lin_firefox: {
+    firefox_linux: {
         base       : 'SauceLabs',
         browserName: 'firefox',
         platform   : 'linux',
         version    : '37'
     },
 
-    sl_ios_safari: {
+    safari_ios: {
         base       : 'SauceLabs',
         browserName: 'iphone',
-        platform   : 'OS X 10.9',
+        platform   : 'ios',
         version    : '8.2'
     },
 
-    sl_ie_9: {
+    ie_9: {
         base       : 'SauceLabs',
         browserName: 'internet explorer',
         platform   : 'Windows 7',
         version    : '9'
     },
 
-    sl_ie_10: {
+    ie_10: {
         base       : 'SauceLabs',
         browserName: 'internet explorer',
         platform   : 'Windows 8',
         version    : '10'
     },
 
-    sl_ie_11: {
+    ie_11: {
         base       : 'SauceLabs',
         browserName: 'internet explorer',
         platform   : 'Windows 8.1',
