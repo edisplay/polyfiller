@@ -8,7 +8,8 @@ module.exports = function (config) {
         reporters : ['mocha', 'saucelabs'],
 
         sauceLabs: {
-            testName: 'Polyfiller tests'
+            testName: 'Polyfiller tests',
+            "public": "public"
         },
 
         customLaunchers: clients
