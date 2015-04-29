@@ -12,7 +12,7 @@ module.exports = {
         'benchmark:api',
         'mochaTest:api',
         'karma:api',
-        'karma:client'
+        //'karma:client'
     ],
 
     lint: [
