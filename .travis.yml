@@ -21,3 +21,6 @@ install:
 
 before_script:
   - grunt test
+
+after_success:
+  - grunt coveralls

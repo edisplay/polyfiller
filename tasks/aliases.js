@@ -1,6 +1,6 @@
 'use strict';
 
-var tasks = {
+module.exports = {
     build: [
         'babel:build'
     ],
@@ -23,9 +23,3 @@ var tasks = {
 
     default: [ ]
 };
-
-if (process.env.TRAVIS) {
-    tasks.test.push('coveralls:api');
-}
-
-module.exports = tasks;
