@@ -13,6 +13,28 @@ let test = (title, callback) => {
     ;
 };
 
+describe('::constructor', () => {
+    test('toString', mock => {
+        expect(mock)
+            .to.equal('[object Polyfiller]');
+    });
+
+    test('pack (npm feature)', mock => {
+        expect(/EventSource/.test(mock), 'source')
+            .to.equal(true);
+    });
+
+    test('pack (default wrapper)', mock => {
+        expect(/^;\(function \(\) {.*/.test(mock), 'source')
+            .to.equal(true);
+    });
+
+    test('pack (custom wrapper)', mock => {
+        expect(/^try { [\s\S]* } catch \(error\) {}$/.test(mock), 'source')
+            .to.equal(true);
+    });
+});
+
 describe('::find', ( ) => {
     let cases = [
         'find (npm feature)',

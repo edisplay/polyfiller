@@ -11,7 +11,7 @@ let logger = new (winston.Logger)({
                 let prefix = winston_config.colorize(options.level, '>> '),
                     meta = options.meta;
 
-                if (options.level == 'error') {
+                if (options.level === 'error') {
                     let message = '';
 
                     if (meta.text) {
@@ -41,7 +41,7 @@ let logger = new (winston.Logger)({
 });
 
 logger.on('logging', (transport, level) => {
-    if (level == 'error') {
+    if (level === 'error') {
         process.exit(-1);
     }
 });

@@ -87,6 +87,6 @@ export default class Polyfiller {
     }
 
     toString () {
-        return `[Object ${this.constructor.name}}]`;
+        return `[object ${this.constructor.name}]`;
     }
 }

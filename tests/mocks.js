@@ -4,6 +4,12 @@ import path from 'path';
 import Polyfiller from '../index';
 
 export default {
+    'toString' () {
+        let polyfiller = new Polyfiller;
+
+        return polyfiller.toString();
+    },
+
     'find (empty)' () {
         let polyfiller = new Polyfiller;
 

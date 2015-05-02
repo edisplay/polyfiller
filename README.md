@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/polyfiller.svg)](http://badge.fury.io/js/polyfiller)
 [![Build Status](https://travis-ci.org/monolithed/polyfiller.png)](https://travis-ci.org/monolithed/polyfiller)
+[![Coverage Status](https://coveralls.io/repos/monolithed/polyfiller/badge.svg)](https://coveralls.io/r/monolithed/polyfiller)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 
 

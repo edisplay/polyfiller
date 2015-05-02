@@ -2,7 +2,7 @@
 
 module.exports = function (grunt, options) {
     return {
-        development: {
+        lint: {
             options: {
                 // This option suppresses warnings about missing semicolons.
                 asi: false,
@@ -112,7 +112,7 @@ module.exports = function (grunt, options) {
 
                 // This option suppresses warnings about generator functions with
                 // no yield statement in them.
-                noyield: false,
+                noyield: true,
 
                 // This option prohibits the use of unary increment and decrement operators.
                 plusplus: false,
@@ -131,13 +131,13 @@ module.exports = function (grunt, options) {
                 maxdepth: 10,
 
                 // This option lets you set the max number of statements allowed per function.
-                maxstatements: 10,
+                maxstatements: 15,
 
                 // This option lets you control cyclomatic complexity throughout your code.
-                maxcomplexity: true,
+                maxcomplexity: 6,
 
                 // This option lets you set the maximum length of a line.
-                maxlen: true,
+                maxlen: 90,
 
                 // This option warns when you define and never use your variables.
                 unused: true,
@@ -221,11 +221,17 @@ module.exports = function (grunt, options) {
                     document  : true,
                     __global__: true,
                     __static__: true
-                }
+                },
+
+                //ignores: []
             },
 
             files: {
-                src: ['{views,utils}/**/*.js']
+                src: [
+                    'index.js',
+                    '{tools,trunk,utils}/**/*.js',
+                    '!trunk/catalog/*/files/**/*.js'
+                ]
             }
         }
     };

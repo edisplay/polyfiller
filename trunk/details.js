@@ -7,7 +7,6 @@ import tsort from 'tsort';
 import resolve from 'resolve';
 
 import utils from './utils';
-import options from './options';
 import functional from './../tools/functional';
 import log from './../utils/log';
 
@@ -67,7 +66,7 @@ export default class Details {
             }
             catch (error) {
                 log.warn('resolve_path', {
-                    text: 'Could not find the following file ' + file, error })
+                    text: 'Could not find the following file ' + file, error });
             }
         }
     }
@@ -86,7 +85,9 @@ export default class Details {
         }
         catch (error) {
             throw log.error('feature_info', {
-                text : `Requested feature <${feature}> not found in the catalog`, error });
+                error,
+                text : `Requested feature <${feature}> not found in the catalog`
+            });
         }
 
         return Object.assign({ dependencies: [] }, config);
@@ -137,8 +138,7 @@ export default class Details {
      * @returns {Array}
      */
     exclude_features (features, excluded) {
-        return features.filter((value, index) =>
-            !excluded.includes(value));
+        return features.filter(value => !excluded.includes(value));
     }
 
     /**
@@ -171,7 +171,7 @@ export default class Details {
             let files = {
                 included: this.exclude_features(list, this.options.exclude),
                 excluded: this.options.exclude
-            }
+            };
 
             if (this.options.verbose) {
                 for (let [title, file] of functional.entries(files)) {

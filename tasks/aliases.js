@@ -7,16 +7,19 @@ module.exports = {
 
     test: [
         'build',
+        'jshint:lint',
         'babel:tests',
         'mock:api',
-        'benchmark:api',
-        'mochaTest:api',
+        //'benchmark:api',
+        //'mochaTest:api',
+        'mocha_istanbul:api',
         'karma:api',
-        //'karma:client'
+        //'karma:client',
+        'coveralls:api'
     ],
 
     lint: [
-        'jshint:development'
+        'jshint:lint'
     ],
 
     default: [ ]
