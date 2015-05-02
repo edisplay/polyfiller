@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = {
+var tasks = {
     build: [
         'babel:build'
     ],
@@ -15,7 +15,6 @@ module.exports = {
         'mocha_istanbul:api',
         'karma:api',
         //'karma:client',
-        'coveralls:api'
     ],
 
     lint: [
@@ -24,3 +23,9 @@ module.exports = {
 
     default: [ ]
 };
+
+if (process.env.TRAVIS) {
+    tasks.test.push('coveralls:api');
+}
+
+module.exports = tasks;
