@@ -29,8 +29,6 @@ var Polyfiller = require('polyfiller');
 ### Usage Example
 
 ```js
-var Polyfiller = require('polyfiller');
-
 var polyfiller = new Polyfiller;
 
 var list = polyfiller.find([ 'Promise' ]),
@@ -51,7 +49,7 @@ Returns an unordered bundle of polyfills as an array of objects
 ```js
 var polyfiller = new Polyfiller;
 
-vwr list = polyfiller.find(['Promise'], function (feature, name) {
+var list = polyfiller.find(['Promise'], function (feature, name) {
 	console.log(name, feature.source, feature.config);
 });
 
@@ -84,7 +82,6 @@ Return a list of all of available features as an array of strings.
 
 ```js
 var polyfiller = new Polyfiller;
-
 var list = polyfiller.list();
 
 console.log(list); // ['Promise', 'Reflect', 'URL', ...]
@@ -98,8 +95,6 @@ Returns: `String`
 Packs a list of polyfills into one string
 
 ```js
-var Polyfiller = require('polyfiller');
-
 var polyfiller = new Polyfiller;
 
 var list = polyfiller.find([ 'Promise' ]),
@@ -117,8 +112,7 @@ Default: `[trunk/catalog]`
 Have custom polyfills? Add paths to their location here.
 
 ```js
-var path = require('path'),
-	Polyfiller = require('polyfiller');
+var path = require('path');
 
 var polyfiller = new Polyfiller({
 	catalog: [ 
@@ -135,9 +129,6 @@ Default: `[]`
 Some polyfills have dependencies that you can exclude here
 
 ```js
-var path = require('path'),
-	Polyfiller = require('polyfiller');
-
 var polyfiller = new Polyfiller({
 	exclude: ['setImmediate']
 });
@@ -151,9 +142,6 @@ Default: `false`
 Verbose mode is an option that provides additional details as to what the package is doing.
 
 ```js
-var path = require('path'),
-	Polyfiller = require('polyfiller');
-
 var polyfiller = new Polyfiller({
 	verbose: true
 });
@@ -164,12 +152,9 @@ var polyfiller = new Polyfiller({
 Type: `Function` <br />
 Default: `None`
 
-A safety wrapper for your environment
+A custom wrapper for your environment
 
 ```js
-var path = require('path'),
-	Polyfiller = require('polyfiller');
-
 var polyfiller = new Polyfiller({
 	wrapper: function (source) {
 		return ';(function () {' + source + '}.call(self));'
