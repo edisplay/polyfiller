@@ -31,8 +31,9 @@ var Polyfiller = require('polyfiller');
 ```js
 var Polyfiller = require('polyfiller');
 
-var polyfiller = new Polyfiller,
-	list = polyfiller.find([ 'Promise' ]),
+var polyfiller = new Polyfiller;
+
+var list = polyfiller.find([ 'Promise' ]),
 	code = polyfiller.pack(list);
 ```
 
@@ -48,27 +49,30 @@ Returns: `Array`
 Returns an unordered bundle of polyfills as an array of objects
 
 ```js
-var polyfiller = new Polyfiller,
-	list = polyfiller.find(['Promise'], function (feature, name) {
-		console.log(name, feature.source, feature.config);
-	});
+var polyfiller = new Polyfiller;
 
-	list[0].source; // source code
-	list[0].config.name; // feature name
+vwr list = polyfiller.find(['Promise'], function (feature, name) {
+	console.log(name, feature.source, feature.config);
+});
+
+list[0].source; // source code
+list[0].config.name; // Promise
 ```
 
 
 Also available the second format (it may be useful in the future versions):
 
 ```js
-var polyfiller = new Polyfiller,
-	list = polyfiller.find([
-		{ name: 'Promise' }, 
-		{ name: 'Reflect' } 
-	],
-	function (feature, name) {
-		console.log(name, feature.source, feature.config);
-	});
+var polyfiller = new Polyfiller;
+
+var list = polyfiller.find([
+	{ 
+		name: 'Promise'
+	}
+],
+function (feature, name) {
+	console.log(name, feature.source, feature.config);
+});
 ```
 
 #### list
@@ -79,8 +83,9 @@ Returns: `Array`
 Return a list of all of available features as an array of strings.
 
 ```js
-var polyfiller = new Polyfiller,
-	list = polyfiller.list();
+var polyfiller = new Polyfiller;
+
+var list = polyfiller.list();
 
 console.log(list); // ['Promise', 'Reflect', 'URL', ...]
 ```
@@ -95,8 +100,9 @@ Packs a list of polyfills into one string
 ```js
 var Polyfiller = require('polyfiller');
 
-var polyfiller = new Polyfiller,
-	list = polyfiller.find([ { name: 'Promise' } ]),
+var polyfiller = new Polyfiller;
+
+var list = polyfiller.find([ 'Promise' ]),
 	code = polyfiller.pack(list);
 ```
 
