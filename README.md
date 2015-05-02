@@ -1,4 +1,4 @@
-# polyfiller
+# Polyfiller
 
 [![npm version](https://badge.fury.io/js/polyfiller.svg)](http://badge.fury.io/js/polyfiller)
 [![Build Status](https://travis-ci.org/monolithed/polyfiller.png)](https://travis-ci.org/monolithed/polyfiller)
@@ -167,6 +167,14 @@ var polyfiller = new Polyfiller({
 ```
 grunt test
 ```
+
+### Contributing
+
+1. Fork the one
+2. Create a topic branch
+3. Make your commits
+4. Write the tests and run `grunt test`
+5. Submit Pull Request once Tests are Passing
 
 
 ### license
