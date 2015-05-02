@@ -76,7 +76,7 @@ var polyfiller = new Polyfiller,
 Type: `Function ()` <br />
 Returns: `Array`
 
-Return a list of all the polyfills as an array of strings.
+Return a list of all of available features as an array of strings.
 
 ```js
 var polyfiller = new Polyfiller,
@@ -106,7 +106,7 @@ var polyfiller = new Polyfiller,
 #### catalog
 
 Type: `Array` <br />
-Default: `[]`
+Default: `[trunk/catalog]`
 
 Have custom polyfills? Add paths to their location here.
 

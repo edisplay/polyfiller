@@ -9,7 +9,7 @@ module.exports = function (grunt, options) {
                 //coverage      : true,
                 ui            : 'bdd',
                 reporter      : 'spec',
-                timeout       : 3 * 1000,
+                timeout       : 10 * 1000,
                 root          : 'cache/',
                 coverageFolder: 'cache/coverage',
                 reportFormats : ['lcov'],

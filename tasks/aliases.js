@@ -14,7 +14,6 @@ module.exports = {
         //'mochaTest:api',
         'mocha_istanbul:api',
         'karma:api',
-        //'karma:client',
     ],
 
     lint: [

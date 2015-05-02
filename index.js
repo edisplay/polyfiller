@@ -48,7 +48,7 @@ export default class Polyfiller {
     }
 
     /**
-     * Return a list of all the polyfills as an array of strings.
+     * Return a list of all of available features as an array of strings.
      *
      * @returns {Array}
      */

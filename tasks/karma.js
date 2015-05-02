@@ -16,7 +16,8 @@ module.exports = function (grunt, options) {
 
                 mocha: {
                     reporter: 'html',
-                    ui      : 'bdd'
+                    ui      : 'bdd',
+                    timeout : 10 * 1000,
                 }
             },
 

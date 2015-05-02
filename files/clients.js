@@ -11,6 +11,7 @@ module.exports = {
         version    : '41.0'
     },
 
+/*
     chrome_osx: {
         base       : 'SauceLabs',
         browserName: 'chrome',
@@ -53,6 +54,7 @@ module.exports = {
         version    : '37.0'
     },
 
+*/
     ie_9: {
         base       : 'SauceLabs',
         browserName: 'internet explorer',
@@ -60,6 +62,7 @@ module.exports = {
         version    : '9.0'
     },
 
+/*
     ie_10: {
         base       : 'SauceLabs',
         browserName: 'internet explorer',
@@ -80,7 +83,7 @@ module.exports = {
         platform   : 'OS X 10.10',
         version    : '8.2'
     },
-
+*/
     ipad: {
         base       : 'SauceLabs',
         browserName: 'ipad',
