@@ -18,7 +18,7 @@ module.exports = function (grunt, options) {
                 {
                     expand: true,
                     src   : ['index.js', '{utils,trunk,tools}/**/*.{js,json}' ],
-                    dest  : 'cache',
+                    dest  : 'build',
                 }
             ]
         },

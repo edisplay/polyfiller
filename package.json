@@ -10,6 +10,8 @@
 
     "man": "README.md",
 
+    "main": "build/index.js",
+
     "engines": {
         "node": ">=0.10.28"
     },
@@ -24,7 +26,8 @@
     },
 
     "scripts": {
-        "test": "grunt test"
+        "prepublish": "grunt build",
+        "test"      : "grunt test"
     },
 
     "dependencies": {
@@ -49,6 +52,7 @@
         "grunt"                   : "^0.4.5",
         "grunt-contrib-jshint"    : "^0.11.2",
         "grunt-contrib-clean"     : "^0.6.0",
+        "grunt-contrib-symlink"   : "^0.3.0",
         "grunt-karma"             : "^0.10.1",
         "grunt-coveralls"         : "^1.0.0",
         "grunt-mocha-test"        : "^0.12.7",

@@ -2,7 +2,8 @@
 
 module.exports = {
     build: [
-        'babel:build'
+        'babel:build',
+        'symlink:build'
     ],
 
     test: [

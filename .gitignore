@@ -34,5 +34,6 @@ npm-debug.log
 .idea
 .sauce
 /cache
+/build
 /logs
 TODO.md
