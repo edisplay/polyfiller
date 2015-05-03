@@ -1,5 +1,5 @@
 {
-    "name": "requestAnimationFrame",
+    "name": "window.requestAnimationFrame",
 
     "author": "Nicolas Gryman",
 

@@ -1,5 +1,5 @@
 {
-    "name": "setImmediate",
+    "name": "window.setImmediate",
 
     "author": "YuzuJS",
 

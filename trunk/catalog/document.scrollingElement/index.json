@@ -1,0 +1,24 @@
+{
+    "name": "window.setImmediate",
+
+    "author": "Mathias Bynens",
+
+    "description": [
+        {
+            "type": "w3c",
+            "url": "http://dev.w3.org/csswg/cssom-view/#dom-document-scrollingelement"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://www.npmjs.com/package/scrollingelement"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://github.com/mathiasbynens/document.scrollingElement/blob/master/LICENSE-MIT.txt"
+        }
+    ]
+}
