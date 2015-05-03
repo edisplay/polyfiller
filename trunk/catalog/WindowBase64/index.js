@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('Base64');
+let details = new Details,
+    feature = details.load_feature('Base64');
+
+export default feature;

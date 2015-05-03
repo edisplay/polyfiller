@@ -3,6 +3,9 @@
 import path from 'path';
 import Details from '../../details';
 
-const file = path.join(__dirname, './files/index.js');
+let file = path.join(__dirname, './files/index.js');
 
-export default (new Details).load_feature(file);
+let details = new Details,
+    feature = details.load_feature(file);
+
+export default feature;

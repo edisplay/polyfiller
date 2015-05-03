@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('event-source-polyfill');
+let details = new Details,
+    feature = details.load_feature('event-source-polyfill');
+
+export default feature;

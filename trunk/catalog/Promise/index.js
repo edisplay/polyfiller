@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('es6-promises');
+let details = new Details,
+    feature = details.load_feature('es6-promises');
+
+export default feature;

@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('harmony-reflect');
+let details = new Details,
+    feature = details.load_feature('harmony-reflect');
+
+export default feature;

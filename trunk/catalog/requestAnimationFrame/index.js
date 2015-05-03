@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('raf.js');
+let details = new Details,
+    feature = details.load_feature('raf.js');
+
+export default feature;

@@ -2,4 +2,7 @@
 
 import Details from '../../details';
 
-export default (new Details).load_feature('setimmediate');
+let details = new Details,
+    feature = details.load_feature('setimmediate');
+
+export default feature;
