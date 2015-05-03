@@ -51,7 +51,7 @@ A list of all of available features
 |  URL                   | [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL) |
 |  WindowBase64          | [WindowBase64](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64) |
 |  Fetch                 | [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) <br /> [GlobalFetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch) <br /> [Body](https://developer.mozilla.org/en-US/docs/Web/API/Body) <br /> [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) <br /> [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) <br /> [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) |
-|  requestAnimationFrame | [requestAnimationFrame](https://developer.mozilla.org/ru/docs/DOM/window.requestAnimationFrame)| 
+|  requestAnimationFrame | [window.requestAnimationFrame](https://developer.mozilla.org/ru/docs/DOM/window.requestAnimationFrame)| 
 |  setImmediate          | [window.setImmediate](https://developer.mozilla.org/ru/docs/Web/API/Window/setImmediate) |
 |  TextEncoder           | [TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder) |
 
