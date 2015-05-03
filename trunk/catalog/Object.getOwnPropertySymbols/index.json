@@ -1,0 +1,29 @@
+{
+    "name": "Object.getOwnPropertySymbols",
+
+    "author": "Andrea Giammarchi",
+
+    "description": [
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
+        },
+
+        {
+            "type": "ecma",
+            "url": "https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/get-own-property-symbols"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url" : "https://github.com/WebReflection/get-own-property-symbols/blob/master/LICENSE.txt"
+        }
+    ]
+}
