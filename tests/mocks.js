@@ -132,5 +132,24 @@ export default {
         features = polyfiller.find([ 'EventSource' ]);
 
         return polyfiller.pack(features);
+    },
+
+    'pack (verification)' () {
+        let polyfiller = new Polyfiller({
+            wrapper: function (source) {
+                return source;
+            }
+        }),
+
+        features = polyfiller.list();
+
+        return features.map(name => {
+            let feature = polyfiller.find([name]);
+
+            return {
+                name: name,
+                code: polyfiller.pack(feature)
+            }
+        });
     }
 };

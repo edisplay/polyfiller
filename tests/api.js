@@ -201,4 +201,11 @@ describe('::pack', () => {
         expect(/^try { [\s\S]* } catch \(error\) {}$/.test(mock), 'source')
             .to.equal(true);
     });
+
+    test('pack (verification)', mock => {
+        mock.forEach(feature => {
+            expect(feature.code.length > 1, feature.name)
+                .to.equal(true);
+        });
+    });
 });

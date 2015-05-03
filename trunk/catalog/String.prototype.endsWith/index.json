@@ -1,0 +1,28 @@
+{
+    "name": "String.prototype.endsWith",
+
+    "author": "Mathias Bynens",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/string.prototype.endswith"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
+}

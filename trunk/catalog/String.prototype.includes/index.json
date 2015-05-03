@@ -1,0 +1,28 @@
+{
+    "name": "String.prototype.includes",
+
+    "author": "Paul Miller <http://paulmillr.com>",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.includes"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/string.prototype.includes"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
+}

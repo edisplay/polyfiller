@@ -43,7 +43,11 @@ A list of all of available features
 
 |           Feature             |                 What's included?                 |
 |:------------------------------|:------------------------------------------------ |
+| Array.from                    | [Array.from](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from) |
+| Array.prototype.find          | [Array.prototype.find](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find) |
+|  Array.prototype.findIndex    | [Array.prototype.findIndex](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) |
 |  Collections                  | [Set](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)<br /> [Map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)<br /> [WeakSet](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)<br /> [WeakMap](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)<br />  |
+|  CSS.escape                   | [CSS.escape](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape) |
 |  DOM4                         | [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)<br /> [Element#prepend()](https://dom.spec.whatwg.org/#dom-parentnode-prependnodes)<br /> [Element#append()](https://dom.spec.whatwg.org/#dom-parentnode-appendnodes)<br /> [Element#before()](https://dom.spec.whatwg.org/#dom-childnode-beforenodes)<br /> [Element#after()](https://dom.spec.whatwg.org/#dom-childnode-afternodes)<br /> [Element#replaceWith()](https://dom.spec.whatwg.org/#dom-childnode-replacewithnodes)<br /> [Element#remove()](https://dom.spec.whatwg.org/#dom-childnode-remove)<br /> [Element#query](https://dom.spec.whatwg.org/#dom-elements-queryrelativeselectors)<br /> [Element#queryAll](https://dom.spec.whatwg.org/#dom-elements-queryallrelativeselectors)<br /> [Element#matches](https://dom.spec.whatwg.org/#dom-element-matchesselectors)<br /> [Element#closest](https://dom.spec.whatwg.org/#dom-element-closestselectors)<br /> [Element.classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) |
 |  EventSource                  | [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) |
 |  Promise                      | [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) |
@@ -52,6 +56,16 @@ A list of all of available features
 |  WindowBase64                 | [WindowBase64](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64) |
 |  Fetch                        | [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) <br /> [GlobalFetch](https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch) <br /> [Body](https://developer.mozilla.org/en-US/docs/Web/API/Body) <br /> [Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers) <br /> [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request) <br /> [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) |
 |  Object.getOwnPropertySymbols | [Object.getOwnPropertySymbols](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols) | 
+| String/fromCodePoint          | [String/fromCodePoint](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint) | 
+| RegExp.prototype.search       | [RegExp.prototype.search](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search) | 
+| RegExp.prototype.match        | [RegExp.prototype.match](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match) | 
+|  String.prototype.includes    | [String.prototype.includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes) | 
+|  String.prototype.at    | [String.prototype.at](https://github.com/mathiasbynens/String.prototype.at) | 
+|  String.prototype.codePointAt    | [String.prototype.codePointAt](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt) | 
+|  String.prototype.normalize   | [String.prototype.normalize](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/normalize) | 
+|  String.prototype.startsWith  | [String.prototype.startsWith](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith) | 
+|  String.prototype.endsWith  | [String.prototype.endsWith](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) | 
+|  String.prototype.repeat  | [String.prototype.repeat](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) | 
 |  window.requestAnimationFrame | [window.requestAnimationFrame](https://developer.mozilla.org/ru/docs/DOM/window.requestAnimationFrame)| 
 |  document.scrollingElement    | [document.scrollingElement](http://dev.w3.org/csswg/cssom-view/#dom-document-scrollingelement) |
 |  window.setImmediate          | [window.setImmediate](https://developer.mozilla.org/ru/docs/Web/API/Window/setImmediate) |

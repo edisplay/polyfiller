@@ -1,0 +1,28 @@
+{
+    "name": "String.prototype.repeat",
+
+    "author": "Mathias Bynens",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat"
+        },
+
+        {
+            "type": "mdn",
+            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/string.prototype.repeat"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
+}

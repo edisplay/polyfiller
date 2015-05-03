@@ -1,0 +1,23 @@
+{
+    "name": "RegExp.prototype.match",
+
+    "author": "Mathias Bynens",
+
+    "description": [
+        {
+            "type": "ecma",
+            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match"
+        }
+    ],
+
+    "repository": {
+        "type": "npm",
+        "url" : "https://npmjs.org/package/regexp.prototype.match"
+    },
+
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ]
+}
