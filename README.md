@@ -58,8 +58,8 @@ A list of all of available features
 
 ### Compatibility
 
-Theoretically compatible with all contemporary browsers since IE9
-For *IE8* only it's recommended to include [ie8](https://github.com/WebReflection/ie8) script before your build
+Theoretically compatible with all contemporary browsers since **IE9**<br />
+For **IE8** only it's recommended to include [ie8](https://github.com/WebReflection/ie8) script before your build
 
 ### Methods
 
