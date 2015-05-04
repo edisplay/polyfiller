@@ -1,9 +1,13 @@
 'use strict';
 
+var clients = require('../files/clients');
+
 module.exports = function (grunt, options) {
+    var timeout = 100 * 1000;
+
     return {
         options: {
-            basePath: '../',
+            basePath: './',
             frameworks: ['mocha', 'chai'],
 
             files: [
@@ -29,13 +33,29 @@ module.exports = function (grunt, options) {
 
         api: {
             options: {
-                configFile: 'files/karma.api.js'
+                browsers  : ['PhantomJS'],
+                reporters : ['mocha', 'progress'],
             }
         },
 
         client: {
             options: {
-                configFile: 'files/karma.client.js'
+                browsers : Object.keys(clients),
+                reporters: ['progress', 'saucelabs'],
+
+                browserDisconnectTimeout  : timeout,
+                browserNoActivityTimeout  : timeout,
+                browserDisconnectTolerance: 2,
+
+                sauceLabs: {
+                    testName : 'Polyfiller tests',
+                    username : process.env.SAUCE_USERNAME,
+                    accessKey: process.env.SAUCE_ACCESS_KEY,
+                    doctor   : true,
+                    recordScreenshots: false,
+                },
+
+                customLaunchers: clients
             }
         }
     };
