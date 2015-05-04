@@ -101,6 +101,12 @@ export default {
         return polyfiller.list();
     },
 
+    'list (extended)' () {
+        let polyfiller = new Polyfiller;
+
+        return polyfiller.list(true);
+    },
+
     'pack (empty)' () {
         let polyfiller = new Polyfiller,
             features = polyfiller.find([ ]);

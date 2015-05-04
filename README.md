@@ -115,17 +115,31 @@ function (feature, name) {
 
 #### list
 
-Type: `Function ()` <br />
+Type: `Function ([extended=false])` <br />
 Returns: `Array`
 
 Return a list of all of available features as an array of strings.
 
 ```js
 var polyfiller = new Polyfiller;
-var list = polyfiller.list();
 
-console.log(list); // ['Promise', 'Reflect', 'URL', ...]
+polyfiller.list(); // ['Promise', 'Reflect', 'URL', ...]
 ```
+
+*extended* option
+
+```js
+var polyfiller = new Polyfiller;
+var list = polyfiller.list(true);
+
+list; // [{ config }, ...]
+list[0].name; // Array.from
+list[0].author; // Mathias Bynens
+list[0].licenses[0].type; // MIT
+...
+```
+
+For information see `index.json` file
 
 #### pack
 

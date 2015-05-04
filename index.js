@@ -50,17 +50,24 @@ export default class Polyfiller {
     /**
      * Return a list of all of available features as an array of strings.
      *
+     * @param {boolean} [extended]
      * @returns {Array}
      */
-    list () {
+    list (extended) {
         try {
-            let list = this.details.available_features();
+            let features = this.details.available_features();
 
             if (this.options.verbose) {
-                log.info('Available features', { list });
+                log.info('Available features', { features });
             }
 
-            return list;
+            if (extended) {
+                return features.map(name => {
+                    return this.details.feature_info(name);
+                });
+            }
+
+            return features;
         }
         catch (error) {
             throw log.error('::list', {

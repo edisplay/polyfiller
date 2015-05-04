@@ -175,6 +175,13 @@ describe('::list', () => {
         });
     });
 
+    test('list (extended)', mock => {
+        mock.forEach(feature => {
+            expect(feature.name.length > 1, 'name')
+                .to.equal(true);
+        });
+    });
+
     test('list (option.exclude)', mock => {
         expect(mock.indexOf('Promise') === -1, 'name')
             .to.equal(true);
