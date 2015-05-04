@@ -1,14 +1,12 @@
 {
-    "name": "EventSource",
-
+    "name"  : "EventSource",
     "author": "Yaffle (https://github.com/Yaffle)",
+    "types" : [ "whatwg" ],
 
-    "description": [
+    "files": [
         {
-            "mdn": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource"
-        },
-        {
-            "w3c": "http://www.w3.org/TR/eventsource"
+            "name": "EventSource",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource"
         }
     ],
 

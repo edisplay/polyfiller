@@ -1,17 +1,17 @@
 {
-    "name": "window.setImmediate",
-
+    "name"  : "window.setImmediate",
     "author": "YuzuJS",
+    "types" : [ "w3c" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/API/Window/setImmediate"
+            "name": "window.setImmediate",
+            "url" : "https://developer.mozilla.org/ru/docs/Web/API/Window/setImmediate"
         },
 
         {
-            "type": "w3c",
-            "url": "https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html"
+            "name": "window.clearImmediate",
+            "url" : "https://developer.mozilla.org/ru/docs/Web/API/Window/clearImmediate"
         }
     ],
 

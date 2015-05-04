@@ -61,7 +61,7 @@ export default {
 
     'find (option.exclude)' () {
         let polyfiller = new Polyfiller({
-            exclude: [ 'setImmediate' ],
+            exclude: [ 'window.setImmediate' ],
         });
 
         return polyfiller.find([ 'Promise' ]);

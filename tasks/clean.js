@@ -6,6 +6,7 @@ module.exports = function (grunt, options) {
             src: [
                 'npm-shrinkwrap.json',
                 'npm-debug.log',
+                'build',
                 'cache'
             ]
         }

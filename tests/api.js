@@ -49,7 +49,7 @@ describe('::find', ( ) => {
 
     cases.forEach(name => {
         test(name, mock => {
-            let features = ['setImmediate', 'Promise'];
+            let features = ['window.setImmediate', 'Promise'];
 
             expect(mock.length, 'length')
                 .to.equal(2);
@@ -64,12 +64,12 @@ describe('::find', ( ) => {
                 expect('source' in mock[index], 'source')
                     .to.equal(true);
 
-                expect(new RegExp(name).test(mock[index].source), 'source.length')
-                    .to.equal(true);
+                expect(new RegExp(name.replace(/.*\./, ''))
+                    .test(mock[index].source), 'source.length').to.equal(true);
             });
 
             expect(mock[1].config.dependencies[0], 'dependencies')
-                .to.equal('setImmediate');
+                .to.equal('window.setImmediate');
 
             expect(/addFromSetImmediateArguments/.test(mock[0].source),
                 'included feature').to.equal(true);

@@ -1,17 +1,32 @@
 {
-    "name": "Fetch",
-
+    "name"  : "Fetch",
     "author": "GitHub, Inc",
+    "types" : [ "whatwg" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+            "name": "GlobalFetch",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
         },
 
         {
-            "type": "whatwg",
-            "url": "https://fetch.spec.whatwg.org/"
+            "name": "Body",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Body"
+        },
+
+        {
+            "name": "Headers",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Headers"
+        },
+
+        {
+            "name": "Request",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Request"
+        },
+
+        {
+            "name": "Response",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Response"
         }
     ],
 

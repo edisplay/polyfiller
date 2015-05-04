@@ -1,17 +1,12 @@
 {
-    "name": "Object.getOwnPropertySymbols",
-
+    "name"  : "Object.getOwnPropertySymbols",
     "author": "Andrea Giammarchi",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
-        },
-
-        {
-            "type": "ecma",
-            "url": "https://people.mozilla.org/~jorendorff/es6-draft.html#sec-object.getownpropertysymbols"
+            "name": "Object.getOwnPropertySymbols",
+            "info": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
         }
     ],
 

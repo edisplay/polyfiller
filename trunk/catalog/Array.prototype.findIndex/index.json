@@ -1,17 +1,12 @@
 {
-    "name": "Array.prototype.findIndex",
-
+    "name"  : "Array.prototype.findIndex",
     "author": "Paul Miller <http://paulmillr.com>",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex"
+            "name": "Array.prototype.findIndex",
+            "info": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex"
         }
     ],
 

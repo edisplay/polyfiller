@@ -1,17 +1,12 @@
 {
     "name": "URL",
-
     "author": "Joshua Bell",
+    "types" : [ "whatwg" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/URL"
-        },
-
-        {
-            "type": "whatwg",
-            "url": "https://url.spec.whatwg.org"
+            "name": "URL",
+            "url" : "https://developer.mozilla.org/en-US/docs/Web/API/URL"
         }
     ],
 

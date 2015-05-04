@@ -1,17 +1,12 @@
 {
-    "name": "String.prototype.repeat",
-
+    "name"  : "String.prototype.repeat",
     "author": "Mathias Bynens",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.repeat"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"
+            "name": "String.prototype.repeat",
+            "infp": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/repeat"
         }
     ],
 

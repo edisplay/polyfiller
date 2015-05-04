@@ -1,17 +1,12 @@
 {
-    "name": "CSS.escape",
-
+    "name"  : "CSS.escape",
     "author": "Mathias Bynens",
+    "types" : [ "w3c" ],
 
-    "description": [
+    "files": [
         {
-            "type": "w3c",
-            "url": "http://dev.w3.org/csswg/cssom/#the-css.escape%28%29-method"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape"
+            "name": "CSS.escape",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape"
         }
     ],
 

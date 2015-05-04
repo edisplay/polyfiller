@@ -1,7 +1,14 @@
 {
-    "name": "String.prototype.at",
-
+    "name"  : "String.prototype.at",
     "author": "Mathias Bynens",
+    "types" : [ "proposal" ],
+
+    "files": [
+        {
+            "name": "String.prototype.at",
+            "info": "https://github.com/mathiasbynens/String.prototype.at"
+        }
+    ],
 
     "description": [
         {

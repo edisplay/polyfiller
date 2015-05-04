@@ -1,12 +1,12 @@
 {
-    "name": "RegExp.prototype.search",
-
+    "name"  : "RegExp.prototype.search",
     "author": "Mathias Bynens",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search"
+            "name": "RegExp.prototype.search",
+            "info": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search"
         }
     ],
 

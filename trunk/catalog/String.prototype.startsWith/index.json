@@ -1,17 +1,12 @@
 {
-    "name": "String.prototype.startsWith",
-
+    "name"  : "String.prototype.startsWith",
     "author": "Mathias Bynens",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.startswith"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith"
+            "name": "String.prototype.startsWith",
+            "info" : "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith"
         }
     ],
 

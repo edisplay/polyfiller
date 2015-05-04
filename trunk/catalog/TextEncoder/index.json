@@ -1,22 +1,12 @@
 {
-    "name": "TextEncoder",
-
+    "name"  : "TextEncoder",
     "author": "Joshua Bell",
+    "types" : [ "whatwg" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder"
-        },
-
-        {
-            "type": "whatwg",
-            "url": "https://encoding.spec.whatwg.org/"
+            "name": "TextEncoder",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder"
         }
     ],
 

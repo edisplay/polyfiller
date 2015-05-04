@@ -1,17 +1,12 @@
 {
-    "name": "String.prototype.codePointAt",
-
+    "name"  : "String.prototype.codePointAt",
     "author": "Mathias Bynens",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.codepointat"
-        },
-
-        {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt"
+            "name": "String.prototype.codePointAt",
+            "info": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt"
         }
     ],
 

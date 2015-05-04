@@ -1,11 +1,12 @@
 {
-    "name": "Promise",
-
+    "name"  : "Promise",
     "author": "Dmitry Korobkin",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "mdn": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+            "name": "Promise",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
         }
     ],
 
@@ -15,7 +16,7 @@
     },
 
     "dependencies": [
-        "setImmediate"
+        "window.setImmediate"
     ],
 
     "licenses": [

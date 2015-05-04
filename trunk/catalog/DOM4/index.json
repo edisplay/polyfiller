@@ -1,32 +1,67 @@
 {
-    "name": "DOM4",
-
+    "name"  : "DOM4",
     "author": "Andrea Giammarchi <andrea.giammarchi@gmail.com>",
+    "types" : [ "w3c", "whatwg" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element"
+            "name": "CustomEvent",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"
         },
 
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList"
+            "name": "Element#append",
+            "info": "https://dom.spec.whatwg.org/#dom-parentnode-appendnodes"
         },
 
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent"
+            "name": "Element#prepend",
+            "info": "https://dom.spec.whatwg.org/#dom-parentnode-prependnodes"
         },
 
         {
-            "type": "w3c",
-            "url": "http://www.w3.org/TR/dom/"
+            "name": "Element#after",
+            "info": "https://dom.spec.whatwg.org/#dom-childnode-afternodes"
         },
 
         {
-            "type": "whatwg",
-            "url": "https://dom.spec.whatwg.org/"
+            "name": "Element#before",
+            "info": "https://dom.spec.whatwg.org/#dom-childnode-beforenodes"
+        },
+
+        {
+            "name": "Element#replaceWith",
+            "info": "https://dom.spec.whatwg.org/#dom-childnode-replacewithnodes"
+        },
+
+        {
+            "name": "Element#remove",
+            "info": "https://dom.spec.whatwg.org/#dom-childnode-remove"
+        },
+
+        {
+            "name": "Element#query",
+            "info": "https://dom.spec.whatwg.org/#dom-elements-queryrelativeselectors"
+        },
+
+        {
+            "name": "Element#queryAll",
+            "info": "https://dom.spec.whatwg.org/#dom-elements-queryallrelativeselectors"
+        },
+
+        {
+            "name": "Element#matches",
+            "info": "https://dom.spec.whatwg.org/#dom-element-matchesselectors"
+        },
+
+        {
+            "name": "Element#closest",
+            "info": "https://dom.spec.whatwg.org/#dom-element-closestselectors"
+        },
+
+        {
+            "name": "Element.classList",
+            "info": "https://developer.mozilla.org/en-US/docs/Web/API/Element/classList"
         }
     ],
 

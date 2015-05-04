@@ -1,17 +1,12 @@
 {
-    "name": "String.prototype.normalize",
-
+    "name"  : "String.prototype.normalize",
     "author": "Bjarke Walling <bwp@bwp.dk>",
+    "types" : [ "ecma" ],
 
-    "description": [
+    "files": [
         {
-            "type": "mdn",
-            "url": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/normalize"
-        },
-
-        {
-            "type": "ecma",
-            "url": "http://people.mozilla.org/~jorendorff/es6-draft.html#sec-15.5.3.26"
+            "name": "String.prototype.normalize",
+            "info": "https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/normalize"
         }
     ],
 

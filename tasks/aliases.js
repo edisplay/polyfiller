@@ -2,8 +2,11 @@
 
 module.exports = {
     build: [
+        'clean:cache',
         'babel:build',
-        'symlink:build'
+        'symlink:build',
+        'execute:features',
+        'includes:features'
     ],
 
     test: [

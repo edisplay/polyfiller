@@ -1,12 +1,12 @@
 {
-    "name": "window.setImmediate",
-
+    "name"  : "document.scrollingElement",
     "author": "Mathias Bynens",
+    "types" : [ "w3c" ],
 
-    "description": [
+    "files": [
         {
-            "type": "w3c",
-            "url": "http://dev.w3.org/csswg/cssom-view/#dom-document-scrollingelement"
+            "name": "document.scrollingElement",
+            "url" : "http://dev.w3.org/csswg/cssom-view/#dom-document-scrollingelement"
         }
     ],
 
