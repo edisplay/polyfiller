@@ -11,18 +11,17 @@ let table = deindent`| Feature | What's included? | Type | License |
                      |:--------|:-----------------|:----:|:-------:|
 `;
 
+let icons = "https://github.com/Polyfiller/polyfiller/" +
+    "blob/master/files/icons"
+
 for (let feature of features) {
     let files = feature.files.map(file => {
         return `[${file.name}](${file.info})<br />`;
     });
 
     let types = feature.types.map(type => {
-        if (!/proposal/i.test(type)) {
-            return deindent `<img src="../../blob/master/files/logos/${type}.png?raw=true" \
-                alt="${type}" width="25" height="25" />`;
-        }
-
-        return type;
+        return deindent `<img src="${icons}/${type}.png?raw=true" \
+            alt="${type}" width="25" height="25" />`;
     });
 
     let licenses = feature.licenses.map(license => {
