@@ -1,5 +1,5 @@
 | Feature | What's included? | Type | License |
-|:--------|:-----------------|:-----|:------- |
+|:--------|:-----------------|:----:|:-------:|
 | 		Array.from | 		[Array.from](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/from)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		Array.prototype.find | 		[Array.prototype.find](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		Array.prototype.findIndex | 		[Array.prototype.findIndex](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-array.prototype.findindex)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
@@ -15,7 +15,7 @@
 | 		RegExp.prototype.match | 		[RegExp.prototype.match](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.match)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		RegExp.prototype.search | 		[RegExp.prototype.search](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-regexp.prototype.search)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		String.fromCodePoint | 		[RegExp.prototype.search](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
-| 		String.prototype.at | 		[String.prototype.at](https://github.com/mathiasbynens/String.prototype.at)<br /> | 		proposal | 		MIT |
+| 		String.prototype.at | 		[String.prototype.at](https://github.com/mathiasbynens/String.prototype.at)<br /> | 		Proposal | 		MIT |
 | 		String.prototype.codePointAt | 		[String.prototype.codePointAt](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		String.prototype.endsWith | 		[String.prototype.endsWith](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
 | 		String.prototype.includes | 		[String.prototype.includes](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes)<br /> | 		<img src="../../blob/master/files/logos/ecma.png?raw=true" 				alt="ecma" width="25" height="25" /> | 		MIT |
