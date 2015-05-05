@@ -4,4 +4,4 @@
 [![Dependency Status](https://david-dm.org/Polyfiller/polyfiller.svg)](https://david-dm.org/Polyfiller/polyfiller)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/polyfiller.svg)](https://saucelabs.com/u/polyfiller)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/polyfiller.svg?auth=28a648575b01d971b7d71de81b29b557)](https://saucelabs.com/u/polyfiller)
