@@ -220,6 +220,16 @@ var polyfiller = new Polyfiller({
 });
 ```
 
+Also this option is available like method:
+
+```js
+var polyfiller = new Polyfiller;
+
+polyfiller.options.wrapper(function (source) {
+	return source;
+});
+```
+
 
 ### Tests
 

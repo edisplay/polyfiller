@@ -24,17 +24,18 @@ export default class Polyfiller {
      *
      * @param {Array} features
      * @param {Function} [callback]
+     * @param {Object} [context]
      * @returns {Array}
      */
-    find (features, callback) {
+    find (features, callback, context) {
         let list = this.details.requested_features(features);
 
-        return list.map((name) => {
+        return list.map(name => {
             try {
                 let feature = this.details.feature_bundle(name);
 
                 if (callback) {
-                    callback(feature, name, this.utils.list(features));
+                    callback.call(context, feature, name, this.utils.list(features));
                 }
 
                 return feature;

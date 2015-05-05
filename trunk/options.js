@@ -34,7 +34,7 @@ export default {
     wrapper (content) {
         return content &&
             `;(function () {
-                ${content};
+                ${content}
             }.call(
                 typeof window === 'object' && window ||
                 typeof self   === 'object' && self   ||
