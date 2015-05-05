@@ -18,7 +18,7 @@ for (let feature of features) {
 
     let types = feature.types.map(type => {
         if (type !== 'proposal') {
-            return deindent `<img src="../blob/master/files/logos/${type}.png?raw=true" \
+            return deindent `<img src="../../blob/master/files/logos/${type}.png?raw=true" \
                 alt="${type}" width="25" height="25" />`;
         }
 
