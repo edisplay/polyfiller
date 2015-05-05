@@ -8,7 +8,7 @@ let polyfiller = new Polyfiller,
     features = polyfiller.list(true).reverse();
 
 let table = deindent`| Feature | What's included? | Type | License |
-                     |:--------|:-----------------|:-----|:------- |
+                     |:--------|:-----------------|:----:|:-------:|
 `;
 
 for (let feature of features) {
@@ -17,7 +17,7 @@ for (let feature of features) {
     });
 
     let types = feature.types.map(type => {
-        if (type !== 'proposal') {
+        if (!/proposal/i.test(type)) {
             return deindent `<img src="../../blob/master/files/logos/${type}.png?raw=true" \
                 alt="${type}" width="25" height="25" />`;
         }
