@@ -16,6 +16,15 @@ for (let feature of features) {
         return `[${file.name}](${file.info})<br />`;
     });
 
+    let types = feature.types.map(type => {
+        if (type !== 'proposal') {
+            return deindent `<img src="../blob/master/files/logos/${type}.png?raw=true" \
+                alt="${type}" width="25" height="25" />`;
+        }
+
+        return type;
+    });
+
     let licenses = feature.licenses.map(license => {
         return license.type;
     });
@@ -23,7 +32,7 @@ for (let feature of features) {
     table += deindent`| \
         ${feature.name} | \
         ${files.join('')} | \
-        ${feature.types.join(', ')} | \
+        ${types.join(' ')} | \
         ${licenses.join(', ')} |
     `;
 }
