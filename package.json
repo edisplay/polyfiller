@@ -1,6 +1,6 @@
 {
     "name"   : "polyfiller",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author" : "Abashkin Alexander <monolithed@gmail.com>",
     "homepage": "https://github.com/monolithed/polyfiller.git",
 
@@ -31,10 +31,11 @@
     },
 
     "dependencies": {
-        "resolve"                     : "^1.1.6",
+        "babelify"                    : "^5.0.4",
         "deindent"                    : "^0.1.0",
-        "tsort"                       : "^0.0.1",
         "nconf"                       : "^0.7.1",
+        "resolve"                     : "^1.1.6",
+        "tsort"                       : "^0.0.1",
         "winston"                     : "^1.0.0",
 
         "array.from"                  : "^0.2.0",
@@ -92,11 +93,39 @@
         "karma-phantomjs-launcher": "^0.1.4"
     },
 
-    "optionalDependencies": {
+    "bundleDependencies": [
+        "array.from",
+        "array.prototype.find",
+        "array.prototype.findindex",
+        "Base64",
+        "css.escape",
+        "dom4",
+        "event-source-polyfill",
+        "es6-promises",
+        "es6-collections",
+        "get-own-property-symbols",
+        "harmony-reflect",
+        "raf.js",
+        "regexp.prototype.match",
+        "regexp.prototype.search",
+        "setimmediate",
+        "scrollingelement",
+        "string.fromcodepoint",
+        "string.prototype.codepointat",
+        "string.prototype.at",
+        "string.prototype.includes",
+        "string.prototype.startswith",
+        "string.prototype.endswith",
+        "string.prototype.repeat",
+        "text-encoding",
+        "unorm",
+        "whatwg-fetch"
+    ],
+
+    "commentedDependencies": {
         "travis-encrypt": "^0.1.4"
     },
 
-    "bundleDependencies": [ ],
 
     "licenses": [
         {
