@@ -39,7 +39,7 @@ function (feature, name) {
 Type: `Function ([extended=false])` <br />
 Returns: `Array`
 
-Return a list of all of available features as an array of strings.
+Return a list of all available features as an array of strings.
 
 ```js
 var polyfiller = new Polyfiller;
