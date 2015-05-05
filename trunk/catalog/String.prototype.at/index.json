@@ -10,13 +10,6 @@
         }
     ],
 
-    "description": [
-        {
-            "type": "proposal",
-            "url": "https://github.com/mathiasbynens/String.prototype.at"
-        }
-    ],
-
     "repository": {
         "type": "npm",
         "url" : "https://npmjs.org/package/string.prototype.at"
