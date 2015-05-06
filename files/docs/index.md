@@ -15,7 +15,7 @@ include "usage.md"
 
 ### Catalog
 
-A list of all of available features
+A list of all available features
 
 include "catalog.md"
 
