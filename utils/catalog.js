@@ -12,7 +12,7 @@ let table = deindent`| Feature | What's included? | Type | License |
 `;
 
 let icons = "https://github.com/Polyfiller/polyfiller/" +
-    "blob/master/files/icons";
+    "blob/master/files/icons/type/25x25";
 
 for (let feature of features) {
     let files = feature.files.map(file => {
