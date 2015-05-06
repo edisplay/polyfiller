@@ -42,7 +42,7 @@ var list = polyfiller.find([ 'Promise' ]),
 
 ### Catalog
 
-A list of all of available features
+A list of all available features
 
 | Feature | What's included? | Type | License |
 |:--------|:-----------------|:----:|:-------:|
