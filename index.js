@@ -7,15 +7,19 @@ import utils from './trunk/utils';
 import functional from './tools/functional';
 import log from './utils/log';
 
+const details = Symbol();
+
 /** @class Polyfiller */
 export default class Polyfiller {
     constructor () {
+        /** @public */
         this.options = functional
             .options(options, ...arguments);
 
-        this.details = new Details(this.options);
+        /** @private */
+        this[details] = new Details(this.options);
 
-        /** Provides a set of useful utilities */
+        /** @public Provides a set of useful utilities */
         this.utils = utils;
     }
 
@@ -28,11 +32,11 @@ export default class Polyfiller {
      * @returns {Array}
      */
     find (features, callback, context) {
-        let list = this.details.requested_features(features);
+        let list = this[details].requested_features(features);
 
         return list.map(name => {
             try {
-                let feature = this.details.feature_bundle(name);
+                let feature = this[details].feature_bundle(name);
 
                 if (callback) {
                     callback.call(context, feature, name, this.utils.list(features));
@@ -56,7 +60,7 @@ export default class Polyfiller {
      */
     list (extended) {
         try {
-            let features = this.details.available_features();
+            let features = this[details].available_features();
 
             if (this.options.verbose) {
                 log.info('Available features', { features });
@@ -64,7 +68,7 @@ export default class Polyfiller {
 
             if (extended) {
                 return features.map(name => {
-                    return this.details.feature_info(name);
+                    return this[details].feature_info(name);
                 });
             }
 
@@ -85,7 +89,7 @@ export default class Polyfiller {
      */
     pack (features) {
         try {
-            return this.details.pack_features(features);
+            return this[details].pack_features(features);
         }
         catch (error) {
             throw log.error('::pack', {
