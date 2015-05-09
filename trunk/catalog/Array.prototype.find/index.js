@@ -1,8 +1,8 @@
 'use strict';
 
-import Details from '../../details';
-
-let details = new Details,
-    feature = details.load_feature('array.prototype.find');
-
-export default feature;
+export default [
+    {
+        type: 'npm',
+        name: 'array.prototype.find'
+    }
+];

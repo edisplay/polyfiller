@@ -180,6 +180,66 @@ var polyfiller = new Polyfiller({
 });
 ```
 
+
+Required file structure;
+
+```
+catalog
+	Promise
+		index.json
+		index.js
+```
+
+**index.json**
+
+```json
+{
+	"name": "Promise"
+}
+```
+
+There are dependencies?
+
+```
+"dependencies": ["window.setImmediate"]
+```
+
+**index.js**
+
+```js
+module.exports = [
+	{
+		type: 'npm',
+		name: 'es6-promises'
+	}
+];
+```
+
+The files are located locally?
+
+```
+catalog
+	Promise
+		files
+			index.js — your polyfill
+
+		index.json
+		index.js
+```
+
+```js
+var path = require('path');
+
+module.exports = [
+	{
+		type: 'file',
+		name: path.join(__dirname, './files/index.js')
+	}
+];
+```
+
+
+
 #### exclude
 
 Type: `Array` <br />

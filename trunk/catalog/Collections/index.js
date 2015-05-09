@@ -1,8 +1,8 @@
 'use strict';
 
-import Details from '../../details';
-
-let details = new Details,
-    feature = details.load_feature('es6-collections');
-
-export default feature;
+export default [
+    {
+        type: 'npm',
+        name: 'es6-collections'
+    }
+];

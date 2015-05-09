@@ -96,25 +96,32 @@ export default class Details {
     /**
      * Returns a feature file
      *
-     * @param {string} feature
+     * @param {Array} data
      * @return {string}
      */
-    load_feature (file) {
-        try {
+    load_feature (data) {
+        for (let feature of data) {
+            let file = null;
+
             try {
-                file = resolve.sync(file);
-            }
-            catch (error) { }
+                switch (feature.type) {
+                    case 'npm':
+                        file = resolve.sync(feature.name);
+                        break;
 
-            if (!file) {
-                file = this.resolve_path(file);
-            }
+                    case 'file':
+                        file = this.resolve_path(feature.name);
+                        break;
+                }
 
-            return fs.readFileSync(file, 'utf8');
-        }
-        catch (error) {
-            throw log.error('load_feature', {
-                text: 'Package not found ' + file });
+                if (file) {
+                    return fs.readFileSync(file, 'utf8');
+                }
+            }
+            catch (error) {
+                throw log.error('load_feature', {
+                    text: 'Package not found ' + file });
+            }
         }
     }
 
@@ -185,12 +192,19 @@ export default class Details {
         return [];
     }
 
+    /**
+     * Returns a requested feature
+     *
+     * @param {string} name
+     * @returns {Object}
+     */
     feature_bundle (name) {
-        let source = this.resolve_path(`${name}/index.js`);
+        let feature = this.resolve_path(name);
+            feature = require(feature);
 
         return {
             config: this.feature_info(name),
-            source: require(source)
+            source: this.load_feature(feature)
         };
     }
 }
