@@ -23,7 +23,7 @@ ehthumbs.db
 # Node
 # --------------------------
 
-node_modules
+/node_modules
 npm-shrinkwrap.json
 npm-debug.log
 
