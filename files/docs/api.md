@@ -155,7 +155,6 @@ module.exports = [
 ```
 
 
-
 #### exclude
 
 Type: `Array` <br />

@@ -106,7 +106,10 @@ export default class Details {
             try {
                 switch (feature.type) {
                     case 'npm':
-                        file = resolve.sync(feature.name);
+                        file = resolve.sync(feature.name, {
+                            paths: [ 'node_modules/polyfiller-catalog/node_modules' ]
+                        });
+
                         break;
 
                     case 'file':
@@ -120,7 +123,7 @@ export default class Details {
             }
             catch (error) {
                 throw log.error('load_feature', {
-                    text: 'Package not found ' + file });
+                    text: `Package not found "${feature.name}"`});
             }
         }
     }

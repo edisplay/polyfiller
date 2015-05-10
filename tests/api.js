@@ -163,7 +163,10 @@ describe('::find', ( ) => {
 });
 
 describe('::list', () => {
-    let cases = ['list (default)', 'list (option.catalog)'];
+    let cases = [
+        'list (default)',
+        'list (option.catalog)'
+    ];
 
     cases.forEach((name) => {
         test(name, mock => {

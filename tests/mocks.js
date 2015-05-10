@@ -70,7 +70,7 @@ export default {
     'find (option.catalog)' () {
         let polyfiller = new Polyfiller({
             catalog: [
-                path.resolve(__dirname, '../trunk/catalog')
+                path.resolve(__dirname, '../tests/catalog')
             ],
         });
 
@@ -84,7 +84,7 @@ export default {
     },
 
     'list (option.catalog)' () {
-        let catalog = path.resolve(__dirname, '../trunk/catalog');
+        let catalog = path.resolve(__dirname, '../tests/catalog');
 
         let polyfiller = new Polyfiller({
             catalog: [ catalog ],

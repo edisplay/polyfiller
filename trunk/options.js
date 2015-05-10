@@ -1,6 +1,6 @@
 'use strict';
 
-import path from 'path';
+import catalog from 'polyfiller-catalog';
 
 export default {
     /**
@@ -8,7 +8,7 @@ export default {
      *
      * @return {Array}
      */
-    catalog: [ path.join(__dirname, './catalog') ],
+    catalog: [ catalog.path() ],
 
     /**
      * Excluded features
