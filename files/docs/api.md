@@ -120,7 +120,7 @@ var polyfiller = new Polyfiller({
 });
 ```
 
-Also this option is available like method:
+Also this option is available like a method:
 
 ```js
 var polyfiller = new Polyfiller;
@@ -132,7 +132,7 @@ polyfiller.options.wrapper(function (source) {
 
 #### modules
 
-Do you want to use specific `npm` modules?
+Do you want to use some specific `npm` modules?
 
 ```js
 var path = require('path');
@@ -144,7 +144,7 @@ var polyfiller = new Polyfiller({
 });
 ```
 
-Please use this option only with `catalog` option.
+NOTE: Please use only with the option `catalog`.
 
 
 #### catalog
