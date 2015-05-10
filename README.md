@@ -54,9 +54,13 @@ A list of all available features
 | 		CSS.escape | 		[CSS.escape](https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
 | 		Collections | 		[Set](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)<br />[Map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)<br />[WeakSet](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)<br />[WeakMap](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/ecma.png?raw=true" 			alt="ecma" width="25" height="25" /> | 		MIT |
 | 		DOM4 | 		[CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)<br />[Element#append](https://dom.spec.whatwg.org/#dom-parentnode-appendnodes)<br />[Element#prepend](https://dom.spec.whatwg.org/#dom-parentnode-prependnodes)<br />[Element#after](https://dom.spec.whatwg.org/#dom-childnode-afternodes)<br />[Element#before](https://dom.spec.whatwg.org/#dom-childnode-beforenodes)<br />[Element#replaceWith](https://dom.spec.whatwg.org/#dom-childnode-replacewithnodes)<br />[Element#remove](https://dom.spec.whatwg.org/#dom-childnode-remove)<br />[Element#query](https://dom.spec.whatwg.org/#dom-elements-queryrelativeselectors)<br />[Element#queryAll](https://dom.spec.whatwg.org/#dom-elements-queryallrelativeselectors)<br />[Element#matches](https://dom.spec.whatwg.org/#dom-element-matchesselectors)<br />[Element#closest](https://dom.spec.whatwg.org/#dom-element-closestselectors)<br />[Element#classList](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> <img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
+| 		Element.prototype.dataset | 		[Element.prototype.dataset](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> <img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
 | 		EventSource | 		[EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
 | 		Fetch | 		[GlobalFetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)<br />[Body](https://developer.mozilla.org/en-US/docs/Web/API/Body)<br />[Headers](https://developer.mozilla.org/en-US/docs/Web/API/Headers)<br />[Request](https://developer.mozilla.org/en-US/docs/Web/API/Request)<br />[Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
 | 		Object.getOwnPropertySymbols | 		[Object.getOwnPropertySymbols](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/ecma.png?raw=true" 			alt="ecma" width="25" height="25" /> | 		MIT |
+| 		Object.observe | 		[Object.observe](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/observe)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/proposal.png?raw=true" 			alt="proposal" width="25" height="25" /> | 		MIT |
+| 		PerformanceTiming | 		[URL](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		WTFPL |
+| 		PointerEvents | 		[PointerEvents](http://www.w3.org/Submission/pointer-events/)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		Apache License |
 | 		Promise | 		[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/ecma.png?raw=true" 			alt="ecma" width="25" height="25" /> | 		MIT |
 | 		window.setImmediate | 		[window.setImmediate](undefined)<br />[window.clearImmediate](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
 | 		Reflect | 		[Reflect](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Reflect)<br />[Proxy handler](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/ecma.png?raw=true" 			alt="ecma" width="25" height="25" /> | 		Apache License, MPL |
@@ -72,8 +76,14 @@ A list of all available features
 | 		String.prototype.startsWith | 		[String.prototype.startsWith](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/ecma.png?raw=true" 			alt="ecma" width="25" height="25" /> | 		MIT |
 | 		TextEncoder | 		[TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		Apache License |
 | 		URL | 		[URL](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
+| 		UserTiming | 		[window.performance.clearMarks](undefined)<br />[window.performance.clearMeasures](undefined)<br />[window.performance.getEntries](undefined)<br />[window.performance.getEntriesByName](undefined)<br />[window.performance.getEntriesByType](undefined)<br />[window.performance.mark](undefined)<br />[window.performance.measure](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
 | 		WindowBase64 | 		[WindowBase64](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> <img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		WTFPL |
+| 		document.currentScript | 		[document.scrollingElement](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
 | 		document.scrollingElement | 		[document.scrollingElement](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
+| 		window.location.origin | 		[window.location.origin](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
+| 		window.navigator.getUserMedia | 		[window.navigator.getUserMedia](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
+| 		window.navigator.language | 		[window.location.origin](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/whatwg.png?raw=true" 			alt="whatwg" width="25" height="25" /> | 		MIT |
+| 		window.performance.now | 		[window.performance.now](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
 | 		window.requestAnimationFrame | 		[window.requestAnimationFrame](undefined)<br />[window.cancelAnimationFrame](undefined)<br /> | 		<img src="https://github.com/Polyfiller/polyfiller/blob/master/files/icons/type/25x25/w3c.png?raw=true" 			alt="w3c" width="25" height="25" /> | 		MIT |
 
 
@@ -205,7 +215,7 @@ var polyfiller = new Polyfiller({
 });
 ```
 
-Also this option is available like method:
+Also this option is available like a method:
 
 ```js
 var polyfiller = new Polyfiller;
@@ -217,7 +227,7 @@ polyfiller.options.wrapper(function (source) {
 
 #### modules
 
-Do you want to use specific `npm` modules?
+Do you want to use some specific `npm` modules?
 
 ```js
 var path = require('path');
@@ -229,7 +239,7 @@ var polyfiller = new Polyfiller({
 });
 ```
 
-Please use this option only with `catalog` option.
+NOTE: Please use only with the option `catalog`.
 
 
 #### catalog
