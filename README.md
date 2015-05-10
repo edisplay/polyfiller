@@ -164,6 +164,74 @@ var list = polyfiller.find([ 'Promise' ]),
 
 ### Options
 
+#### exclude
+
+Type: `Array` <br />
+Default: `[]`
+
+Some polyfills have dependencies that you can exclude here
+
+```js
+var polyfiller = new Polyfiller({
+	exclude: ['setImmediate']
+});
+```
+
+#### verbose
+
+Type: `Boolean` <br />
+Default: `false`
+
+Verbose mode is an option that provides additional details as to what the package is doing.
+
+```js
+var polyfiller = new Polyfiller({
+	verbose: true
+});
+```
+
+#### wrapper
+
+Type: `Function` <br />
+Default: `None`
+
+A custom wrapper for your environment
+
+```js
+var polyfiller = new Polyfiller({
+	wrapper: function (source) {
+		return ';(function () {' + source + '}.call(self));'
+	}
+});
+```
+
+Also this option is available like method:
+
+```js
+var polyfiller = new Polyfiller;
+
+polyfiller.options.wrapper(function (source) {
+	return source;
+});
+```
+
+#### modules
+
+Do you want to use specific `npm` modules?
+
+```js
+var path = require('path');
+
+var polyfiller = new Polyfiller({
+	modules: [
+		path.join(__dirname, '../you_package/npm_modules')
+	]
+});
+```
+
+Please use this option only with `catalog` option.
+
+
 #### catalog
 
 Type: `Array` <br />
@@ -237,58 +305,6 @@ module.exports = [
 		name: path.join(__dirname, './files/index.js')
 	}
 ];
-```
-
-
-#### exclude
-
-Type: `Array` <br />
-Default: `[]`
-
-Some polyfills have dependencies that you can exclude here
-
-```js
-var polyfiller = new Polyfiller({
-	exclude: ['setImmediate']
-});
-```
-
-#### verbose
-
-Type: `Boolean` <br />
-Default: `false`
-
-Verbose mode is an option that provides additional details as to what the package is doing.
-
-```js
-var polyfiller = new Polyfiller({
-	verbose: true
-});
-```
-
-#### wrapper
-
-Type: `Function` <br />
-Default: `None`
-
-A custom wrapper for your environment
-
-```js
-var polyfiller = new Polyfiller({
-	wrapper: function (source) {
-		return ';(function () {' + source + '}.call(self));'
-	}
-});
-```
-
-Also this option is available like method:
-
-```js
-var polyfiller = new Polyfiller;
-
-polyfiller.options.wrapper(function (source) {
-	return source;
-});
 ```
 
 

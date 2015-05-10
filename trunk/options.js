@@ -4,11 +4,18 @@ import catalog from 'polyfiller-catalog';
 
 export default {
     /**
+     * Modules
+     *
+     * @return {string}
+     */
+    modules: [ catalog.MODULES ],
+
+    /**
      * Locations
      *
      * @return {Array}
      */
-    catalog: [ catalog.path() ],
+    catalog: [ catalog.SOURCES ],
 
     /**
      * Excluded features

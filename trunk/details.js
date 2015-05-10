@@ -107,7 +107,7 @@ export default class Details {
                 switch (feature.type) {
                     case 'npm':
                         file = resolve.sync(feature.name, {
-                            paths: [ 'node_modules/polyfiller-catalog/node_modules' ]
+                            paths: this.options.modules
                         });
 
                         break;
