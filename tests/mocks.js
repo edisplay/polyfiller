@@ -68,13 +68,44 @@ export default {
     },
 
     'find (option.catalog)' () {
+        let catalog = path.resolve(__dirname,
+            '../tests/catalog');
+
         let polyfiller = new Polyfiller({
-            catalog: [
-                path.resolve(__dirname, '../tests/catalog')
-            ],
+            catalog: [ catalog ],
         });
 
         return polyfiller.find([ 'Promise' ]);
+    },
+
+    'find (option.modules)' () {
+        let modules = path.resolve(__dirname,
+                '../tests/modules/node_modules'),
+
+            catalog = path.resolve(__dirname,
+                '../tests/catalog');
+
+        let polyfiller = new Polyfiller({
+            modules: [ modules ],
+            catalog: [ catalog ],
+        });
+
+        return polyfiller.find([ 'Promise' ]);
+    },
+
+    'list (option.modules)' () {
+        let modules = path.resolve(__dirname,
+                '../tests/modules/node_modules'),
+
+            catalog = path.resolve(__dirname,
+                '../tests/catalog');
+
+        let polyfiller = new Polyfiller({
+            modules: [ modules ],
+            catalog: [ catalog ],
+        });
+
+        return polyfiller.list();
     },
 
     'list (default)' () {
@@ -84,7 +115,8 @@ export default {
     },
 
     'list (option.catalog)' () {
-        let catalog = path.resolve(__dirname, '../tests/catalog');
+        let catalog = path.resolve(__dirname,
+            '../tests/catalog');
 
         let polyfiller = new Polyfiller({
             catalog: [ catalog ],

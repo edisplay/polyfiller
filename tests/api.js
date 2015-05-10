@@ -39,6 +39,7 @@ describe('::find', ( ) => {
     let cases = [
         'find (npm feature)',
         'find (option.catalog)',
+        'find (option.modules)',
         'find (advanced format)'
     ];
 
@@ -165,7 +166,8 @@ describe('::find', ( ) => {
 describe('::list', () => {
     let cases = [
         'list (default)',
-        'list (option.catalog)'
+        'list (option.catalog)',
+        'list (option.modules)'
     ];
 
     cases.forEach((name) => {
