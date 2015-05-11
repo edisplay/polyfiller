@@ -37,7 +37,8 @@ export default class Details {
 
             if (!name) {
                 throw log.error('dependencies', {
-                    text: 'Could not find a property name for requested feature' });
+                    text: 'Could not find a property name for requested feature'
+                });
             }
 
             graph.add(name, ...this.feature_info(name)
@@ -49,7 +50,8 @@ export default class Details {
         }
         catch (error) {
             throw log.error('dependencies', {
-                text: 'Unresolved dependency error', error });
+                text: 'Unresolved dependency error', error
+            });
         }
 
         return graph.reverse();
@@ -72,7 +74,8 @@ export default class Details {
             }
             catch (error) {
                 log.warn('resolve_path', {
-                    text: 'Could not find the following file ' + file, error });
+                    text: 'Could not find the following file ' + file, error
+                });
             }
         }
     }
@@ -92,11 +95,11 @@ export default class Details {
         catch (error) {
             throw log.error('feature_info', {
                 error,
-                text : `Requested feature <${feature}> not found in the catalog`
+                text: `Requested feature <${feature}> not found in the catalog`
             });
         }
 
-        return Object.assign({ dependencies: [] }, config);
+        return Object.assign({dependencies: []}, config);
     }
 
     /**
@@ -113,12 +116,16 @@ export default class Details {
                 switch (feature.type) {
                     case 'npm':
                     case 'bower':
-                        file = resolve[feature.type].sync(feature.name, {
-                            paths: this.options.modules
-                        });
-
-                        console.log('-----', file);
-
+                        try {
+                            file = resolve[feature.type].sync(feature.name, {
+                                paths: this.options.modules
+                            });
+                        }
+                        catch (error) {
+                            log.warn('load_feature', {
+                                text: `Package not found "${feature.name}"`
+                            });
+                        }
 
                         break;
 
@@ -133,7 +140,8 @@ export default class Details {
             }
             catch (error) {
                 throw log.error('load_feature', {
-                    text: `Package not found "${feature.name}"`});
+                    text: `Package not found "${feature.name}"`
+                });
             }
         }
     }
@@ -186,7 +194,7 @@ export default class Details {
         }
         else {
             let list = utils.list(features);
-                list = this.dependencies(list);
+            list = this.dependencies(list);
 
             let files = {
                 included: this.exclude_features(list, this.options.exclude),
@@ -195,7 +203,7 @@ export default class Details {
 
             if (this.options.verbose) {
                 for (let [title, file] of functional.entries(files)) {
-                    log.info(title + ' files', { file });
+                    log.info(title + ' files', {file});
                 }
             }
 
@@ -213,7 +221,7 @@ export default class Details {
      */
     feature_bundle (name) {
         let feature = this.resolve_path(name);
-            feature = require(feature);
+        feature = require(feature);
 
         return {
             config: this.feature_info(name),
