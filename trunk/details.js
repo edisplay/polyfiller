@@ -153,8 +153,7 @@ export default class Details {
      * @return {string}
      */
     pack_features (features) {
-        let result = features.map(feature =>
-            feature.source);
+        let result = features.map(feature => feature.source);
 
         return this.options.wrapper(result.join(''));
     }
@@ -194,7 +193,7 @@ export default class Details {
         }
         else {
             let list = utils.list(features);
-            list = this.dependencies(list);
+                list = this.dependencies(list);
 
             let files = {
                 included: this.exclude_features(list, this.options.exclude),
@@ -221,7 +220,7 @@ export default class Details {
      */
     feature_bundle (name) {
         let feature = this.resolve_path(name);
-        feature = require(feature);
+            feature = require(feature);
 
         return {
             config: this.feature_info(name),
