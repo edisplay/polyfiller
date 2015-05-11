@@ -117,6 +117,9 @@ export default class Details {
                             paths: this.options.modules
                         });
 
+                        console.log('-----', file);
+
+
                         break;
 
                     case 'file':

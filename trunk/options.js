@@ -8,14 +8,14 @@ export default {
      *
      * @return {string}
      */
-    modules: [ catalog.MODULES ],
+    modules: [ ...catalog.MODULES ],
 
     /**
      * Locations
      *
      * @return {Array}
      */
-    catalog: [ catalog.SOURCES ],
+    catalog: [ ...catalog.SOURCES ],
 
     /**
      * Excluded features
