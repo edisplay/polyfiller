@@ -4,12 +4,18 @@ import fs from 'fs';
 import path from 'path';
 
 import tsort from 'tsort';
-import resolve from 'resolve';
+import npm_resolve from 'resolve';
+import bower_resolve from 'resolve-bower';
 
 import utils from './utils';
 import functional from './../tools/functional';
 import log from './../utils/log';
 
+
+const resolve = {
+    npm  : npm_resolve,
+    bower: bower_resolve
+};
 
 /** @class Details */
 export default class Details {
@@ -106,7 +112,8 @@ export default class Details {
             try {
                 switch (feature.type) {
                     case 'npm':
-                        file = resolve.sync(feature.name, {
+                    case 'bower':
+                        file = resolve[feature.type].sync(feature.name, {
                             paths: this.options.modules
                         });
 

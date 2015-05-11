@@ -134,7 +134,7 @@ module.exports = function (grunt, options) {
                 maxstatements: 15,
 
                 // This option lets you control cyclomatic complexity throughout your code.
-                maxcomplexity: 6,
+                maxcomplexity: 10,
 
                 // This option lets you set the maximum length of a line.
                 maxlen: 90,
