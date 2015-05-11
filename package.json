@@ -1,6 +1,6 @@
 {
     "name"   : "polyfiller",
-    "version": "0.0.23",
+    "version": "0.0.24",
     "author" : "Abashkin Alexander <monolithed@gmail.com>",
     "homepage": "https://github.com/Polyfiller/polyfiller.git",
 
@@ -33,7 +33,7 @@
     "dependencies": {
         "babelify"          : "^6.0.2",
         "nconf"             : "^0.7.1",
-        "polyfiller-catalog": "^0.0.19",
+        "polyfiller-catalog": "^0.0.20",
         "resolve"           : "^1.1.6",
         "resolve-bower"     : "0.0.1",
         "tsort"             : "^0.0.1",
