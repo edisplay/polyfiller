@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/Polyfiller/polyfiller.png)](https://travis-ci.org/Polyfiller/polyfiller)
 [![Coverage Status](https://coveralls.io/repos/Polyfiller/polyfiller/badge.svg)](https://coveralls.io/r/Polyfiller/polyfiller)
 [![Dependency Status](https://david-dm.org/Polyfiller/polyfiller.svg)](https://david-dm.org/Polyfiller/polyfiller)
-[![Donate](https://img.shields.io/gratipay/polyfiller.corp.svg)](https://gratipay.com/polyfiller.corp)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.txt)
 [![Codacy Badge](https://www.codacy.com/project/badge/f98b6ccda7d841c1a2b1feb3da940324)](https://www.codacy.com/app/monolithed/polyfiller)
 
