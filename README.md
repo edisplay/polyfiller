@@ -237,7 +237,8 @@ var path = require('path');
 
 var polyfiller = new Polyfiller({
 	modules: [
-		path.join(__dirname, '../you_package/npm_modules')
+		path.join(__dirname, '../your_catalog/npm_modules'),
+		path.join(__dirname, '../your_catalog/bower_components')
 	]
 });
 ```
@@ -257,13 +258,15 @@ var path = require('path');
 
 var polyfiller = new Polyfiller({
 	catalog: [ 
-		path.resolve(__dirname, '../your/catalog') 
+		path.resolve(__dirname, '../your/catalog')
 	]
 });
 ```
 
+If you want to use `npm` or `bower` packages in your catalog, please see `modules` section. 
 
-Required file structure;
+
+Required file structure for each new package:
 
 ```
 catalog
@@ -297,6 +300,44 @@ module.exports = [
 ];
 ```
 
+*type*
+
+Type: `string [npm | bower | file]` <br />
+Default: `None`
+
+*name*
+
+Type: `string` <br />
+Default: `None`
+
+**package.json**
+
+Use `dependencies` and `bundleDependencies` for new features located in `npm` 
+
+```json
+{
+	"dependencies": {
+		"es6-promises": "^1.0.10"
+	},
+
+	"bundleDependencies": [
+		"es6-promises"
+	]
+}
+```
+
+**bower.json**
+
+Use `dependencies` for new features located in `bower` 
+
+```json
+{
+	"dependencies": {
+		"es6-promises": "1.0.10"
+	}
+}
+```
+
 The files are located locally?
 
 ```
@@ -310,6 +351,8 @@ catalog
 ```
 
 ```js
+// index.js
+
 var path = require('path');
 
 module.exports = [
