@@ -15,14 +15,14 @@ include "usage.md"
 
 ### Catalog
 
-A list of all available features
+A list of [available features](https://github.com/Polyfiller/polyfiller-catalog/tree/master/files)
 
 include "catalog.md"
 
 
 ### Compatibility
 
-Theoretically compatible with all contemporary browsers since **IE9**<br />
+Theoretically compatible with all contemporary browsers since **IE9**.<br />
 For **IE8** only it's recommended to include [ie8](https://github.com/WebReflection/ie8) script before your build
 
 include "api.md"

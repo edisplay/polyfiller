@@ -44,7 +44,7 @@ var list = polyfiller.find([ 'Promise' ]),
 
 ### Catalog
 
-A list of all available features
+A list of [available features](https://github.com/Polyfiller/polyfiller-catalog/tree/master/files)
 
 | Feature | What's included? | Type | License |
 |:--------|:-----------------|:----:|:-------:|
@@ -93,7 +93,7 @@ A list of all available features
 
 ### Compatibility
 
-Theoretically compatible with all contemporary browsers since **IE9**<br />
+Theoretically compatible with all contemporary browsers since **IE9**.<br />
 For **IE8** only it's recommended to include [ie8](https://github.com/WebReflection/ie8) script before your build
 
 ### Methods
@@ -335,8 +335,10 @@ grunt test
 2. Create a topic branch
 3. Make your commits
 4. Write the tests (see `mocks.js` and `api.js`)
-4. Run `grunt test`
+4. Run `grunt test` (code) or `grunt build` (docs)  
 5. Submit Pull Request once Tests are Passing
+
+[Have an interesting and well-tested polyfill?](https://github.com/Polyfiller/polyfiller-catalog)
 
 
 ### License
