@@ -4,18 +4,14 @@ import fs from 'fs';
 import path from 'path';
 
 import tsort from 'tsort';
-import npm_resolve from 'resolve';
-import bower_resolve from 'resolve-bower';
+import npm from 'resolve';
+import bower from 'resolve-bower';
 
 import utils from './utils';
 import functional from './../tools/functional';
 import log from './../utils/log';
 
-
-const resolve = {
-    npm  : npm_resolve,
-    bower: bower_resolve
-};
+const resolve = { npm, bower };
 
 /** @class Details */
 export default class Details {
@@ -32,9 +28,7 @@ export default class Details {
     dependencies (features) {
         let graph = tsort();
 
-        features.forEach((feature) => {
-            let name = feature.name;
-
+        features.forEach(({ name }) => {
             if (!name) {
                 throw log.error('dependencies', {
                     text: 'Could not find a property name for requested feature'
@@ -74,7 +68,7 @@ export default class Details {
             }
             catch (error) {
                 log.warn('resolve_path', {
-                    text: 'Could not find the following file ' + file, error
+                    text: `Could not find the following file ${file}`, error
                 });
             }
         }
@@ -109,28 +103,28 @@ export default class Details {
      * @return {string}
      */
     load_feature (data) {
-        for (let feature of data) {
+        for (let {type, name} of data) {
             let file = null;
 
             try {
-                switch (feature.type) {
+                switch (type) {
                     case 'npm':
                     case 'bower':
                         try {
-                            file = resolve[feature.type].sync(feature.name, {
+                            file = resolve[type].sync(name, {
                                 paths: this.options.modules
                             });
                         }
                         catch (error) {
                             log.warn('load_feature', {
-                                text: `Package not found "${feature.name}"`
+                                text: `Package not found "${name}"`
                             });
                         }
 
                         break;
 
                     case 'file':
-                        file = this.resolve_path(feature.name);
+                        file = this.resolve_path(name);
                         break;
                 }
 
@@ -140,7 +134,7 @@ export default class Details {
             }
             catch (error) {
                 throw log.error('load_feature', {
-                    text: `Package not found "${feature.name}"`
+                    text: `Package not found "${name}"`
                 });
             }
         }
@@ -153,7 +147,7 @@ export default class Details {
      * @return {string}
      */
     pack_features (features) {
-        let result = features.map(feature => feature.source);
+        let result = features.map(({ source }) => source);
 
         return this.options.wrapper(result.join(''));
     }

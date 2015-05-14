@@ -11,7 +11,7 @@ module.exports = {
 
     test: [
         'build',
-        'jshint:lint',
+        //'jshint:lint',
         'babel:tests',
         'mock:api',
         //'benchmark:api',

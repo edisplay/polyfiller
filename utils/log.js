@@ -7,28 +7,27 @@ import format_list from './format_list';
 let logger = new (winston.Logger)({
     transports: [
         new (winston.transports.Console)({
-            formatter (options) {
-                let prefix = winston_config.colorize(options.level, '>> '),
-                    meta = options.meta;
+            formatter ({level, message, meta = {}}) {
+                let prefix = winston_config.colorize(level, '>> ');
 
-                if (options.level === 'error') {
-                    let message = '';
+                if (level === 'error') {
+                    let text = '';
 
                     if (meta.text) {
-                        message = `  - ${meta.text}\n`;
+                        text = `  - ${meta.text}\n`;
                     }
 
                     try {
                         if (meta.error) {
-                            message += `    \n${meta.error.stack}`;
+                            text += `    \n${meta.error.stack}`;
                         }
                     }
                     catch (error) {}
 
-                    return prefix + `[${options.message}]\n${message}`;
+                    return prefix + `[${message}]\n${text}`;
                 }
 
-                let message = prefix + options.message;
+                message = prefix + message;
 
                 if (meta.list) {
                     message = format_list(message, meta.list);
