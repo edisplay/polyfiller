@@ -2,7 +2,7 @@
 
 #### find
 
-Type: `Function (feature, name, features)` <br />
+Type: `Function (Array, [ Function (feature, name, features) ])` <br />
 Returns: `Array`
 
 Returns an unordered bundle of polyfills as an array of objects
