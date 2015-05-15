@@ -100,7 +100,7 @@ For **IE8** only it's recommended to include [ie8](https://github.com/WebReflect
 
 #### find
 
-Type: `Function (feature, name)` <br />
+Type: `Function (feature, name, features)` <br />
 Returns: `Array`
 
 Returns an unordered bundle of polyfills as an array of objects
@@ -109,7 +109,7 @@ Returns an unordered bundle of polyfills as an array of objects
 var polyfiller = new Polyfiller;
 
 var list = polyfiller.find(['Promise'], function (feature, name) {
-	console.log(name, feature.source, feature.config);
+	console.log(feature.source, feature.config);
 });
 
 list[0].source; // source code
@@ -158,7 +158,7 @@ list[0].licenses[0].type; // MIT
 ...
 ```
 
-For information see `index.json` file
+For more information see the [config](https://github.com/Polyfiller/polyfiller-catalog/blob/master/files/Fetch/index.json) format
 
 #### pack
 
