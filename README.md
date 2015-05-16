@@ -370,7 +370,7 @@ module.exports = [
 ### Tests
 
 ```
-grunt test
+npm test
 ```
 
 
