@@ -7,7 +7,8 @@ module.exports = function (grunt, options) {
             comments: true,
 
             optional: [
-                'spec.protoToAssign'
+                'spec.protoToAssign',
+                'runtime'
             ],
 
             ignore: ['**/*.json']

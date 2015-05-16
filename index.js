@@ -1,6 +1,5 @@
 'use strict';
 
-import 'babelify/polyfill';
 import Details from './trunk/details';
 import options from './trunk/options';
 import utils from './trunk/utils';

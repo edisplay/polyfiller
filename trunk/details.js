@@ -159,7 +159,7 @@ export default class Details {
      * @returns {Array}
      */
     exclude_features (features, excluded) {
-        return features.filter(value => !excluded.includes(value));
+        return features.filter(value => excluded.indexOf(value) === -1);
     }
 
     /**
