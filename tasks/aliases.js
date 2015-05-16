@@ -20,6 +20,11 @@ module.exports = {
         'karma:api',
     ],
 
+    tunnel: [
+        'coveralls:api',
+        'karma:client'
+    ],
+
     lint: [
         'jshint:lint'
     ],

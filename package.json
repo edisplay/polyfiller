@@ -27,6 +27,7 @@
 
     "scripts": {
         "prepublish": "grunt build",
+        "tunnel"    : "grunt tunnel",
         "test"      : "grunt test"
     },
 
