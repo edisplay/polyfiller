@@ -1,22 +1,22 @@
 env:
-  global:
-  - SAUCE_USERNAME: polyfiller
-  - secure: "DuOlI2XmwJqRSuu0inhAJQD+YWPjXWy1Z2GLuj6A7y1/4ZzLtQuqalEORfOA2RG5YVaHDzffuNTuRkwX3Gz5DpG4zoFqsN/YCmwtfIs4lteSMQzli+qZQucMjY5NYWtWPlTeH7Xts82mrkOfsU8+XDIBvRWkdIpclCAC4cKa8+A="
+    global:
+        - SAUCE_USERNAME: polyfiller
+        - secure: "DuOlI2XmwJqRSuu0inhAJQD+YWPjXWy1Z2GLuj6A7y1/4ZzLtQuqalEORfOA2RG5YVaHDzffuNTuRkwX3Gz5DpG4zoFqsN/YCmwtfIs4lteSMQzli+qZQucMjY5NYWtWPlTeH7Xts82mrkOfsU8+XDIBvRWkdIpclCAC4cKa8+A="
 
 notifications:
-  email: false
+    email: false
 
 language: node_js
 
 node_js:
-  - "0.12"
-  - '0.10'
+    - '0.12'
+    - '0.11'
 
 install:
     - npm install
 
 before_script:
-  - npm test
+    - npm test
 
 after_success:
-  - npm run tunnel
+    - npm run tunnel
