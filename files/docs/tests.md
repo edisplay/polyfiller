@@ -1,3 +1,3 @@
 ```
-grunt test
+npm test
 ```
