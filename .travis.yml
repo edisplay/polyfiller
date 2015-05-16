@@ -19,7 +19,7 @@ install:
     - npm install
 
 before_script:
-    - npm test
+    - grunt test
 
 after_success:
-    - npm run tunnel
+    - grunt tunnel
