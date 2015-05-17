@@ -6,10 +6,5 @@
 
 # Filters
 
-*.sh   filter=treatspaces
-*.js   filter=treatspaces
-*.xml  filter=treatspaces
-*.styl filter=treatspaces
-*.jade filter=treatspaces
-*.json filter=treatspaces
-*.html filter=treatspaces
+*.sh filter=treatspaces
+*.js filter=treatspaces
