@@ -4,6 +4,7 @@ import grunt from 'grunt';
 import Polyfiller from '../index';
 import functional from '../tools/functional';
 import deindent from '../tools/deindent';
+import config from './config';
 
 let table = deindent`| Feature | What's included? | Type | License |
                      |:--------|:-----------------|:----:|:-------:|
@@ -23,8 +24,8 @@ let body = {
     },
 
     'Type' (feature) {
-        let icons = "https://github.com/Polyfiller/polyfiller/" +
-            "blob/master/files/icons/type/25x25";
+        let icons = config.get('repository') +
+            '/blob/master/files/icons/type/25x25';
 
         let types = feature.types.map(type => {
             return deindent `<img src="${icons}/${type}.png?raw=true" \
