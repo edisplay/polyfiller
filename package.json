@@ -34,7 +34,7 @@
 	"dependencies": {
 		"babel-runtime"     : "^5.4.3",
 		"nconf"             : "^0.7.1",
-		"polyfiller-catalog": "^0.0.23",
+		"polyfiller-catalog": "^0.0.24",
 		"resolve"           : "^1.1.6",
 		"resolve-bower"     : "0.0.1",
 		"tsort"             : "^0.0.1",
