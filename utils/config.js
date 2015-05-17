@@ -2,9 +2,8 @@
 
 import nconf from 'nconf';
 
-nconf.use('file', { file: './config.json' });
+nconf.use('file', {
+    file: './config.json'
+});
 
-export default {
-    set: nconf.set.bind(nconf),
-    get: nconf.get.bind(nconf)
-};
+export default nconf.get.bind(nconf);

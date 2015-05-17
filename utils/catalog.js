@@ -24,7 +24,7 @@ let body = {
     },
 
     'Type' (feature) {
-        let icons = config.get('repository') +
+        let icons = config('repository') +
             '/blob/master/files/icons/type/25x25';
 
         let types = feature.types.map(type => {
