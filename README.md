@@ -209,7 +209,7 @@ var polyfiller = new Polyfiller({
 #### wrapper
 
 Type: `Function` <br />
-Default: `None`
+Default: [see](https://github.com/Polyfiller/polyfiller/blob/master/trunk/options.js#L41-L53)
 
 A custom wrapper for your environment
 
