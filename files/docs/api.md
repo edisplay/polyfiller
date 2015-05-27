@@ -111,9 +111,10 @@ var polyfiller = new Polyfiller({
 #### wrapper
 
 Type: `Function` <br />
-Default: [see](https://github.com/Polyfiller/polyfiller/blob/master/trunk/options.js#L41-L53)
+Default (`find`): `None` <br />
+Default (`pack`): [see](https://github.com/Polyfiller/polyfiller/blob/master/trunk/options.js#L41-L53)
 
-A custom wrapper for your environment
+A custom wrapper for your environment.
 
 ```js
 var polyfiller = new Polyfiller({
