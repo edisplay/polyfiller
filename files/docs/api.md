@@ -136,7 +136,7 @@ polyfiller.options.wrapper(function (source) {
 
 #### modules
 
-Do you want to use some specific `npm` modules?
+Do you want to use some specific `npm` or `bower` modules?
 
 ```js
 var path = require('path');
