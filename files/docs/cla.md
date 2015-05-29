@@ -1,4 +1,4 @@
-# Polyfiller Grant and Corporate Contributor License Agreement
+# <a name="cla-corporate"></a> Polyfiller Grant and Corporate Contributor License Agreement
 
 In order to clarify the intellectual property license granted with Contributions from any person or entity, Polyfiller must have a Contributor License Agreement (CLA) on file that has been signed by each Contributor, indicating agreement to the license terms below. This license is for your protection as a Contributor as well as the protection of Polyfiller and its users; it does not change your rights to use your own Contributions for any other purpose.
 
@@ -27,7 +27,7 @@ Should You wish to submit work that is not Your original creation, You may submi
 It is your responsibility to notify Polyfiller when any change is required to the list of designated employees authorized to submit Contributions on behalf of the Corporation, or to the Corporation's Point of Contact with Polyfiller.
 
 
-# Polyfiller Individual Contributor License Agreement
+# <a name="cla-individual"></a> Polyfiller Individual Contributor License Agreement
 
 In order to clarify the intellectual property license granted with Contributions from any person or Polyfiller must have a Contributor License Agreement ("CLA") on file that has been signed by each Contributor, indicating agreement to the license terms below. This license is for your protection as a Contributor as well as the protection of Polyfiller; it does not change your rights to use your own Contributions for any other purpose.
 

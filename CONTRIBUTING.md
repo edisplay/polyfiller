@@ -12,6 +12,7 @@ today! Here are the guidelines we'd like you to follow:
  - [Submission Guidelines](#submit)
  - [Coding Rules](#rules)
  - [Commit Message Guidelines](#commit)
+ - [License](#license)
  - [Signing the CLA](#cla)
  - [Further Info](#info)
 
@@ -322,14 +323,17 @@ readable messages** that are easy to follow when looking through the **project h
 Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
 to read on github as well as in various git tools.
 
+## <a name="license"></a> License
+Our code is licensed under a liberal [MIT][mit] license.
+
 ## <a name="cla"></a> Signing the CLA
 
 Please sign our Contributor License Agreement (CLA) before sending pull requests. For any code
 changes to be accepted, the CLA must be signed. It's a quick process, we promise!
 
-* For individuals we have a [simple click-through form][individual-cla].
+* For individuals we have a [simple click-through form][cla-individual].
 * For corporations we'll need you to
-  [print, sign and one of scan+email, fax or mail the form][corporate-cla].
+  [print, sign and one of scan+email, fax or mail the form][cla-corporate].
 
 ## <a name="info"></a> Further Information
 You can find out more detailed information about contributing in the
@@ -340,9 +344,10 @@ You can find out more detailed information about contributing in the
 
 Based on AngularJS contributing guide
 
-[coc]: https://github.com/Polyfiller/code-of-conduct/blob/master/CODE_OF_CONDUCT.md
-[corporate-cla]: https://github.com/Polyfiller/polyfiller/tree/master/files/docs/cla.md
-[individual-cla]: http://code.google.com/legal/individual-cla-v1.0.html
+[mit]: https://github.com/Polyfiller/polyfiller/blob/master/LICENSE.txt
+[coc]: https://github.com/Polyfiller/polyfiller/blob/master/files/docs/coc.md
+[cla-corporate]: https://github.com/Polyfiller/polyfiller/blob/master/files/docs/cla.md#cla-corporate
+[cla-individual]: https://github.com/Polyfiller/polyfiller/blob/master/files/docs/cla.md#cla-individual
 [github]: https://github.com/Polyfiller/Polyfiller.js
 [issue]: https://github.com/Polyfiller/polyfiller/issues
 [catalog-issue]: https://github.com/Polyfiller/polyfiller-catalog/issues
