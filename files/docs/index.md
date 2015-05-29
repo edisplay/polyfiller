@@ -41,5 +41,4 @@ include "contributing.md"
 
 include "license.md"
 
-[![Analytics](https://ga-beacon.appspot.com/UA-63563443-1/polyfiller/README.md)](https://github.com/Polyfiller/polyfiller)
-
+[![Analytics](https://ga-beacon.appspot.com/UA-63563443-1/polyfiller/README.md)](https://github.com/igrigorik/ga-beacon)
