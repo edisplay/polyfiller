@@ -19,7 +19,7 @@ export default {
      * @return {Generator}
      */
      * entries (object) {
-        for (let key of Object.keys(object)) {
+        for (let key of Reflect.ownKeys(object)) {
             yield [key, object[key]];
         }
     },
