@@ -140,7 +140,7 @@ function (feature, name) {
 Type: `Function ([extended=false])` <br />
 Returns: `Array`
 
-Returns a list of all available features as an array of strings.
+Returns a list of all available features as an array of <b>strings</b>.
 
 ```js
 var polyfiller = new Polyfiller;
@@ -314,33 +314,6 @@ Default: `None`
 Type: `string` <br />
 Default: `None`
 
-**package.json**
-
-Use `dependencies` and `bundleDependencies` for new features located in `npm` 
-
-```json
-{
-	"dependencies": {
-		"es6-promises": "^1.0.10"
-	},
-
-	"bundleDependencies": [
-		"es6-promises"
-	]
-}
-```
-
-**bower.json**
-
-Use `dependencies` for new features located in `bower` 
-
-```json
-{
-	"dependencies": {
-		"es6-promises": "1.0.10"
-	}
-}
-```
 
 The files are located locally?
 
