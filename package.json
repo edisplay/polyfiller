@@ -1,6 +1,6 @@
 {
 	"name"   : "polyfiller",
-	"version": "0.0.30",
+	"version": "0.0.31",
 	"author" : "Abashkin Alexander <monolithed@gmail.com>",
 	"homepage": "https://github.com/Polyfiller/polyfiller.git",
 
@@ -34,7 +34,7 @@
 	"dependencies": {
 		"babel-runtime"     : "^5.4.7",
 		"nconf"             : "^0.7.1",
-		"polyfiller-catalog": "^0.0.29",
+		"polyfiller-catalog": "^0.0.30",
 		"resolve"           : "^1.1.6",
 		"resolve-bower"     : "0.0.1",
 		"tsort"             : "^0.0.1",
@@ -53,20 +53,22 @@
 		"grunt-includes"          : "^0.5.1",
 		"grunt-dev-update"        : "^1.0.2",
 		"grunt-execute"           : "^0.2.2",
-		"grunt-karma"             : "^0.10.1",
+		"grunt-karma"             : "^0.12.0",
 		"grunt-mocha-test"        : "^0.12.7",
-		"grunt-mocha-istanbul"    : "^2.4.0",
+		"grunt-mocha-istanbul"    : "^3.0.1",
 		"grunt-mock"              : "^0.0.3",
 		"load-grunt-config"       : "^0.17.0",
-		"chai"                    : "^2.2.0",
+		"chai"                    : "^3.2.0",
 		"jit-grunt"               : "^0.9.0",
 		"time-grunt"              : "^1.0.0",
-		"karma"                   : "^0.12.31",
-		"karma-chai-plugins"      : "^0.5.0",
-		"karma-mocha"             : "^0.1.10",
+		"karma"                   : "^0.13.9",
+		"karma-chai-plugins"      : "^0.6.0",
+		"karma-mocha"             : "^0.2.0",
 		"karma-mocha-reporter"    : "^1.0.2",
-		"karma-phantomjs-launcher": "^0.1.4",
-		"karma-sauce-launcher"    : "^0.2.10"
+		"karma-phantomjs-launcher": "^0.2.1",
+		"karma-sauce-launcher"    : "^0.2.10",
+		"mocha"                   : "^2.3.0",
+		"phantomjs"               : "^1.9.18"
 	},
 
 	"commentedDependencies": {
@@ -74,10 +76,5 @@
 		"jsonschema"    : "^1.0.1"
 	},
 
-	"licenses": [
-		{
-			"type": "MIT",
-			"url" : "http://www.opensource.org/licenses/mit-license.php"
-		}
-	]
+	"license": "MIT"
 }
