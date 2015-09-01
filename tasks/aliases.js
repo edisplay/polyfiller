@@ -1,12 +1,16 @@
 'use strict';
 
-module.exports = {
+export default {
     build: [
         'clean:cache',
         'babel:build',
         'symlink:build',
         'execute:features',
         'includes:features'
+    ],
+
+    init: [
+        'git-hooks'
     ],
 
     test: [

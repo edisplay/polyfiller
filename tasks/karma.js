@@ -1,9 +1,9 @@
 'use strict';
 
-var clients = require('../files/clients');
+import clients from '../files/clients';
 
-module.exports = function (grunt, options) {
-    var timeout = 100 * 1000;
+export default (grunt, options) => {
+    let timeout = 100 * 1000;
 
     return {
         options: {

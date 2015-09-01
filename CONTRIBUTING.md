@@ -146,7 +146,7 @@ module.exports = [
 ];
 ```
 
-Run `grunt test` and [commit your changes](#commit)
+Run `npm test` and [commit your changes](#commit)
 
 
 ## <a name="bump"></a> Want a new package version?
@@ -195,7 +195,7 @@ All our documentation are located in `files/docs/` directory and `CONTRIBUTING.m
 To build the `README.md` please run the following command:
 
 ```
-grunt build
+npm run prepublish
 ```
 
 ## <a name="submit"></a> Submission Guidelines
@@ -240,7 +240,7 @@ git checkout -b your-fix-branch master
 * Run the full Polyfiller test suite and ensure that all tests pass.
 
 ```shell
-grunt test
+npm test
 ```
 
 * Commit your changes
@@ -358,4 +358,3 @@ Based on AngularJS contributing guide
 [js-style-guide]: http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
 [jsfiddle]: http://jsfiddle.net/
 [plunker]: http://plnkr.co/edit
-

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt, options) {
+export default (grunt, options) => {
     return {
         features: {
             options : {

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function (grunt, options) {
+export default (grunt, options) => {
     return {
         api: {
             src: 'cache/tests/api.js',
