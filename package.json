@@ -57,18 +57,19 @@
 		"grunt-mocha-test"        : "^0.12.7",
 		"grunt-mocha-istanbul"    : "^3.0.1",
 		"grunt-mock"              : "^0.0.3",
-		"load-grunt-config"       : "^0.17.0",
 		"chai"                    : "^3.2.0",
+		"istanbul"                : "^0.3.19",
 		"jit-grunt"               : "^0.9.0",
-		"time-grunt"              : "^1.0.0",
 		"karma"                   : "^0.13.9",
 		"karma-chai-plugins"      : "^0.6.0",
 		"karma-mocha"             : "^0.2.0",
 		"karma-mocha-reporter"    : "^1.0.2",
 		"karma-phantomjs-launcher": "^0.2.1",
 		"karma-sauce-launcher"    : "^0.2.10",
+		"load-grunt-config"       : "^0.17.0",
 		"mocha"                   : "^2.3.0",
-		"phantomjs"               : "^1.9.18"
+		"phantomjs"               : "^1.9.18",
+		"time-grunt"              : "^1.0.0"
 	},
 
 	"commentedDependencies": {
